@@ -1,1 +1,80 @@
-test
+%section.key-visual
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          더 민주적인 세상을 만드는
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          민주주의 활동가들의
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          협동조합입니다.
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text.mission-text-serif
+          Democracy More
+
+%section.what-we-do
+  .container.container-sm
+    .section-title
+      우리가 하는 일
+    .section-desc
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+    .categories
+      .category 기관&middot시민 참여 플랫폼
+      .category 시민주도 캠페인
+      .category 시민자치 커뮤니티
+      .category 디지털 솔루션
+  .tiles-container
+    .tiles-column.js-sticky-sidebar
+      .tile-container.tile-container-lg
+        .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url('samples/home/whatwedo/card1.png')})" }
+          .tile-meta
+            .category 시민주도 캠페인
+            .title 게임의 룰에 캠페이너의 인생을 담다
+            .created-at 2019.08.30
+    .tiles-column<>
+      - 10.times do
+        .tile-container.tile-container-sm<>
+          .tile
+            .tile-cover{ style: "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})" }
+            .tile-meta
+              .category 시민주도 캠페인
+              .title 게임의 룰에 캠페이너의 인생을 담다
+              .created-at 2019.08.30
+      .tile-more.text-center
+        %a.btn.btn-outline-primary.btn-more(href="#")
+          더 보기
+
+%section.solutions
+  .container.container-sm
+    .section-title
+      솔루션
+    .section-desc
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+  .container
+    .tiles-container
+      - 4.times do
+        .tile-container{ 'data-aos': 'fade-up' }
+          .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url('samples/home/whatwedo/card1.png')})" }
+            .tile-meta
+              .subtitle 일상 곳곳을 민주적으로
+              .title 기관&middot;시민 참여 플랫폼
+
+%section.contacts
+  .container.container-sm
+    .section-title
+      빠띠와 협업하기
+    .section-desc
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+    .contact-button-container
+      %button.btn.btn-default.btn-contact
+        협업문의하기
+    .contact-envelope
+      = image_tag 'contact-envelope.png'

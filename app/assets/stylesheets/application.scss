@@ -1,1 +1,59 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 770px,
+  lg: 992px,
+  xl: 1200px
+);
 
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+// ) !default;
+
+$container-max-widths: (
+  xs: 540px,
+  sm: 540px,
+  md: 960px,
+  lg: 1140px,
+  xl: 1300px,
+  g: 1560px,
+  xg: 1920px
+);
+
+// xs: 540px,
+// sm: 700px,
+// md: 960px,
+// lg: 1140px,
+// xl: 1300px,
+// g: 1560px,
+// xg: 1920px
+
+$gray-light: #6d7278;
+$gray-c2: #c2c2c2;
+$brand-cyan : #1e988c;
+$brand-violet: #7463ad;
+$brand-violet-light: #d0c7f1;
+
+$text-color: #111111;
+$text-color-dark: #000;
+
+$theme-colors: (
+  "primary": $brand-violet,
+);
+
+// vendors
+@import "bootstrap";
+@import "aos";
+
+// basic
+@import "font";
+@import "base";
+
+// components
+@import "header";
+@import "footer";
+@import "home";

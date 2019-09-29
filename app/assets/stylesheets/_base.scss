@@ -1,0 +1,23 @@
+body {
+	-webkit-text-size-adjust: none;
+	font-family: 'Noto Sans KR','Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    color: $text-color-dark;
+    text-decoration: none;
+  }
+}
+
+.container.container-sm {
+  @include media-breakpoint-up(lg) {
+    width: 720px;
+  }
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}

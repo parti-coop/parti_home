@@ -1,0 +1,35 @@
+nav.app-nav {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $gray-c2;
+  @include media-breakpoint-down(lg) {
+    .navbar-collapse.collapsing .navbar-nav,
+    .navbar-collapse.collapse.show .navbar-nav {
+      margin-top: 16px !important;
+    }
+  }
+  .navbar-nav .show > .nav-link,
+  .navbar-nav .active > .nav-link,
+  .navbar-nav .nav-link.show,
+  .navbar-nav .nav-link.active {
+    color: $brand-violet;
+  }
+  .navbar-nav .nav-link {
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  @include media-breakpoint-up(lg) {
+    .navbar-nav .nav-link {
+      padding-right: 28px;
+      padding-left: 28px;
+    }
+  }
+  .navbar-brand img {
+    height: 33px;
+    @include media-breakpoint-up(sm) {
+      height: 26px;
+    }
+  }
+}

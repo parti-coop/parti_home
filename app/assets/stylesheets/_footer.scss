@@ -1,0 +1,52 @@
+footer.app-footer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .logo {
+    font-size: 26px;
+  }
+  .utils {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      .utils-right {
+        margin-top: 20px;
+      }
+    }
+    .util {
+      display: inline-block;
+      vertical-align: text-top;
+      a {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+        i {
+          font-size: 32px;
+        }
+      }
+    }
+    .util + .util {
+      margin-left: 12px;
+    }
+  }
+  .democracy-report-subscribe {
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 32px;
+      margin-right: 16px;
+    }
+    input.form-control {
+      margin-right: 16px;
+      @include media-breakpoint-down(sm) {
+        margin-right: 8px;
+        width: 60%;
+      }
+    }
+  }
+  .license {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}

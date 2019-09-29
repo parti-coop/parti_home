@@ -1,0 +1,28 @@
+%footer.app-footer
+  .container-fluid
+    .logo
+      빠띠
+    .utils
+      .utils-left
+        .util
+          = link_to '개인보호정책', '#'
+        .util
+          = link_to 'https://github.com/parti-coop' do
+            %i.fab.fa-github
+        .util
+          = link_to 'https://facebook.com/PartiUnion' do
+            %i.fab.fa-facebook
+        .util
+          = link_to 'https://twitter.com/parti_coop' do
+            %i.fab.fa-twitter
+      .utils-right
+        .democracy-report-subscribe
+          %form.form-inline{ action: "https://stibee.com/api/v1.0/lists/v1NhKd0XWaKx1-Tx0vc30O7zWlo=/public/subscribers", method: :post }
+            %label{ for: :email } 민주주의 리포트 구독하기
+            %input{ name: :email, type: :email, class: 'form-control' }
+            %button.btn.btn-primary.btn-subscribe{ type: :submit } 구독신청
+    .license
+      Copyright 2019.
+      %b Parti Coop.
+      %span.text-nowrap All rights reserved.
+
