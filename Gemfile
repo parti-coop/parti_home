@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'unicorn'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
+gem 'mini_racer'
 
 # database
 gem 'sqlite3'
