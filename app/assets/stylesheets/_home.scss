@@ -3,7 +3,7 @@ body.body-pages-home {
     height: 800px;
     background-image: linear-gradient(to right, #36b6a9, #a499c9);
     padding-top: 150px;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       height: 520px;
       padding-top: 120px;
     }
@@ -11,7 +11,7 @@ body.body-pages-home {
       border-bottom: 1px solid white;
       .mission-text-container {
         height: 127px;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           height: 75px;
         }
         display: flex;
@@ -23,7 +23,7 @@ body.body-pages-home {
           font-weight: 300;
           letter-spacing: -3.67px;
           color: white;
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
             font-size: 28px;
             font-weight: 500;
             line-height: 23px;
@@ -32,7 +32,7 @@ body.body-pages-home {
           &.mission-text-serif {
             font-family: 'Noto Serif KR Bold';
             line-height: 113px;
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
               line-height: 44px;
             }
           }
@@ -117,7 +117,7 @@ body.body-pages-home {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             background-size: cover;
-            background-position: center;
+            background-position: top center;
             position: relative;
             .category {
               font-size: 18px;
@@ -180,7 +180,7 @@ body.body-pages-home {
             .tile-cover {
               height: 288px;
               background-size: cover;
-              background-position: center;
+              background-position: top center;
               border-radius: 8px;
               @include media-breakpoint-down(sm) {
                 height: 117px;

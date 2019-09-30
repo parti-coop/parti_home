@@ -12,6 +12,6 @@ $(function() {
   $('.js-sticky-sidebar').stickySidebar({
     topSpacing: 20,
     bottomSpacing: 20,
-    minWidth: 576,
+    minWidth: 769,
   });
 })
