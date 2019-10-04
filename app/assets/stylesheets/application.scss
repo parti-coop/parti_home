@@ -49,7 +49,7 @@ $theme-colors: (
 @import "bootstrap";
 @import "aos";
 
-// basic
+// base
 @import "font";
 @import "base";
 
@@ -57,3 +57,4 @@ $theme-colors: (
 @import "header";
 @import "footer";
 @import "home";
+@import "what_we_do";

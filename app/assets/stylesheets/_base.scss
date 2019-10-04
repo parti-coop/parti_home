@@ -1,6 +1,13 @@
 body {
 	-webkit-text-size-adjust: none;
 	font-family: 'Noto Sans KR','Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
+  margin-top: 83px;
+  @include media-breakpoint-down(md) {
+    margin-top: 73px; 
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: 76px; 
+  }
 }
 
 a {
@@ -20,4 +27,24 @@ a {
 
 .text-nowrap {
   white-space: nowrap;
+}
+
+.base-section-title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  color: $brand-violet;
+  font-weight: 300;
+}
+
+.base-section-desc {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+  }
 }

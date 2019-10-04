@@ -1,5 +1,5 @@
 %nav.app-nav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-white
-  %a.navbar-brand(href="#")
+  %a.navbar-brand{ href: root_url }
     = image_tag 'header-logo.png'
   %button.navbar-toggler(aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarCollapse" data-toggle="collapse" type="button")
     %span.navbar-toggler-icon
@@ -7,7 +7,7 @@
     %ul.navbar-nav.mt-2.ml-lg-auto.d-lg-flex.d-sm-flex
       %li.nav-item
         -# .active
-        %a.nav-link(href="#")
+        %a.nav-link{ href: what_we_do_path }
           우리가 하는 일
       %li.nav-item
         %a.nav-link(href="#") 디지털 솔루션

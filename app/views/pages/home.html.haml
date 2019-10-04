@@ -22,15 +22,14 @@
 
 %section.what-we-do
   .container.container-sm
-    .section-title
+    .base-section-title
       우리가 하는 일
-    .section-desc
+    .base-section-desc
       Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
     .categories
-      .category 기관&middot시민 참여 플랫폼
-      .category 시민주도 캠페인
-      .category 시민자치 커뮤니티
-      .category 디지털 솔루션
+      - PagesController::CATEGORY.each do |_, category_name| 
+        .category 
+          != category_name
   .tiles-container
     .tiles-column.js-sticky-sidebar
       .tile-container.tile-container-lg
@@ -54,9 +53,9 @@
 
 %section.solutions
   .container.container-sm
-    .section-title
+    .base-section-title
       솔루션
-    .section-desc
+    .base-section-desc
       Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
   .container
     .tiles-container
@@ -66,15 +65,3 @@
             .tile-meta
               .subtitle 일상 곳곳을 민주적으로
               .title 기관&middot;시민 참여 플랫폼
-
-%section.contacts
-  .container.container-sm
-    .section-title
-      빠띠와 협업하기
-    .section-desc
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-    .contact-button-container
-      %button.btn.btn-default.btn-contact
-        협업문의하기
-    .contact-envelope
-      = image_tag 'contact-envelope.png'

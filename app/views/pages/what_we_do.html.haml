@@ -1,0 +1,34 @@
+%section.key-visual
+  .line
+    .container
+      .title-container
+        .page-subtitle
+          What we do
+        .page-title
+          우리가 하는 일
+
+%section.tiles
+  .container.container-sm.categories-container
+    .categories
+      .category.active
+        .category-text
+          전체  
+      - PagesController::CATEGORY.each do |_, category_name| 
+        .category
+          .category-text
+            != category_name
+  .container
+    .tiles-container
+      - 10.times do
+        .tile-container.tile-container-sm<>
+          .tile
+            .tile-cover{ style: "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})" }
+            .tile-meta
+              .category 시민주도 캠페인
+              .title 게임의 룰에 캠페이너의 인생을 담다
+              .created-at 2019.08.30
+    .tile-more.text-center
+      %a.btn.btn-outline-primary.btn-more(href="#")
+        더 보기
+
+

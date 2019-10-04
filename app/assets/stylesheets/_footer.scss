@@ -1,3 +1,36 @@
+
+section.contacts {
+  padding-top: 120px;
+  background-color: $brand-violet;
+  .base-section-title {
+    color: white;
+  }
+  .base-section-desc {
+    color: $brand-violet-light;
+  }
+  .contact-button-container {
+    text-align: center;
+    .btn-contact {
+      margin-top: 24px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      color: $brand-violet;
+      background-color: white;
+      padding: 16px 32px;
+      border-radius: 32px;
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+  .contact-envelope img {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
 footer.app-footer {
   padding-top: 120px;
   padding-bottom: 120px;
