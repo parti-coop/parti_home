@@ -27,9 +27,16 @@ nav.app-nav {
     }
   }
   .navbar-brand img {
-    height: 33px;
-    @include media-breakpoint-up(sm) {
+    height: 34px;
+    @include media-breakpoint-down(sm) {
       height: 26px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .navbar-nav .dropdown-menu {
+      border: none;
+      padding-top: 0;
     }
   }
 }

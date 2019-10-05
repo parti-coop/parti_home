@@ -1,12 +1,9 @@
 body {
 	-webkit-text-size-adjust: none;
 	font-family: 'Noto Sans KR','Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
-  margin-top: 83px;
+  margin-top: $header-height;
   @include media-breakpoint-down(md) {
-    margin-top: 73px; 
-  }
-  @include media-breakpoint-down(xs) {
-    margin-top: 76px; 
+    margin-top: $header-height-sm; 
   }
 }
 
@@ -16,6 +13,16 @@ a {
   &:hover {
     color: $text-color-dark;
     text-decoration: none;
+  }
+
+  &.anchor {
+    display: block;
+    position: relative;
+    top: -1 * $header-height;
+    @include media-breakpoint-down(md) {
+      top: -1 * $header-height-sm; 
+    }
+    visibility: hidden;
   }
 }
 
@@ -27,6 +34,12 @@ a {
 
 .text-nowrap {
   white-space: nowrap;
+}
+
+.text-keep-all {
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;  
 }
 
 .base-section-title {
@@ -46,5 +59,52 @@ a {
     font-size: 28px;
     font-weight: 500;
     line-height: 36px;
+  }
+}
+
+section.base-key-visual {
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 80px;
+  .base-line {
+    border-bottom: 1px solid white;
+  }
+  .base-title-container {
+    height: 450px;
+    @include media-breakpoint-down(sm) {
+      height: 290px;
+      bottom: -8px;
+      position: relative;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .base-page-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: white;
+    @extend .text-keep-all;
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .base-page-title {
+    margin-top: 14px;
+    font-size: 88px;
+    font-weight: 300;
+    line-height: 72px;
+    letter-spacing: -3.67px;
+    color: white;
+    @extend .text-keep-all;
+    @include media-breakpoint-down(sm) {
+      margin-top: 8px;
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 }

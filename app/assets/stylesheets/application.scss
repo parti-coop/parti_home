@@ -1,11 +1,13 @@
+$header-height: 83px;
+$header-height-sm: 73px;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 770px,
   lg: 992px,
-  xl: 1200px
+  xl: 1360px
 );
-
 // $grid-breakpoints: (
 //   xs: 0,
 //   sm: 576px,
@@ -15,25 +17,21 @@ $grid-breakpoints: (
 // ) !default;
 
 $container-max-widths: (
-  xs: 540px,
-  sm: 540px,
+  sm: 768px,
   md: 960px,
-  lg: 1140px,
-  xl: 1300px,
-  g: 1560px,
-  xg: 1920px
+  // lg: 1140px,
+  lg: 960px,
+  xl: 1300px
 );
 
-// xs: 540px,
-// sm: 700px,
-// md: 960px,
-// lg: 1140px,
-// xl: 1300px,
-// g: 1560px,
-// xg: 1920px
+// sm: 540px,
+// md: 720px,
+// lg: 960px,
+// xl: 1140px
 
 $gray-light: #6d7278;
 $gray-c2: #c2c2c2;
+$gray-d8: #d8d8d8;
 $brand-cyan : #1e988c;
 $brand-violet: #7463ad;
 $brand-violet-light: #d0c7f1;
@@ -58,3 +56,4 @@ $theme-colors: (
 @import "footer";
 @import "home";
 @import "what_we_do";
+@import "solutions";

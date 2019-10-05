@@ -51,6 +51,7 @@
         %a.btn.btn-outline-primary.btn-more(href="#")
           더 보기
 
+%a.anchor(id="solutions")
 %section.solutions
   .container.container-sm
     .base-section-title
@@ -59,9 +60,12 @@
       Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
   .container
     .tiles-container
-      - 4.times do
-        .tile-container{ 'data-aos': 'fade-up' }
-          .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url('samples/home/whatwedo/card1.png')})" }
-            .tile-meta
-              .subtitle 일상 곳곳을 민주적으로
-              .title 기관&middot;시민 참여 플랫폼
+      - SolutionsController::SOLUTION.each do |solution|
+        = link_to send(solution[:path_text]) do
+          .tile-container{ 'data-aos': 'fade-up' }
+            .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url(solution[:image_path])})" }
+              .tile-meta
+                .subtitle 
+                  != solution[:subtitle]
+                .title 
+                  != solution[:title]

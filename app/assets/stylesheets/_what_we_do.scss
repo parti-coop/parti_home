@@ -1,50 +1,7 @@
 body.body-pages-what_we_do {
-  section.key-visual {
+  section.base-key-visual {
     background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('what-we-do-key-visual.png');
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 80px;
-
-    .line {
-      border-bottom: 1px solid white;
-    }
-
-    .title-container {
-      height: 450px;
-      @include media-breakpoint-down(sm) {
-        height: 374px;
-      }
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .page-subtitle {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 32px;
-      color: white;
-      @include media-breakpoint-down(sm) {
-        font-size: 20px;
-        line-height: 28px;
-      }
-    }
-
-    .page-title {
-      margin-top: 14px;
-      font-size: 88px;
-      font-weight: 300;
-      line-height: 72px;
-      letter-spacing: -3.67px;
-      color: white;
-      @include media-breakpoint-down(sm) {
-        margin-top: 8px;
-        font-size: 40px;
-        line-height: 32px;
-      }
-    }
   }
-
   section.tiles {
     .categories-container {
       @include media-breakpoint-down(sm) {
@@ -57,7 +14,7 @@ body.body-pages-what_we_do {
         @include media-breakpoint-down(md) {
           flex-wrap: nowrap;
           overflow-x: auto;
-          overflow-y: none;
+          overflow-y: hidden;
           -webkit-overflow-scrolling: touch;
           -ms-overflow-style: -ms-autohiding-scrollbar;
           margin-right: -15px;
