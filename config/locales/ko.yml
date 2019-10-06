@@ -1,0 +1,54 @@
+ko:
+  date:
+    formats:
+      default: '%Y.%m.%d'
+      email: '%Y년 %-m월 %-d일'
+    day_names: [일, 월, 화, 수, 목, 금, 토]
+  time:
+    formats:
+      default: "%Y.%m.%d %H:%M"
+  errors:
+    format: "%{message}"
+    messages:
+      not_saved: "%{attribute}은(는) 저장되지 않았습니다"
+      blank: "%{attribute} 값을 입력해 주세요"
+      taken: "%{attribute} 값이 이미 사용 중 입니다"
+      too_long: "%{attribute} 값에 너무 긴 글이 입력되었습니다"
+      carrierwave_processing_error: 처리할 수 없는 파일입니다.
+      mini_magick_processing_error: 처리할 수 없는 파일입니다.
+      carrierwave_integrity_error: 허용되지 않는 파일 형식입니다.
+      not_deletable_parti: 가입한 멤버가 있거나 게시글이 있는 채널은 삭제할 수 없습니다.
+      unknown: 앗! 뭔가 잘못되었습니다.
+      carrierwave_processing_error: "이미지 사이즈 조정에 실패했습니다."
+      carrierwave_integrity_error: "이미지 파일이 아닙니다."
+      carrierwave_download_error: "다운로드 할 수 없습니다."
+      extension_whitelist_error: "허용되지 않는 파일 종류입니다."
+      extension_blacklist_error: "허용되지 않는 파일 종류입니다."
+      content_type_whitelist_error: "허용되지 않는 파일 종류입니다."
+      content_type_blacklist_error: "허용되지 않는 파일 종류입니다."
+      rmagick_processing_error: "이미지 파일이 아니거나 처리할 수 없는 파일입니다."
+      mini_magick_processing_error: "이미지 파일이 아니거나 처리할 수 없는 파일입니다."
+      min_size_error: "파일사이즈가 너무 작습니다."
+      max_size_error: "파일사이즈가 너무 큽니다."
+  activerecord:
+    models:
+      contact: 협업 문의
+    attributes:
+      contact:
+        project_subject: 프로젝트 주제
+        project_category: 프로젝트 유형
+        project_body: 프로젝트 개요
+        attachment: 첨부파일
+        contact_org: 조직명
+        contact_manager: 담당자 이름/직함
+        contact_tel: 전화번호
+        contact_email: 이메일 주소
+    errors:
+      messages:
+        record_invalid: "오류가 있습니다: %{errors}"
+  helpers:
+    label:
+      contact:
+        project_subject: 프로젝트 주제 (필수)
+        contact_email: 이메일 주소 (필수)
+

@@ -1,14 +1,15 @@
-%section.contacts
-  .container.container-sm
-    .base-section-title
-      빠띠와 협업하기
-    .base-section-desc
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-    .contact-button-container
-      %button.btn.btn-default.btn-contact
-        협업문의하기
-    .contact-envelope
-      = image_tag 'contact-envelope.png'
+- if controller_name != 'contacts'
+  %section.contacts
+    .container.container-sm
+      .base-section-title
+        빠띠와 협업하기
+      .base-section-desc
+        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+      .contact-button-container
+        = link_to new_contact_path,  class: 'btn btn-default btn-contact' do
+          협업 문의하기
+      .contact-envelope
+        = image_tag 'contact-envelope.png'
 
 %footer.app-footer
   .container-fluid

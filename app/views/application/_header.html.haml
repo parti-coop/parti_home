@@ -10,14 +10,14 @@
         %a.nav-link{ href: what_we_do_path }
           우리가 하는 일
       %li.nav-item.dropdown
-        %a.nav-link.dropdown-toggle{ href: '#', id: 'header-navbar-dropdown', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' } 
+        %a.nav-link.dropdown-toggle{ href: '#', id: 'header-navbar-dropdown', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' }
           솔루션
         .dropdown-menu{ 'aria-labelledby': 'header-navbar-dropdown' }
           - SolutionsController::SOLUTION.each do |solution|
             %a.dropdown-item{ href: send(solution[:path_text]) }
               != solution[:title]
       %li.nav-item
-        %a.nav-link(href="#") 협업문의
+        %a.nav-link{ href: new_contact_path } 협업 문의
     -# %form.form-inline.mt-2.mt-md-0
     -#   %input.form-control.mr-sm-2(aria-label="Search" placeholder="Search" type="text")/
     -#   %button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search

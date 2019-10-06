@@ -3,7 +3,7 @@ body {
 	font-family: 'Noto Sans KR','Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
   margin-top: $header-height;
   @include media-breakpoint-down(md) {
-    margin-top: $header-height-sm; 
+    margin-top: $header-height-sm;
   }
 }
 
@@ -20,7 +20,7 @@ a {
     position: relative;
     top: -1 * $header-height;
     @include media-breakpoint-down(md) {
-      top: -1 * $header-height-sm; 
+      top: -1 * $header-height-sm;
     }
     visibility: hidden;
   }
@@ -32,6 +32,12 @@ a {
   }
 }
 
+.container.container-xs {
+  @include media-breakpoint-up(lg) {
+    width: 576px;
+  }
+}
+
 .text-nowrap {
   white-space: nowrap;
 }
@@ -39,7 +45,7 @@ a {
 .text-keep-all {
   word-break: keep-all;
   word-wrap: break-word;
-  overflow-wrap: break-word;  
+  overflow-wrap: break-word;
 }
 
 .base-section-title {

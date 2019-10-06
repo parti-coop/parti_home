@@ -41,7 +41,7 @@ footer.app-footer {
     margin-top: 56px;
     display: flex;
     justify-content: space-between;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       display: block;
       .utils-right {
         margin-top: 20px;

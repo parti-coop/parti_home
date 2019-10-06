@@ -19,7 +19,6 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 768px,
   md: 960px,
-  // lg: 1140px,
   lg: 960px,
   xl: 1300px
 );
@@ -57,3 +56,4 @@ $theme-colors: (
 @import "home";
 @import "what_we_do";
 @import "solutions";
+@import "contacts";

@@ -1,0 +1,115 @@
+body.body-contacts-new {
+  section.key-visual {
+    background-image: linear-gradient(to right, #36b6a9, #a499c9);
+    .title-container {
+      padding-bottom: 40px;
+      padding-top: 40px;
+      .page-title {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        color: white;
+        @include media-breakpoint-down(sm) {
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      .page-subtitle {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+        color: white;
+        margin-top: 16px;
+        @include media-breakpoint-down(sm) {
+          font-size: 20px;
+          line-height: 28px;
+          padding-right: 18px;
+        }
+      }
+    }
+
+    .envelope {
+      position: relative;
+      img {
+        position: absolute;
+        width: 30%;
+        transform: rotate(-35deg);
+        right: -50px;
+        top: -50px;
+        @media (max-width: 400px) {
+          width: 100%;
+          right: -160px;
+          top: -80px;
+        }
+      }
+    }
+  }
+  section.form {
+    padding-bottom: 120px;
+    border-bottom: 1px solid $gray-c2;
+
+    fieldset {
+      margin-top: 80px;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 48px;
+      @include media-breakpoint-down(sm) {
+        margin-top: 90px;
+      }
+    }
+    legend {
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 48px;
+      margin-bottom: 40px;
+      @include media-breakpoint-down(sm) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+    label {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .form-control {
+      font-size: 14px;
+      line-height: 25px;
+      color: $text-color;
+      height: 44px;
+    }
+    textarea.form-control {
+      height: 128px;
+    }
+    option {
+      font-size: 14px;
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-check {
+      line-height: 22px;
+      label.form-check-label {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      input#confirm {
+        height: 32px;
+      }
+    }
+    input[type="submit"] {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      border-radius: 38px;
+      margin-top: 80px;
+    }
+  }
+}
