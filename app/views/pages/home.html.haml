@@ -26,30 +26,11 @@
       우리가 하는 일
     .base-section-desc
       Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-    .categories
-      - PagesController::CATEGORY.each do |_, category_name| 
-        .category 
-          != category_name
-  .tiles-container
-    .tiles-column.js-sticky-sidebar
-      .tile-container.tile-container-lg
-        .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url('samples/home/whatwedo/card1.png')})" }
-          .tile-meta
-            .category 시민주도 캠페인
-            .title 게임의 룰에 캠페이너의 인생을 담다
-            .created-at 2019.08.30
-    .tiles-column<>
-      - 10.times do
-        .tile-container.tile-container-sm<>
-          .tile
-            .tile-cover{ style: "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})" }
-            .tile-meta
-              .category 시민주도 캠페인
-              .title 게임의 룰에 캠페이너의 인생을 담다
-              .created-at 2019.08.30
-      .tile-more.text-center
-        %a.btn.btn-outline-primary.btn-more(href="#")
-          더 보기
+
+  .container.container-sm.categories-container
+    = render 'pages/home/what_we_do/solution_filters', solution_slug: nil
+  = render 'pages/home/what_we_do/posts', posts: @posts, solution_slug: nil
+
 
 %a.anchor(id="solutions")
 %section.solutions
@@ -60,12 +41,12 @@
       Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
   .container
     .tiles-container
-      - SolutionsController::SOLUTION.each do |solution|
+      - Post::SOLUTIONS.each do |solution|
         = link_to send(solution[:path_text]) do
           .tile-container{ 'data-aos': 'fade-up' }
             .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url(solution[:image_path])})" }
               .tile-meta
-                .subtitle 
+                .subtitle
                   != solution[:subtitle]
-                .title 
+                .title
                   != solution[:title]

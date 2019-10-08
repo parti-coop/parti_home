@@ -28,7 +28,8 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -37,6 +38,17 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# file
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'file_validators'
+
+# admin
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'activeadmin'
+gem 'activeadmin_simplemde', github: 'parti-coop/activeadmin_simplemde'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

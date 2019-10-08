@@ -1,0 +1,4 @@
+var page_dom = "<%= j(render 'pages/what_we_do/posts_page', posts: @posts) %>";
+$('.js-post-tiles-container').append(page_dom);
+var more_dom = "<%= j(render 'pages/what_we_do/more_posts_btn', posts: @posts) %>";
+$('.js-post-tiles-more').html(more_dom);

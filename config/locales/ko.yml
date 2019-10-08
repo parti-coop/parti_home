@@ -6,7 +6,8 @@ ko:
     day_names: [일, 월, 화, 수, 목, 금, 토]
   time:
     formats:
-      default: "%Y.%m.%d %H:%M"
+      default: "%Y-%m-%d %H:%M"
+      long: "%Y-%m-%d %H:%M:%S"
   errors:
     format: "%{message}"
     messages:
@@ -51,4 +52,3 @@ ko:
       contact:
         project_subject: 프로젝트 주제 (필수)
         contact_email: 이메일 주소 (필수)
-

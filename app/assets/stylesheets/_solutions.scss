@@ -23,8 +23,8 @@ body.body-solutions {
   }
   section.tiles {
     .tiles-title-line {
-      overflow: auto;
-      //max-width: 100vw;
+      overflow-x: hidden;
+      overflow-y: auto;
       > .container:before {
         content: ' ';
         height: 1px;
@@ -118,7 +118,7 @@ body.body-solutions {
 
   section.tiles-what-we-do {
     padding-bottom: 170px;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       .container.container-full {
         max-width: none;
         & > * {
@@ -132,7 +132,7 @@ body.body-solutions {
     .tiles-container {
       margin-left: -12px;
       margin-right: -12px;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(xs) {
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
@@ -144,11 +144,11 @@ body.body-solutions {
         }
       }
       .tile-container {
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(xs) {
           width: 246px;
         }
         &:last-child {
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(xs) {
             padding-right: 15px;
           }
         }
@@ -158,8 +158,13 @@ body.body-solutions {
         padding-right: 12px;
         vertical-align: top;
         @include media-breakpoint-down(sm) {
+          width: 50%;
+          padding-bottom: 24px;
+        }
+        @include media-breakpoint-down(xs) {
           flex: 0 0 auto;
           width: 246px;
+          padding-bottom: 0;
         }
         .tile {
           border: 1px solid $gray-c2;
@@ -167,19 +172,25 @@ body.body-solutions {
           padding: 32px 24px;
           border-radius: 8px;
           .tile-meta {
-            display: flex;
-            flex-direction: column;
             height: 100%;
+            position: relative;
             .title {
               font-size: 21px;
               font-weight: 500;
               line-height: 32px;
-              flex: 1;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              max-height: 96px;
             }
             .created-at {
               font-size: 12px;
               line-height: 20px;
               color: $gray-light;
+              position: absolute;
+              bottom: 0;
             }
           }
           &.tile-more {

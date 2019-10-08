@@ -7,28 +7,20 @@
         .base-page-title
           우리가 하는 일
 
+%a.anchor(id="tiles")
 %section.tiles
   .container.container-sm.categories-container
     .categories
-      .category.active
-        .category-text
-          전체  
-      - PagesController::CATEGORY.each do |_, category_name| 
-        .category
-          .category-text
-            != category_name
+      .category{ class: ('active' if params[:solution_slug].blank?) }
+        = link_to what_we_do_path(anchor: :tiles), class: 'category-text' do
+          전체
+      - Post::SOLUTIONS.each do |solution|
+        .category{ class: ('active' if solution[:slug].to_s == params[:solution_slug]) }
+          = link_to what_we_do_path(solution_slug: solution[:slug], anchor: :tiles), class: 'category-text' do
+            != solution[:title]
   .container
-    .tiles-container
-      - 10.times do
-        .tile-container.tile-container-sm<>
-          .tile
-            .tile-cover{ style: "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})" }
-            .tile-meta
-              .category 시민주도 캠페인
-              .title 게임의 룰에 캠페이너의 인생을 담다
-              .created-at 2019.08.30
-    .tile-more.text-center
-      %a.btn.btn-outline-primary.btn-more(href="#")
-        더 보기
-
+    .tiles-container.js-post-tiles-container
+      = render 'pages/what_we_do/posts_page', posts: @posts
+    .tile-more.text-center.js-post-tiles-more
+      = render 'pages/what_we_do/more_posts_btn', posts: @posts
 

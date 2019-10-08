@@ -1,17 +1,17 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{charset: "utf-8"}/
-    %meta{content: "initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=medium-dpi", name: "viewport"}/
-
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %meta{charset: "utf-8"}
+    %meta{content: "initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=medium-dpi", name: "viewport"}
     %title 빠띠
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
     %script{ crossorigin: "anonymous", src: "https://kit.fontawesome.com/066b650a4c.js" }
     = javascript_include_tag 'application'
   %body{ class: body_class }
+    = render 'application/flash', flash: flash
     = render 'application/header'
     = yield
     = render 'application/footer'

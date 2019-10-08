@@ -31,3 +31,6 @@
 /config/master.key
 
 local_env.yml
+
+/public/uploads/*
+!/public/uploads/.keep

@@ -1,0 +1,11 @@
+
+%div.position-absolute.w-100.d-flex.flex-column.p-4{ "aria-atomic": "true", "aria-live": "polite", "data-autohide": "false" }
+  - flash.each do |type, msg|
+    .toast.ml-auto.show{ role: 'alert' }
+      .toast-header.text-white{ class: bootstrap_class_for_flash }
+        %strong.mr-auto= i18n_for_flash(type)
+        %button.ml-2.mb-1.close{ "aria-label": "Close", "data-dismiss": "toast", type: "button" }
+          %span.text-white{ "aria-hidden": "true" }
+            &times;
+      .toast-body
+        = msg

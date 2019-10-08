@@ -45,40 +45,69 @@ body.body-pages-home {
     padding-top: 120px;
     padding-bottom: 152px;
     border-bottom: 1px solid $gray-c2;
-    .categories {
-      margin-top: 80px;
-      display: flex;
-      justify-content: space-between;
+
+    .categories-container {
       @include media-breakpoint-down(sm) {
-        margin-top: 40px;
-        display: block;
+        max-width: none;
+      }
+      .categories {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+          -ms-overflow-style: -ms-autohiding-scrollbar;
+          margin-right: -15px;
+          margin-left: -15px;
+          padding-bottom: 6px;
+          margin-bottom: -6px;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
       .category {
         font-size: 18px;
         font-weight: 500;
         line-height: 26px;
-        color: $gray-light;
         flex: 1 1 auto;
         text-align: center;
-        @include media-breakpoint-down(sm) {
-          display: inline-block;
-          width: 49%;
-          margin-bottom: 16px;
-          font-size: 14px;
-          font-weight: 500;
+        a {
+          color: $gray-light;
+        }
+        &.active a {
+          color: $text-color;
+        }
+        @include media-breakpoint-down(md) {
+          flex: 0 0 auto;
+          padding-left: 32px;
+          padding-right: 32px;
+          font-size: 16px;
           line-height: 24px;
+          &:first-child {
+            padding-left: 15px;
+          }
+        }
+        .category-text {
+          display: inline-block;
+          position: relative;
+        }
+        &.active .category-text:after {
+          display: inline-block;
+          content: ' ';
+          position: absolute;
+          width: 100%;
+          bottom: -6px;
+          left: 0;
+          height: 4px;
+          background-color: $brand-violet;
         }
       }
       .category + .category {
         border-left: 1px solid $gray-light;
-        @include media-breakpoint-down(sm) {
-          border: none;
-        }
-      }
-      @include media-breakpoint-down(sm) {
-        .category:nth-child(even) {
-          border-left: 1px solid #6d7278;
-        }
       }
     }
 
@@ -124,6 +153,7 @@ body.body-pages-home {
               font-weight: 300;
               color: white;
               line-height: 26px;
+              text-shadow: 0 1px 0 $text-color;
               @include media-breakpoint-down(sm) {
                 font-size: 16px;
                 font-weight: 500;
@@ -136,6 +166,7 @@ body.body-pages-home {
               line-height: 48px;
               color: white;
               margin-top: 8px;
+              text-shadow: 0 1px 0 $text-color;
               @include media-breakpoint-down(sm) {
                 font-size: 24px;
                 font-weight: 500;
@@ -164,6 +195,7 @@ body.body-pages-home {
           width: 50%;
           padding-left: 48px;
           padding-right: 48px;
+          vertical-align: top;
           @include media-breakpoint-down(lg) {
             padding-left: 8px;
             padding-right: 8px;

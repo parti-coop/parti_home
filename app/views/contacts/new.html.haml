@@ -15,7 +15,7 @@
         %legend 프로젝트 정보
         .form-group
           = f.label :project_subject, '프로젝트 주제'
-          = f.select :project_subject, SolutionsController::SOLUTION.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "주제 선택..." }, class: 'form-control'
+          = f.select :project_subject, Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "주제 선택..." }, class: 'form-control'
         .form-group
           = f.label :project_body, '프로젝트 개요'
           = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산'

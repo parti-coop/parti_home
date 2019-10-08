@@ -33,7 +33,7 @@ nav.app-nav {
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     .navbar-nav .dropdown-menu {
       border: none;
       padding-top: 0;
