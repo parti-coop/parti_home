@@ -6,7 +6,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    if model
+      "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    else
+      "uploads/images/#{Date.today.strftime("%Y-%m-%d")}"
+    end
   end
 
   def content_type_whitelist
@@ -61,7 +65,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "#{secure_token(10)}.#{file.extension}" if original_filename.present?
+    if model
+      "#{secure_token(10)}.#{file.extension}" if original_filename.present?
+    else
+      super
+    end
   end
 
   protected

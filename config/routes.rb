@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'solutions/soft', to: 'solutions#soft'
 
   resources :contacts
+
+  post 'attachments', to: 'attachments#create'
 end

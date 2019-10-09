@@ -41,17 +41,24 @@ body.edit.admin_posts.active_admin.admin_namespace #title_bar {
   }
 }
 
-.editor-preview-side > p, .editor-preview > p {
-  margin-top: 0;
-  margin-bottom: 42px;
-  font-size: 14px;
+pre.CodeMirror-line {
+  font-size: 18px;
 }
 
-.admin-post-show-body {
+.admin-post-show-body,
+.editor-preview-side,
+.editor-preview {
   img {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 600px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    margin-top: 31px;
+    margin-bottom: 31px;
   }
 
   // h1 {
