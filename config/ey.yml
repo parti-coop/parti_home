@@ -24,11 +24,11 @@ defaults:
   # This setting can be overridden for individual deployments using
   # the command line options --migrate or --no-migrate.
   #
-  migrate: false
+  migrate: true
 
   # Default migration command to run when migrations are enabled.
   #
-  #migration_command: rake db:migrate --trace
+  migration_command: rake db:migrate --trace
 
   # Enables rails assets precompilation always and halts when the task fails.
   #
@@ -116,7 +116,7 @@ defaults:
   # Default is "".
   # Leave blank to remove --without from the bundle install command.
   #
-  #bundle_without: 
+  #bundle_without:
 
   # Add extra options to the bundle install command line.
   # Does not override bundle_without, if specified.
@@ -124,7 +124,7 @@ defaults:
   # If the application's gems are vendored in the
   # repository, setting --local can speed up bundle.
   #
-  #bundle_options: 
+  #bundle_options:
 
   # Enable maintenance page during migrate action (default)
   # Setting this to false, disables maintenance page during migrations.
@@ -142,7 +142,7 @@ defaults:
   # for these servers is false. Mongrel and some other servers default
   # to true to avoid downtime during server restarting.
   #
-  #maintenance_on_restart: 
+  #maintenance_on_restart:
 
   # If true, always run deployments in verbose mode.
   #
