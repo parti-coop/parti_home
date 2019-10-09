@@ -30,17 +30,37 @@ ActiveAdmin.register Post do
     actions
   end
 
+  show do
+    attributes_table_for resource do
+      row :id
+      row :title
+      row :body do
+        markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
+        raw(%(<div class="admin-post-show-body">#{markdown.render(resource.body)}</div>))
+      end
+      row :published_at
+      row :solution_slug
+      row :source
+      row :updated_at
+      row :cover do
+        span img(src: resource.cover.url(:sm))
+      end
+    end
+  end
+
   form do |f|
     f.inputs do
       f.input :title
       f.input :body, as: :simplemde_editor, input_html: { 'data-options': { spellChecker: false }.to_json }
-      f.input :solution_slug
+      f.input :solution_slug, as: :select, collection: Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }
       f.input :published_at, as: :datepicker
+      f.input :cover, hint: image_tag(f.object.cover.url(:sm))
+      f.input :cover_cache, as: :hidden
     end
     f.actions
   end
 
-  permit_params :title, :body, :published_at, :solution_slug
+  permit_params :title, :body, :published_at, :solution_slug, :cover
 
   action_item :publish, only: :show do
     link_to "발행", publish_admin_post_path(post), method: :put unless post.published_at?

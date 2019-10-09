@@ -1,4 +1,4 @@
-body.body-contacts-new {
+body.body-contacts-new, body.body-contacts-create {
   section.key-visual {
     background-image: linear-gradient(to right, #36b6a9, #a499c9);
     .title-container {
@@ -98,7 +98,7 @@ body.body-contacts-new {
         font-size: 14px;
         margin-bottom: 0;
       }
-      input#confirm {
+      input.form-check-input {
         height: 32px;
       }
     }

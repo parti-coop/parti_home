@@ -33,11 +33,21 @@ ko:
       max_size_error: "파일사이즈가 너무 큽니다."
   activerecord:
     models:
+      post: 글
       contact: 협업 문의
+      comment: 댓글
     attributes:
+      post:
+        title: 제목
+        body: 내용
+        published_at: 발행 일시
+        solution_slug: 솔루션
+        source: 소스
+        cover: 커버 이미지
+        updated_at: 수정일시
       contact:
-        project_subject: 프로젝트 주제
-        project_category: 프로젝트 유형
+        project_subject: 프로젝트 이름
+        solution_slug: 솔루션
         project_body: 프로젝트 개요
         attachment: 첨부파일
         contact_org: 조직명
@@ -50,5 +60,6 @@ ko:
   helpers:
     label:
       contact:
-        project_subject: 프로젝트 주제 (필수)
+        project_subject: 프로젝트 이름 (필수)
+        project_body: 프로젝트 개요(필수)
         contact_email: 이메일 주소 (필수)

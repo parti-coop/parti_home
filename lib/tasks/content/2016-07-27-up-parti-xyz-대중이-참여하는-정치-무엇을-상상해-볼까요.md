@@ -3,7 +3,7 @@
 
 ## 빠띠팀은 “온라인 플랫폼으로, 시민이 정치에 어디까지 참여할 수 있는가”란 질문을 “한국”이란 상황에 대입해 실험하고 답을 찾는 팀입니다. 더 넓게 더 깊게 시민들이 현실 정치에 개입할 수 있기를 바라지만, 막상 그렇게 만들기 위해선 우리 스스로의 상상력도 넓어져야 하고, 실제로 구현했을 때의 벌어질 이슈들도 깊게 파고 들어 확인하는게 필요합니다.
 
-![[http://up.parti.xyz](http://up.parti.xyz)](/assets/images/up-parti-xyz-대중이-참여하는-정치-무엇을-상상해-볼까요/0*6Otn8mr6gw5ZoZ67.)*[http://up.parti.xyz](http://up.parti.xyz)*
+![[http://up.parti.xyz](http://up.parti.xyz)](/assets/images/up-parti-xyz-대중이-참여하는-정치-무엇을-상상해-볼까요/0*6Otn8mr6gw5ZoZ67.png)*[http://up.parti.xyz](http://up.parti.xyz)*
 
 업빠띠([http://up.parti.xyz](http://up.parti.xyz))는 ‘대중이 주도하는 정치 참여 방식에 대한 여러 상상들’을 캠페인이란 방식으로 실험하는 빠띠팀의 3번째 메인 프로젝트입니다. ( 그동안 캠페인 방식으로 진행한 프로젝트들은 다음에서 볼 수 있습니다. [빠띠의 콜라보레이션 프로젝트](http://docs.parti.xyz/docs/collaboration/) )거대하고 공고한 시스템에 ‘[바늘꽂기](http://parti.xyz/articles/1847)‘하는 심정으로 진행하지만 우리는 반드시 저 끝까지 연결된 구멍을 하나 내어 들여다 보는게 목표입니다. “시민들의 필요에서 출발한 아이디어가 현실 시스템의 변화를 이끌어 내기까지 어떤 난관이 있고, 어떤 해결책으로 돌파해야 할까?” 그것이 우리의 물음이고 도전입니다.
 

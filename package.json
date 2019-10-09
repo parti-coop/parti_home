@@ -1,5 +1,7 @@
 {
   "name": "parti_home",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "mediumexporter": "git+ssh://git@github.com/xdamman/mediumexporter.git"
+  }
 }

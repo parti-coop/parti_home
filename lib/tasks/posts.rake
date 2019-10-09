@@ -3,14 +3,14 @@ namespace :posts do
   task import_mediums: :environment do
     include Rails.application.routes.url_helpers
 
-    Dir.glob(Rails.root.join('content/assets/**/*')).each do |path|
+    Dir.glob(Rails.root.join('public/static-assets/images/**/*')).each do |path|
       next if File.directory?(path) or File.extname(path).present?
       FileUtils.mv path, "#{path}.png"
     end
 
     ActiveRecord::Base.transaction do
       Post.where(source: 'medium').destroy_all
-      Dir[Rails.root.join('lib', 'tasks', 'content', '*.md')].each do |path|
+      Dir[Rails.root.join('lib', 'tasks', 'content', '*.md')].each_with_index do |path, index|
         date = File.basename(path)[0..9]
         title = ''
         body = ''
@@ -22,18 +22,29 @@ namespace :posts do
         body.gsub!(/\(\/assets\/images\/([^\/]*?)\/([^.]*?)\)/) do |match|
           dir_name = $1
           file_name = $2
-          file_name.gsub!('*', '')
           "(/assets/images/#{dir_name}/#{file_name}.png)"
         end
-        body.gsub!(/\(\/assets\/images/, '(/static-assets/images')
+        body.gsub!(/\(\/assets\/images\/([^\/]*?)\/([^.]*?)\.\)/) do |match|
+          dir_name = $1
+          file_name = $2
+          "(/assets/images/#{dir_name}/#{file_name}.png)"
+        end
+        body.gsub!(/\(\/assets\/images\/([^\/]*?)\/([^\/]*?)\)/) do |match|
+          dir_name = $1
+          file_name = $2
+          file_name.gsub!('*', '')
+          "(/static-assets/images/#{dir_name}/#{file_name})"
+        end
 
         post = Post.new(title: title, body: body, published_at: date, source: 'medium')
 
         first_image_urls = body[/\((\/static-assets\/images\/[^\/]*?\/[^\/]*?)\)/]
         unless first_image_urls.nil?
-          post.remote_cover_url = root_url + $1
+          post.remote_cover_url = root_url + $1[1..-1]
+          puts root_url + $1[1..-1]
         end
-        post.save
+        post.save!
+        print index
       end
     end
   end

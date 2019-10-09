@@ -30,7 +30,12 @@ var __parti_prepare = function($base, force) {
 
 $(function() {
   __parti_prepare($('body'));
+
   AOS.init();
+  $('.js-toast').toast({
+    delay: 300000,
+  });
+  $('.js-toast').toast('show');
 })
 
 var parti_partial$ = function($partial, force) {

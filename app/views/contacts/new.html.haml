@@ -10,31 +10,34 @@
 
 %section.form
   .container.container-xs
-    = form_with url: "#" do |f|
+    = form_with model: @contact, local: true do |f|
       %fieldset
         %legend 프로젝트 정보
         .form-group
-          = f.label :project_subject, '프로젝트 주제'
-          = f.select :project_subject, Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "주제 선택..." }, class: 'form-control'
+          = f.label :project_subject
+          = f.text_field :project_subject, class: 'form-control'
         .form-group
-          = f.label :project_body, '프로젝트 개요'
+          = f.label :project_body
           = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산'
         .form-group
-          = f.label :attachment, '첨부파일'
+          = f.label :solution_slug
+          = f.select :solution_slug, Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "솔루션 선택..." }, class: 'form-control'
+        .form-group
+          = f.label :attachment
           = f.file_field :attachment, class: 'form-control'
       %fieldset
         %legend 연락처
         .form-group
-          = f.label :contact_org, '조직명'
+          = f.label :contact_org
           = f.text_field :contact_org, class: 'form-control'
         .form-group
-          = f.label :contact_manager, '담당자 이름/직함'
+          = f.label :contact_manager
           = f.text_field :contact_manager, class: 'form-control'
         .form-group
-          = f.label :contact_tel, '전화번호'
+          = f.label :contact_tel
           = f.text_field :contact_tel, class: 'form-control'
         .form-group
-          = f.label :contact_email, '이메일 주소'
+          = f.label :contact_email
           = f.email_field :contact_email, class: 'form-control'
         .form-group
           .form-check
