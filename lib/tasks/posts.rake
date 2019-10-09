@@ -40,8 +40,7 @@ namespace :posts do
 
         first_image_urls = body[/\((\/static-assets\/images\/[^\/]*?\/[^\/]*?)\)/]
         unless first_image_urls.nil?
-          post.remote_cover_url = root_url + $1[1..-1]
-          puts root_url + $1[1..-1]
+          post.cover = Pathname.new(Rails.root.join("public#{$1}")).open
         end
         post.save!
         print index
