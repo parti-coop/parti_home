@@ -1,35 +1,9 @@
 - content = capture do
   %section.descriptions
     .container
-      %p.lead
-        정부, 기관, 단체가 시민, 이해관계자와
+      %p.lead.text-keep-all
+        이슈를 중심으로 다양한 해결책을 
         %br
-        협력하는 O2O* 플랫폼과 공론장을
-        %br
-        기획하고 운영합니다.
-      %p.remark
-        * O2O란?
-        %br
-        Online to Offline, Offline to Online의 약자로 온오프라인의 경계를 넘나드는 빠띠의 활동 영역을 나타냅니다.
-
-  %section.tiles.tiles-portfolio
-    .tiles-title-line
-      .container
-        .tiles-title
-          솔루션 포트폴리오
-    .container
-      .tiles-container<>
-        - 4.times do
-          .tile-container<>
-            .tile
-              .tile-cover{ style: "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})" }
-              .tile-meta
-                .title 게임의 룰에 캠페이너의 인생을 담다
-                .body
-                  %a(href="#") democracy.seoul.go.kr
-                  서울시와 함께 공론장 및 O2O플랫폼 기획 및
-                  서울시와 함께 공론장 및 O2O플랫폼 기획 및
-                  서울시와 함께 공론장 및 O2O플랫폼 기획 및
-                  서울시와 함께 공론장 및 O2O플랫폼 기획 및
+        공동 생산하는 열린 커뮤니티를 만듭니다.
 
 = render 'solutions/show', info: @info, content: content

@@ -9,6 +9,42 @@
 
 = content
 
+- if info[:items].any?
+  %section.tiles.tiles-portfolio
+    .tiles-title-line
+      .container
+        .tiles-title
+          솔루션
+    .container
+      .tiles-container<>
+        - info[:items].each do |item|
+          .tile-container<>
+            .tile
+              .tile-cover{ style: (item[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{item[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+              .tile-meta
+                .title
+                  != item[:title]
+                .body
+                  != item[:description]
+
+- if info[:portfolios].any?          
+  %section.tiles.tiles-portfolio
+    .tiles-title-line
+      .container
+        .tiles-title
+          포트폴리오
+    .container
+      .tiles-container<>
+        - info[:portfolios].each do |portfolio|
+          .tile-container<>
+            .tile
+              .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+              .tile-meta
+                .title
+                  != portfolio[:title]
+                .body
+                  != portfolio[:description]
+
 %section.tiles.tiles-what-we-do
   .tiles-title-line
     .container
