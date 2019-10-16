@@ -142,7 +142,7 @@ class Post < ApplicationRecord
       url: 'http://votefuture.kr'
     },
     {
-      image_path: 'cam_portfolio_3',
+      image_path: 'cam_portfolio_3.png',
       title: '#우리에겐_페미니스트_선생님이_필요합니다',
       description: '''
       사이버불링의 대상이 된 페미니스트 선생님에 대한 문제 해결을 위한 캠페인
