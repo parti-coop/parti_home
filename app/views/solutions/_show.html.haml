@@ -14,18 +14,20 @@
     .tiles-title-line
       .container
         .tiles-title
-          프로그램
+          != info[:items_name]
     .container
       .tiles-container<>
         - info[:items].each do |item|
           .tile-container<>
-            .tile
-              .tile-cover{ style: (item[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{item[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
-              .tile-meta
-                .title
-                  != item[:title]
-                .body
-                  != item[:description]
+            = link_to (item[:url].presence || new_contact_path) , target: '_blank' do
+              .tile
+                .tile-cover-container
+                  .tile-cover{ style: (item[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{item[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                .tile-meta
+                  .title
+                    != item[:title]
+                  .body
+                    != item[:description]
 
 - if info[:portfolios].any?          
   %section.tiles.tiles-portfolio
@@ -37,13 +39,15 @@
       .tiles-container<>
         - info[:portfolios].each do |portfolio|
           .tile-container<>
-            .tile
-              .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
-              .tile-meta
-                .title
-                  != portfolio[:title]
-                .body
-                  != portfolio[:description]
+            = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
+              .tile
+                .tile-cover-container
+                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                .tile-meta
+                  .title
+                    != portfolio[:title]
+                  .body
+                    != portfolio[:description]
 
 %section.tiles.tiles-what-we-do
   .tiles-title-line

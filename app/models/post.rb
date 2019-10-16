@@ -203,6 +203,7 @@ class Post < ApplicationRecord
       title: '기관 민주주의 플랫폼',
       subtitle: '일상 곳곳을 민주적으로',
       image_path: 'solutions/card-demos.png',
+      items_name: '프로그램',
       items: Post::DEMOS_SOLUTIONS,
       portfolios: Post::DEMOS_PORTFOLIOS
     }, {
@@ -211,6 +212,7 @@ class Post < ApplicationRecord
       title: '이슈 커뮤니티',
       subtitle: '함께 일하고 함께 노는',
       image_path: 'solutions/card-org.png',
+      items_name: '프로그램',
       items: Post::ORG_SOLUTIONS,
       portfolios: Post::ORG_PORTFOLIOS
     }, {
@@ -219,6 +221,7 @@ class Post < ApplicationRecord
       title: '시민주도 캠페인',
       subtitle: '시민 주도로 바꾸는 세상',
       image_path: 'solutions/card-campaign.png',
+      items_name: '프로그램',
       items: Post::CAMPAIGN_SOLUTIONS,
       portfolios: Post::CAMPAIGN_PORTFOLIOS
     }, {
@@ -227,6 +230,7 @@ class Post < ApplicationRecord
       title: '민주주의 디지털 기술',
       subtitle: '일상과 세상을 더 민주적으로',
       image_path: 'solutions/card-soft.png',
+      items_name: '디지털 플랫폼',
       items: Post::SOFT_SOLUTIONS,
       portfolios: Post::SOFT_PORTFOLIOS
     }
