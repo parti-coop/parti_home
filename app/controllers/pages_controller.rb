@@ -12,6 +12,9 @@ class PagesController < ApplicationController
     @posts = fetch_what_we_do().page(params[:page]).per(3*10)
   end
 
+  def privacy
+  end
+
   def subscribe_reports
     access_token = ENV['STIBEE_KEY']
     response = HTTParty.post("https://api.stibee.com/v1/lists/7834/subscribers", {
