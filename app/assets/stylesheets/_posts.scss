@@ -55,6 +55,7 @@ body.body-posts-show {
           flex: 1;
         }
         .post-date {
+          margin-left: 20px;
           display: inline-block;
         }
       }
@@ -67,7 +68,7 @@ body.body-posts-show {
       .post:hover .post-title {
         text-decoration: underline;
       }
-      .post.active {
+      .post.active .post-title {
         font-weight: bold;
       }
     }

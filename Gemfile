@@ -24,7 +24,7 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'redcarpet'
 gem 'htmlentities'
 gem 'browser'
-
+gem 'meta-tags', '~> 2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 # gem 'coffee-rails', '~> 4.2'
