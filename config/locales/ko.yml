@@ -60,6 +60,6 @@ ko:
   helpers:
     label:
       contact:
-        project_subject: 프로젝트 이름 (필수)
-        project_body: 프로젝트 개요(필수)
-        contact_email: 이메일 주소 (필수)
+        project_subject: 프로젝트 이름 *
+        project_body: 프로젝트 개요 *
+        contact_email: 이메일 주소 *

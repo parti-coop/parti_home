@@ -29,7 +29,7 @@ body.body-solutions {
         content: ' ';
         height: 1px;
         width: 10000px;
-        background-color: #7463ad;
+        background-color: $brand-violet;
         display: block;
       }
       .tiles-title {
@@ -211,6 +211,10 @@ body.body-solutions {
               font-size: 18px;
               line-height: 26px;
             }
+          }
+          &:hover {
+            box-shadow: 0 4px 4px 0 #00000033;
+            border: solid 1px $brand-violet;
           }
         }
       }

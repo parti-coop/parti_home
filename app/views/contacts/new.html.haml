@@ -13,6 +13,10 @@
     = form_with model: @contact, local: true do |f|
       %fieldset
         %legend 프로젝트 정보
+
+        .alert.alert-secondary.help-text
+          * 는 반드시 입력해 주세요.
+
         .form-group
           = f.label :project_subject
           = f.text_field :project_subject, class: 'form-control'
@@ -44,4 +48,5 @@
             = f.check_box :confirm, class: 'form-check-input'
             %label.form-check-label{ for: :confirm }
               개인정보 수집 및 처리에 동의합니다.
+
         = f.submit '협업문의하기', class: 'btn btn-primary btn-block'

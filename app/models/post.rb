@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  
+
   # 데모스
   DEMOS_SOLUTIONS = [
     {
@@ -13,7 +13,7 @@ class Post < ApplicationRecord
       image_path: 'demos_solution_2.jpg',
       title: '열린 정책 공론장',
       description: '''
-        시민제안 내 의제를 바탕으로 공론화 진행, 기관 의제에 대한 시민 의견 수렴 공론장을 기획하고 운영하는 온, 오프라인 공론장을 만듭니다. 
+        시민제안 내 의제를 바탕으로 공론화 진행, 기관 의제에 대한 시민 의견 수렴 공론장을 기획하고 운영하는 온, 오프라인 공론장을 만듭니다.
       '''
     },
     {
@@ -57,32 +57,32 @@ class Post < ApplicationRecord
       title: '김해문화재단 김해가야G',
       description: '''
         김해문화재단과 함께 공유공간 커뮤니티 빌딩 사업 기획 및 운영<br>
-        시민이 직접 공유공간 활용 방안을 제안하고 운영해보는 커뮤니티 실험 
+        시민이 직접 공유공간 활용 방안을 제안하고 운영해보는 커뮤니티 실험
       '''
     }
   ]
 
-  ORG_SOLUTIONS = [ 
+  ORG_SOLUTIONS = [
     {
       image_path: 'org_solution_1.jpg',
       title: '커뮤니티 툴킷',
       description: '''
         누구나 이슈 커뮤니티를 시작할 수 있는 가이드를 오픈소스로 생산합니다.
       ''',
-      url: 'https://toolkit.parti.coop/community/community101'     
+      url: 'https://toolkit.parti.coop/community/community101'
     },
     {
       image_path: 'org_solution_2.jpg',
       title: '이슈 커뮤니티 디자인',
       description: '''
-        시민 스스로 만들고 협력하는 지속가능한 커뮤니티 모델을 만듭니다. 
+        시민 스스로 만들고 협력하는 지속가능한 커뮤니티 모델을 만듭니다.
       '''
     },
     {
       image_path: 'org_solution_3.jpg',
       title: '커뮤니티 액션 워크숍',
       description: '''
-        커뮤니티가 이슈와 해결책을 찾고 실행하는 워크숍을 설계하고 운영합니다. 
+        커뮤니티가 이슈와 해결책을 찾고 실행하는 워크숍을 설계하고 운영합니다.
       '''
     }
   ]
@@ -108,7 +108,7 @@ class Post < ApplicationRecord
       image_path: 'org_portfolio_3.jpg',
       title: '쓰레기덕질',
       description: '''
-        일상의 실천부터 캠페인까지, 제로 웨이스트를 지향하는 사람들의 커뮤니티 
+        일상의 실천부터 캠페인까지, 제로 웨이스트를 지향하는 사람들의 커뮤니티
       ''',
       url: 'https://zero-waste.parti.xyz'
     },
@@ -203,7 +203,7 @@ class Post < ApplicationRecord
       title: '기관 민주주의 플랫폼',
       subtitle: '일상 곳곳을 민주적으로',
       image_path: 'solutions/card-demos.png',
-      items_name: '프로그램',
+      items_name: '툴킷',
       items: Post::DEMOS_SOLUTIONS,
       portfolios: Post::DEMOS_PORTFOLIOS
     }, {
@@ -212,7 +212,7 @@ class Post < ApplicationRecord
       title: '이슈 커뮤니티',
       subtitle: '함께 일하고 함께 노는',
       image_path: 'solutions/card-org.png',
-      items_name: '프로그램',
+      items_name: '툴킷',
       items: Post::ORG_SOLUTIONS,
       portfolios: Post::ORG_PORTFOLIOS
     }, {
@@ -221,7 +221,7 @@ class Post < ApplicationRecord
       title: '시민주도 캠페인',
       subtitle: '시민 주도로 바꾸는 세상',
       image_path: 'solutions/card-campaign.png',
-      items_name: '프로그램',
+      items_name: '툴킷',
       items: Post::CAMPAIGN_SOLUTIONS,
       portfolios: Post::CAMPAIGN_PORTFOLIOS
     }, {

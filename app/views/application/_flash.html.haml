@@ -1,5 +1,5 @@
-%div.position-fixed.d-flex.flex-column.p-4#site-flashs-top{ "aria-atomic": "true", "aria-live": "polite", "data-autohide": "false", "style": "z-index: 1;" }
+%div.position-fixed.d-flex.flex-column.p-4#site-flashs-top{ "aria-atomic": "true", "aria-live": "polite", "data-autohide": "false", "style": "z-index: 1; right: 0;" }
   - flash.each do |type, msg|
     = render 'application/flash_item', type: type, msg: msg
-
+- flash.discard
 %div.position-fixed.d-flex.flex-column.p-4#site-flashs-bottom{ "aria-atomic": "true", "aria-live": "polite", "data-autohide": "false", "style": "z-index: 1; bottom: 0; right: 0;" }

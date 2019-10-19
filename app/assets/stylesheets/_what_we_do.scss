@@ -35,7 +35,8 @@ body.body-pages-what_we_do {
         a {
           color: $gray-light;
         }
-        &.active a {
+        &.active a,
+        &:hover a {
           color: $text-color;
         }
         @include media-breakpoint-down(md) {
@@ -52,7 +53,8 @@ body.body-pages-what_we_do {
           display: inline-block;
           position: relative;
         }
-        &.active .category-text:after {
+        &.active .category-text:after,
+        &:hover .category-text:after {
           display: inline-block;
           content: ' ';
           position: absolute;

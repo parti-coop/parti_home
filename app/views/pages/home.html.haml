@@ -24,8 +24,10 @@
   .container.container-sm
     .base-section-title
       우리가 하는 일
-    .base-section-desc
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+    .base-section-desc.text-keep-all
+      민주주의를 혁신하고,
+      %br
+      일상과 세상에 민주주의를 확산킵니다.
 
   .container.container-sm.categories-container
     = render 'pages/home/what_we_do/solution_filters', solution_slug: nil
@@ -37,8 +39,8 @@
   .container.container-sm
     .base-section-title
       솔루션
-    .base-section-desc
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+    .base-section-desc.text-keep-all
+      컨설팅, 교육 및 워크숍, 디지털 플랫폼까지 다양한 솔루션이 준비되어 있습니다.
   .container
     .tiles-container
       - Post::SOLUTIONS.each do |solution|
