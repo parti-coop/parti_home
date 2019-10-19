@@ -1,0 +1,10 @@
+<% if flash[:error].blank? %>
+  $('#site-subscribe-report-input-name').val('');
+  $('#site-subscribe-report-input-email').val('');
+<% end %>
+<% flash.each do |type, msg| %>
+  var $flash_item = $('<%= j render('application/flash_item', type: type, msg: msg) %>');
+  $('#site-flashs-bottom').append($flash_item);
+  $flash_item.toast('show')
+<% end %>
+<% flash.discard %>

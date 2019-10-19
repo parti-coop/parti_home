@@ -34,3 +34,5 @@ local_env.yml
 
 /public/uploads/*
 !/public/uploads/.keep
+
+.powenv

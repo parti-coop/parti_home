@@ -36,6 +36,9 @@ gem 'meta-tags', '~> 2.1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 
+gem 'httparty'
+gem 'dotenv-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

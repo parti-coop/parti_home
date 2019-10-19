@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'solutions/org', to: 'solutions#org'
   get 'solutions/campaign', to: 'solutions#campaign'
   get 'solutions/soft', to: 'solutions#soft'
+  post 'reports/subscribe', to: 'pages#subscribe_reports', as: :subscribe_reports
 
   resources :contacts
   resources :posts, only: :show

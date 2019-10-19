@@ -32,9 +32,6 @@ $(function() {
   __parti_prepare($('body'));
 
   AOS.init();
-  $('.js-toast').toast({
-    delay: 300000,
-  });
   $('.js-toast').toast('show');
 })
 
