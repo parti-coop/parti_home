@@ -58,10 +58,11 @@
     .tiles-container
       - Post.published.recent.by_solution_slug(info[:slug]).limit(3).each do |post|
         .tile-container<>
-          .tile
-            .tile-meta
-              .title!= post.title
-              .created-at= static_day_f post.published_at
+          = link_to post_path(id: post.id) do
+            .tile
+              .tile-meta
+                .title!= post.title
+                .created-at= static_day_f post.published_at
       .tile-container<>
         = link_to what_we_do_path(solution_slug: info[:slug]), class: 'tile tile-more' do
           .more-link

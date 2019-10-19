@@ -113,14 +113,23 @@ body.body-pages-what_we_do {
           width: 100%;
         }
         .tile {
+          .tile-cover-container,
           .tile-cover {
             height: 288px;
-            background-size: cover;
-            background-position: top center;
+            overflow: hidden;
             border-radius: 8px;
             @include media-breakpoint-down(sm) {
               height: 234px;
             }
+          }
+          .tile-cover {
+            background-color: $gray-d8;
+            background-size: cover;
+            background-position: top center;
+            transition: all 0.5s ease;
+          }
+          &:hover .tile-cover-container .tile-cover {
+            transform: scale(1.1);
           }
           .tile-meta {
             margin-top: 32px;

@@ -2,21 +2,26 @@
   - post = posts.first
   .tiles-column.js-sticky-sidebar
     .tile-container.tile-container-lg
-      .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{post.cover_url})" }
-        .tile-meta
-          .category!= post.solution_text
-          .title!= post.title
-          .created-at= static_day_f(post.published_at)
-
-  .tiles-column<>
-    - posts[1..-1].each do |post|
-      .tile-container.tile-container-sm<>
+      = link_to post do
         .tile
-          .tile-cover{ style: "background-image: url(#{post.cover_url})" }
           .tile-meta
             .category!= post.solution_text
             .title!= post.title
             .created-at= static_day_f(post.published_at)
+          .tile-cover-container
+            .tile-cover{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{post.cover_url})" }
+
+  .tiles-column<>
+    - posts[1..-1].each do |post|
+      .tile-container.tile-container-sm<>
+        = link_to post do
+          .tile
+            .tile-cover-container
+              .tile-cover{ style: "background-image: url(#{post.cover_url})" }
+            .tile-meta
+              .category!= post.solution_text
+              .title!= post.title
+              .created-at= static_day_f(post.published_at)
     .tile-more.text-center
       = link_to what_we_do_path(solution_slug: solution_slug), class: 'btn btn-outline-primary btn-more' do
         더 보기

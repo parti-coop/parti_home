@@ -120,12 +120,6 @@ body.body-pages-home {
       }
       .tiles-column {
         flex: 1;
-        .tile {
-          border-radius: 8px;
-          @include media-breakpoint-down(sm) {
-            border-radius: 0;
-          }
-        }
         .tile-container-lg {
           padding-right: 48px;
           @include media-breakpoint-down(lg) {
@@ -143,10 +137,6 @@ body.body-pages-home {
             @include media-breakpoint-down(sm) {
               height: 328px;
             }
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            background-size: cover;
-            background-position: top center;
             position: relative;
             .category {
               font-size: 18px;
@@ -184,10 +174,37 @@ body.body-pages-home {
               left: 0;
               bottom: 0;
               padding: 40px;
+              z-index: 1;
               @include media-breakpoint-down(sm) {
                 padding: 16px 30px;
               }
             }
+          }
+          .tile-cover-container,
+          .tile-cover {
+            height: 100%;
+            overflow: hidden;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            @include media-breakpoint-down(sm) {
+              border-radius: 0;
+            }
+          }
+          .tile-cover-container {
+            top: 0;
+            .tile-cover {
+              background-color: $gray-d8;
+              width: 100%;
+              background-size: cover;
+              background-position: top center;
+              position: relative;
+              transition: all 0.5s ease;
+            }
+          }
+          &:hover .tile-cover-container .tile-cover {
+            transform: scale(1.1);
           }
         }
         .tile-container-sm {
@@ -209,14 +226,23 @@ body.body-pages-home {
             }
           }
           .tile {
+            .tile-cover-container,
             .tile-cover {
               height: 288px;
-              background-size: cover;
-              background-position: top center;
               border-radius: 8px;
+              overflow: hidden;
               @include media-breakpoint-down(sm) {
                 height: 117px;
               }
+            }
+            .tile-cover {
+              background-color: $gray-d8;
+              background-size: cover;
+              background-position: top center;
+              transition: all 0.5s ease;
+            }
+            &:hover .tile-cover-container .tile-cover {
+              transform: scale(1.1);
             }
             .tile-meta {
               margin-top: 32px;

@@ -22,6 +22,8 @@ gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'redcarpet'
+gem 'htmlentities'
+gem 'browser'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby

@@ -38,4 +38,19 @@ module ApplicationHelper
   def static_day_f(date)
     date.strftime("%Y.%m.%d")
   end
+
+  def excerpt(text, options = {})
+    return text if text.blank?
+
+    options[:length] = 130 unless options.has_key?(:length)
+    result = strip_tags(text)
+    return result if result.blank?
+
+    result = HTMLEntities.new.decode(result)
+    return result.truncate(options[:length], options)
+  end
+
+  def is_kakao_talkable?
+    browser.device.mobile?
+  end
 end

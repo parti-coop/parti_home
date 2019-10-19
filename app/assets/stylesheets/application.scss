@@ -35,6 +35,7 @@ $brand-cyan : #1e988c;
 $brand-violet: #7463ad;
 $brand-violet-light: #d0c7f1;
 
+$text-body: #444;
 $text-color: #111111;
 $text-color-dark: #000;
 
@@ -57,3 +58,5 @@ $theme-colors: (
 @import "what_we_do";
 @import "solutions";
 @import "contacts";
+@import "posts";
+@import "post-body";

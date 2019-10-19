@@ -36,7 +36,7 @@ ActiveAdmin.register Post do
       row :title
       row :body do
         markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
-        raw(%(<div class="admin-post-show-body">#{markdown.render(resource.body)}</div>))
+        raw(%(<div class="admin-post-show-body site-post-body">#{markdown.render(resource.body)}</div>))
       end
       row :published_at
       row :solution_slug

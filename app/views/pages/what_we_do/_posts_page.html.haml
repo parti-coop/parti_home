@@ -1,8 +1,10 @@
 - posts.each do |post|
   .tile-container.tile-container-sm<>
-    .tile
-      .tile-cover{ style: "background-image: url(#{post.cover_url})" }
-      .tile-meta
-        .category!= post.solution_text
-        .title!= post.title
-        .created-at= static_day_f(post.published_at)
+    = link_to post do
+      .tile
+        .tile-cover-container
+          .tile-cover{ style: "background-image: url(#{post.cover_url})" }
+        .tile-meta
+          .category!= post.solution_text
+          .title!= post.title
+          .created-at= static_day_f(post.published_at)
