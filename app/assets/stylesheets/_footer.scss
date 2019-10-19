@@ -41,7 +41,7 @@ footer.app-footer {
     margin-top: 56px;
     display: flex;
     justify-content: space-between;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       display: block;
       .utils-right {
         margin-top: 20px;
@@ -62,8 +62,17 @@ footer.app-footer {
     .util + .util {
       margin-left: 12px;
     }
+    @include media-breakpoint-down(md) {
+      .util.util-br + .util {
+        margin-left: 0;
+      }
+    }
   }
   .democracy-report-subscribe {
+    @include media-breakpoint-down(md) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    }
     label {
       font-size: 18px;
       font-weight: 500;
@@ -72,9 +81,14 @@ footer.app-footer {
     }
     input.form-control {
       margin-right: 16px;
+      @include media-breakpoint-down(md) {
+        margin-right: 8px;
+        width: 40%;
+      }
       @include media-breakpoint-down(sm) {
         margin-right: 8px;
-        width: 60%;
+        width: 45%;
+        display: inline-block;
       }
     }
   }

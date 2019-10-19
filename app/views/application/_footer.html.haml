@@ -18,22 +18,31 @@
     .utils
       .utils-left
         .util
-          = link_to '개인정보처리방침', privacy_path
-        .util
-          = link_to 'https://github.com/parti-coop' do
+          = link_to 'https://github.com/parti-coop', target: '_blank' do
             %i.fab.fa-github
         .util
-          = link_to 'https://facebook.com/PartiUnion' do
+          = link_to 'https://facebook.com/PartiUnion', target: '_blank' do
             %i.fab.fa-facebook
         .util
-          = link_to 'https://twitter.com/parti_coop' do
+          = link_to 'https://twitter.com/parti_coop', target: '_blank' do
             %i.fab.fa-twitter
+        .util
+          = link_to 'https://www.instagram.com/particoop_/', target: '_blank' do
+            %i.fab.fa-instagram
+        .util.util-br.d-block.d-lg-none
+        .util
+          = link_to '개인정보처리방침', privacy_path
+        .util.util-br.d-block.d-lg-none
+        .util
+          = link_to '문의 contact@parti.xyz', 'mailto:contact@parti.xyz'
+
       .utils-right
         .democracy-report-subscribe
           = form_with url: subscribe_reports_path, class: 'form-inline' do |f|
             %label{ for: :email } 민주주의 리포트 구독하기
-            = f.text_field :name, placeholder: '이름', id: 'site-subscribe-report-input-name', class: 'form-control'
-            = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control'
+            .form-group<>
+              = f.text_field :name, placeholder: '이름', id: 'site-subscribe-report-input-name', class: 'form-control'
+              = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control'
             %button.btn.btn-primary.btn-subscribe{ type: :submit } 구독신청
     .license
       Copyright 2019.
