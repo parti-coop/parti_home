@@ -47,12 +47,13 @@
 
       .utils-right
         .democracy-report-subscribe
-          = form_with url: subscribe_reports_path, class: 'form-inline' do |f|
+          = form_with url: subscribe_reports_path, class: 'form-inline js-form-validation' do |f|
             %label{ for: :email } 민주주의 리포트 구독하기
             .form-group<>
-              = f.text_field :name, placeholder: '이름', id: 'site-subscribe-report-input-name', class: 'form-control'
-              = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control'
+              = f.text_field :name, placeholder: '이름', id: 'site-subscribe-report-input-name', class: 'form-control', data: { 'rule-required': true, 'invalid-error': '#js-report-subscribe-error', msg: '이름과 이메일 주소는 필수 입력 항목입니다.' }
+              = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control', data: { 'rule-required': true, 'invalid-error': '#js-report-subscribe-error', msg: '이름과 이메일 주소는 필수 입력 항목입니다.' }
             %button.btn.btn-primary.btn-subscribe{ type: :submit } 구독신청
+          #js-report-subscribe-error
     .license
       Copyright 2019.
       %b Parti Coop.

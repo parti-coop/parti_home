@@ -78,6 +78,11 @@ footer.app-footer {
       font-weight: 500;
       line-height: 32px;
       margin-right: 16px;
+      &.error {
+        font-weight: normal;
+        font-size: 16px;
+        color: red;
+      }
     }
     input.form-control {
       margin-right: 16px;
