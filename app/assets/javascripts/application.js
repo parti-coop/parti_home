@@ -6,6 +6,8 @@
 //= require jquery.sticky-sidebar
 //= require aos
 //= require kakao
+//= require jquery.validate
+//= require jquery.validate.messages_ko
 
 Kakao.init('497c9a46f0645fa96fe0d31c607ba74a');
 
@@ -63,12 +65,21 @@ $(function() {
     });
   });
 
-  $('#js-contact-form').on('submit', function(e) {
-    if(!$('#contact-form-confirm').is(":checked")) {
-      alert('개인정보 수집 및 처리에 동의가 필요합니다');
-      $('#contact-form-confirm').focus();
-      return false;
-    }
+  // 폼 검증
+  $.each($('.js-form-validation'), function(index, elm) {
+    var $form = $(elm);
+    var options = {
+      ignore: ':hidden:not(.validate)',
+      errorPlacement: function(error, $element) {
+        var $invalid_error = $($element.data('invalid-error'));
+        if($invalid_error.length <= 0) {
+          error.insertAfter($element);
+        } else {
+          $invalid_error.html(error);
+        }
+      }
+    };
+    $form.validate(options);
   });
 })
 

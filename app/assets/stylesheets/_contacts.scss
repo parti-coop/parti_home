@@ -76,6 +76,10 @@ body.body-contacts-new, body.body-contacts-create {
         font-size: 20px;
         line-height: 28px;
       }
+      &.error {
+        color: red;
+        font-size: 16px !important;
+      }
     }
     .form-control {
       font-size: 14px;
@@ -95,7 +99,7 @@ body.body-contacts-new, body.body-contacts-create {
     .form-check {
       line-height: 22px;
       label.form-check-label {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 0;
       }
       input.form-check-input {

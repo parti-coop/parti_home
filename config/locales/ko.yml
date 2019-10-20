@@ -63,3 +63,4 @@ ko:
         project_subject: 프로젝트 이름 *
         project_body: 프로젝트 개요 *
         contact_email: 이메일 주소 *
+        contact_manager: 담당자 이름/직함 *

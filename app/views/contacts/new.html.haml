@@ -10,19 +10,19 @@
 
 %section.form
   .container.container-xs
-    = form_with model: @contact, local: true, id: 'js-contact-form' do |f|
+    = form_with model: @contact, local: true, id: 'js-contact-form', class: 'js-form-validation' do |f|
       %fieldset
         %legend 프로젝트 정보
 
         .alert.alert-secondary.help-text
-          * 는 반드시 입력해 주세요.
+          * 는 필수 입력 항목입니다.
 
         .form-group
           = f.label :project_subject
-          = f.text_field :project_subject, class: 'form-control'
+          = f.text_field :project_subject, class: 'form-control', data: { 'rule-required': true }
         .form-group
           = f.label :project_body
-          = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산'
+          = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산', data: { 'rule-required': true }
         .form-group
           = f.label :solution_slug
           = f.select :solution_slug, Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "솔루션 선택..." }, class: 'form-control'
@@ -36,18 +36,19 @@
           = f.text_field :contact_org, class: 'form-control'
         .form-group
           = f.label :contact_manager
-          = f.text_field :contact_manager, class: 'form-control'
+          = f.text_field :contact_manager, class: 'form-control', data: { 'rule-required': true }
         .form-group
           = f.label :contact_tel
           = f.text_field :contact_tel, class: 'form-control'
         .form-group
           = f.label :contact_email
-          = f.email_field :contact_email, class: 'form-control'
+          = f.email_field :contact_email, class: 'form-control', data: { 'rule-required': true }
         .form-group
           .form-check
-            = f.check_box :confirm, class: 'form-check-input', id: 'contact-form-confirm'
+            = f.check_box :confirm, class: 'form-check-input', id: 'contact-form-confirm', data: { 'rule-required': true, 'invalid-error': '#js-contact-checkbox-error', msg: '개인정보 수집 및 처리 동의가 필요합니다.' }
             %label.form-check-label{ for: :confirm }<>
               = link_to '개인정보 수집 및 처리', privacy_path, target: '_blank', style: 'text-decoration: underline'
               에 동의합니다.
+          #js-contact-checkbox-error
 
         = f.submit '협업문의하기', class: 'btn btn-primary btn-block'
