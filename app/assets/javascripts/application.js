@@ -62,6 +62,14 @@ $(function() {
       }
     });
   });
+
+  $('#js-contact-form').on('submit', function(e) {
+    if(!$('#contact-form-confirm').is(":checked")) {
+      alert('개인정보 수집 및 처리에 동의가 필요합니다');
+      $('#contact-form-confirm').focus();
+      return false;
+    }
+  });
 })
 
 var parti_partial$ = function($partial, force) {

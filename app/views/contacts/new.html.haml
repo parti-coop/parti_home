@@ -10,7 +10,7 @@
 
 %section.form
   .container.container-xs
-    = form_with model: @contact, local: true do |f|
+    = form_with model: @contact, local: true, id: 'js-contact-form' do |f|
       %fieldset
         %legend 프로젝트 정보
 
@@ -45,8 +45,9 @@
           = f.email_field :contact_email, class: 'form-control'
         .form-group
           .form-check
-            = f.check_box :confirm, class: 'form-check-input'
-            %label.form-check-label{ for: :confirm }
-              개인정보 수집 및 처리에 동의합니다.
+            = f.check_box :confirm, class: 'form-check-input', id: 'contact-form-confirm'
+            %label.form-check-label{ for: :confirm }<>
+              = link_to '개인정보 수집 및 처리', privacy_path, target: '_blank', style: 'text-decoration: underline'
+              에 동의합니다.
 
         = f.submit '협업문의하기', class: 'btn btn-primary btn-block'
