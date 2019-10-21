@@ -46,11 +46,12 @@ class Post < ApplicationRecord
   DEMOS_PORTFOLIOS = [
     {
       image_path: 'demos_portfolio_1.png',
-      title: '민주주의 서울 기획 및 운영',
+      title: '민주주의서울 기획 및 운영',
       description: '''
         서울시와 함께 공론장 및 O2O 플랫폼 기획 및 운영<br>
         시민과 서울시가 함께 정책을 논의하고 실행하는 시민참여플랫폼
-      '''
+      ''',
+      url: 'https://democracy.seoul.go.kr/'
     },
     {
       image_path: 'demos_portfolio_2.png',
@@ -58,7 +59,8 @@ class Post < ApplicationRecord
       description: '''
         김해문화재단과 함께 공유공간 커뮤니티 빌딩 사업 기획 및 운영<br>
         시민이 직접 공유공간 활용 방안을 제안하고 운영해보는 커뮤니티 실험
-      '''
+      ''',
+      url: 'https://ggg.parti.xyz/'
     }
   ]
 
