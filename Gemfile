@@ -38,6 +38,7 @@ gem 'kaminari'
 
 gem 'httparty'
 gem 'dotenv-rails'
+gem 'slack-notifier'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

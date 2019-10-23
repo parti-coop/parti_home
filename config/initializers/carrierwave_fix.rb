@@ -24,3 +24,7 @@ module CarrierWave::Uploader::Cache
     @original_filename
   end
 end
+
+CarrierWave.configure do |config|
+  config.asset_host = ActionController::Base.asset_host
+end
