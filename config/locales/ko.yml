@@ -54,6 +54,8 @@ ko:
         contact_manager: 담당자 이름/직함
         contact_tel: 전화번호
         contact_email: 이메일 주소
+        attachment_name: 첨부파일 이름
+        attachment_url: 첨부파일 주소
     errors:
       messages:
         record_invalid: "오류가 있습니다: %{errors}"
