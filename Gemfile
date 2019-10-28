@@ -59,6 +59,9 @@ gem 'devise-bootstrap-views'
 gem 'activeadmin'
 gem 'activeadmin_simplemde', github: 'parti-coop/activeadmin_simplemde'
 
+# deploy
+gem 'travis'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
