@@ -1,24 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 실서비스 [![Build Status](https://travis-ci.com/parti-coop/parti_home.svg?branch=master)](https://travis-ci.com/parti-coop/parti_home)
+* 테스트 서비스 [![Build Status](https://travis-ci.com/parti-coop/parti_home.svg?branch=dev)](https://travis-ci.com/parti-coop/parti_home)

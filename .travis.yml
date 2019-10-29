@@ -8,6 +8,8 @@ deploy:
   on: master
   migrate: "rake db:migrate"
   app: parti_home
-  environment: oasis
+  environment:
+    master: oasis
+    dev: dingo
   api_key:
     secure: "SmclHnuHo7MyiHrJ7NpyjvTDGuzPrlTJEjilJrcFyHtilIOFGTeWtxqutzf1WwDjttRBwWfSqVsSnc3+uVIM1EK34Gt/MgkrFEcseAANnLGcEHQKQPaHBDnQLw0j3+6nV61zRjWBjwfAhjeAMdUZRGDeaFCF9LocZtyzPBafdCum9Fp2Vgr9rBlDh6gjmjQg+PcrHZd32AG4h1hgxpm1tm4o9TiwkJecw7QradP+DOa4+/r0d1KjqmJmfQvesQNKsIOM5UMRONeY9zjqoVt96YinxgkhydUaCR0eR64kJukVEeojUSxJjCP/T5Wjw/D2ZLhiREg5szVWykYexZ0eGaokPEWz2Xe5B+KaWkc7CqpqM6af1aELGx0eCzYWtutK6uoel5tbIILKsaYSCSTGhKXbyrt57s5wNmzlVbX5GjNaqQ309tCDN3paX688riygZFZponPAjG5dvXht1Egb36Wfqo+LDXL5PcLj8QhfM7aPvEe17a38uvnssk2Uw/dElXx5b/iSXLWANY/3Yw6TrbqRcmPt1RUikjeWGn5v6AX7DwbTEA5Yf/bi/4apLdldSrktMdMWoihrjAmtQm90nQyNu12Y0waASxbK7hw706kGGbHAmpD+svnSNa4NNnEcvTe1AvoCUiYjKZE0Lu0XmA/TiXg9p1L7YuXbhbL2beg="
