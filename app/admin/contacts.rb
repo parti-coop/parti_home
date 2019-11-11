@@ -15,7 +15,7 @@ ActiveAdmin.register Contact do
   #   permitted
   # end
 
-  permit_params :project_subject, :solution_slug, :project_body, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email
+  permit_params :project_subject, :solution_slug, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email
 
   index do
     selectable_column
@@ -35,6 +35,7 @@ ActiveAdmin.register Contact do
       row :id
       row :project_subject
       row :project_body
+      row :project_why
       row :solution_slug
       row :attachment do
         span a(resource.attachment_name, href: resource.attachment.url)
@@ -51,6 +52,7 @@ ActiveAdmin.register Contact do
     f.inputs do
       f.input :project_subject
       f.input :project_body
+      f.input :project_why
       f.input :solution_slug, as: :select, collection: Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }
       f.input :attachment
       li do

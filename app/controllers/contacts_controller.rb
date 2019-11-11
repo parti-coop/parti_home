@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
               color: "good",
               text: "[도킹 요청] #{@contact.solution_slug}",
               fields:
-                %i(project_subject project_body
+                %i(project_subject project_body project_why
                 attachment_name attachment_url
                 contact_org contact_manager
                 contact_tel contact_email).map do |attr|
@@ -44,6 +44,6 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:project_subject, :solution_slug, :project_body, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email)
+    params.require(:contact).permit(:project_subject, :solution_slug, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email)
   end
 end
