@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_181547) do
+ActiveRecord::Schema.define(version: 2019_10_29_232858) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "namespace"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_181547) do
     t.string "contact_manager"
     t.string "contact_tel"
     t.string "contact_email", null: false
+    t.string "project_why"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
