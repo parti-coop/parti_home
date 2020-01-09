@@ -56,7 +56,7 @@ gem 'file_validators'
 # admin
 gem 'devise'
 gem 'devise-bootstrap-views'
-gem 'activeadmin'
+gem 'activeadmin', '~> 2.6'
 gem 'activeadmin_simplemde', github: 'parti-coop/activeadmin_simplemde'
 
 # deploy
