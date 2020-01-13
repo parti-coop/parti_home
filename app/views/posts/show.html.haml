@@ -14,21 +14,23 @@
     .post-body.site-post-body
       != @markdown.render(@post.body)
     .post-buttons
-      .dropdown.btn.btn-outline-secondary.btn-post
-        %a(data-toggle="dropdown")
-          %i.fas.fa-share-alt
-          %i.fas.fa-ellipsis-h
-        %ul.dropdown-menu
+      %a.dropdown.btn.btn-outline-secondary.btn-post.cursor-pointer(data-toggle="dropdown")
+        %i.fas.fa-share-alt
+        %i.fas.fa-ellipsis-h
+      %ul.dropdown-menu
+        %li
+          %a.dropdown-item{ href: "https://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}", target: '_blank', title: '페이스북 공유' }
+            페이스북에 공유
+        %li
+          %a.dropdown-item{ href: "https://twitter.com/share?url=#{post_url(@post)}&text=#{excerpt(@post.body)}", target: '_blank', title: '트위터 공유' }
+            트위터에 공유
+        - if is_kakao_talkable?
           %li
-            %a.dropdown-item{ href: "https://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}", target: '_blank', title: '페이스북 공유' }
-              페이스북에 공유
-          %li
-            %a.dropdown-item{ href: "https://twitter.com/share?url=#{post_url(@post)}&text=#{excerpt(@post.body)}", target: '_blank', title: '트위터 공유' }
-              트위터에 공유
-          - if is_kakao_talkable?
-            %li
-              %a.dropdown-item.js-share-kakao{ href: '#', data: { 'share-url': post_url(@post), 'share-image': @post.cover.url(:md), 'share-image-width': '300', 'share-image-height': '300', 'share-title': @post.title, 'share-description': excerpt(@post.body) } }
-                카카오톡에 공유
+            %a.dropdown-item.js-share-kakao{ href: '#', data: { 'share-url': post_url(@post), 'share-image': @post.cover.url(:md), 'share-image-width': '300', 'share-image-height': '300', 'share-title': @post.title, 'share-description': excerpt(@post.body) } }
+              카카오톡에 공유
+        %li
+          %span.dropdown-item.cursor-pointer.js-clipboard{ data: { 'clipboard-text': post_url(@post) } }
+            주소 복사
 
 %section.latest-posts
   .container.container-sm
