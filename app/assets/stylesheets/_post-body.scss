@@ -27,7 +27,19 @@ pre.CodeMirror-line {
     line-height: 29px;
   }
 
+  a {
+    color: $brand-violet;
+    text-decoration: underline;
+  }
 
+  em {
+    font-size: 14px;
+    line-height: 27px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: $gray-light;
+  }
 
   img {
     max-width: 100%;
