@@ -26,7 +26,7 @@ ActiveAdmin.register Contact do
     column :contact_manager
     column :contact_tel
     column :contact_email
-    column :updated_at
+    column :created_at
     actions
   end
 
@@ -44,7 +44,7 @@ ActiveAdmin.register Contact do
       row :contact_manager
       row :contact_tel
       row :contact_email
-      row :updated_at
+      row :created_at
     end
   end
 
