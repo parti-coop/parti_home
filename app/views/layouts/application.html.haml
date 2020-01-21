@@ -30,6 +30,7 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all'
     %script{ crossorigin: "anonymous", src: "https://kit.fontawesome.com/066b650a4c.js" }
+    = yield :recaptcha_js
     = javascript_include_tag 'application'
   %body{ class: body_class }
     = render 'application/flash', flash: flash

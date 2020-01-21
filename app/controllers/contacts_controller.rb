@@ -8,7 +8,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    unless @contact.save
+    if !NewGoogleRecaptcha.human?(
+      params[:new_google_recaptcha_token],
+      "checkout",
+      NewGoogleRecaptcha.minimum_score,
+      @contact
+    ) || !@contact.save
       errors_to_flash(@contact)
       render 'new'
     end
