@@ -19,6 +19,16 @@ pre.CodeMirror-line {
 .site-post-body,
 .editor-preview-side,
 .editor-preview {
+  font-size: 18px;
+  line-height: 31px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+
+
   img {
     max-width: 100%;
     max-height: 600px;
@@ -32,42 +42,6 @@ pre.CodeMirror-line {
     margin-bottom: 31px;
   }
 
-  // h1 {
-  //   font-size: 40px;
-  //   font-weight: 500;
-  //   line-height: 68px;
-  //   margin-top: 112px;
-  // }
-  // h2 {
-  //   font-size: 34px;
-  //   font-weight: 500;
-  //   line-height: 48px;
-  //   margin-top: 96px;
-  // }
-  // h3 {
-  //   font-size: 28px;
-  //   font-weight: 500;
-  //   line-height: 40px;
-  //   margin-top: 80px;
-  // }
-  // h4 {
-  //   font-size: 22px;
-  //   font-weight: 500;
-  //   line-height: 32px;
-  //   margin-top: 64px;
-  // }
-  // h5 {
-  //   font-size: 18px;
-  //   font-weight: 500;
-  //   line-height: 26px;
-  //   margin-top: 52px;
-  // }
-  // h6 {
-  //   font-size: 14px;
-  //   font-weight: 500;
-  //   line-height: 22px;
-  //   margin-top: 44px;
-  // }
   h1:first-child,
   h2:first-child,
   h3:first-child,
@@ -85,25 +59,34 @@ pre.CodeMirror-line {
     margin-bottom: 0;
   }
 
-  font-size: 18px;
-  line-height: 31px;
-
   h1 {
     font-size: 29px;
     line-height: 47px;
     margin-bottom: 19px;
+    @include media-breakpoint-up(sm) {
+      font-size: 26px;
+      line-height: 45px;
+    }
   }
   h2 {
     font-size: 23px;
     line-height: 38px;
     margin-top: 62px;
     margin-bottom: 12px;
+    @include media-breakpoint-up(sm) {
+      font-size: 20px;
+      line-height: 36px;
+    }
   }
   h3 {
     font-size: 18px;
     line-height: 31px;
     font-weight: bold;
     margin-bottom: 7px;
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+      line-height: 29px;
+    }
   }
   h4 {
     font-size: 16px;
