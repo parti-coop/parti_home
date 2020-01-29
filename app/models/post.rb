@@ -7,7 +7,8 @@ class Post < ApplicationRecord
       title: '의제기획 및 선정단',
       description: '''
         시민의 제안이나 기관의 정책 공론화 여부를 검토하고, 숙의를 통해 공적 의제로 만들어냅니다.
-      '''
+      ''',
+      url: 'https://toolkit.parti.coop/sphere/agenda.html'
     },
     {
       image_path: 'demos_solution_2.jpg',
@@ -21,7 +22,8 @@ class Post < ApplicationRecord
       title: '시민제안 워크숍',
       description: '''
         기관의 정책이나 일상의 관심사 등에 대해 시민들과 함께 토론하고 의견과 제안을 모아봅니다.
-      '''
+      ''',
+      url: 'https://toolkit.parti.coop/sphere/workshop.html'
     },
     {
       image_path: 'demos_solution_4.jpg',
