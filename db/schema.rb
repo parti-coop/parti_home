@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_073543) do
 
   create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "project_subject", null: false
-    t.string "solution_slug"
+    t.string "deprecated_solution_slug"
     t.text "project_body", null: false
     t.string "attachment"
     t.string "attachment_name"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_073543) do
     t.string "project_why"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "solution_slugs", default: "[]"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
