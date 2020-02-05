@@ -27,8 +27,12 @@
           = f.label :project_why
           = f.text_area :project_why, class: 'form-control', placeholder: '빠띠를 어떻게 알게 되셨나요? 왜 빠띠인지 조금만 더 설명해주시면 효과적으로 접수를 진행할 수 있어요.', data: { 'rule-required': true }
         .form-group
-          = f.label :solution_slug
-          = f.select :solution_slug, Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }, { prompt: "솔루션 선택..." }, class: 'form-control'
+          = f.label :solution_slugs
+          - Post::SOLUTIONS_OPTIONS_WITH_ETC.each do |solution_option|
+            .form-check
+              = f.check_box :solution_slugs, { class: 'form-check-input form-control', multiple: true }, solution_option[:slug], nil
+              %label.form-check-label{ for: :solution_slugs }<>
+                = solution_option[:title]
         .form-group
           = f.label :attachment
           = f.file_field :attachment, class: 'form-control'

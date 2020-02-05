@@ -15,13 +15,21 @@ ActiveAdmin.register Contact do
   #   permitted
   # end
 
-  permit_params :project_subject, :solution_slug, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email
+  remove_filter :deprecated_solution_slug
+
+  filter :solution_slugs_array_in, { as: :select, collection: Post::SOLUTIONS_OPTIONS_WITH_ETC.map { |solution_option| [solution_option[:title], solution_option[:slug]] } }
+  filter :project_subject
+  filter :contact_org
+  filter :contact_manager
+  filter :contact_email
+
+  permit_params :project_subject, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email, { solution_slugs: [] }
 
   index do
     selectable_column
     id_column
     column :project_subject
-    column :solution_slug
+    column :solution_slugs
     column :contact_org
     column :contact_manager
     column :contact_tel
@@ -36,7 +44,7 @@ ActiveAdmin.register Contact do
       row :project_subject
       row :project_body
       row :project_why
-      row :solution_slug
+      row :solution_slugs
       row :attachment do
         span a(resource.attachment_name, href: resource.attachment.url)
       end
@@ -49,11 +57,12 @@ ActiveAdmin.register Contact do
   end
 
   form do |f|
+    collected_data = Post::SOLUTIONS_OPTIONS_WITH_ETC.map { |solution_option| [solution_option[:title], solution_option[:slug], { checked: f.object.solution_slugs.include?(solution_option[:slug].to_s) }] }
     f.inputs do
       f.input :project_subject
       f.input :project_body
       f.input :project_why
-      f.input :solution_slug, as: :select, collection: Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }
+      f.input :solution_slugs, as: :check_boxes, collection: collected_data
       f.input :attachment
       li do
         span('# 첨부파일 다운로드')
