@@ -57,6 +57,7 @@ ko:
         contact_email: 이메일 주소
         attachment_name: 첨부파일 이름
         attachment_url: 첨부파일 주소
+        created_at: 접수일시
     errors:
       messages:
         record_invalid: "오류가 있습니다: %{errors}"
