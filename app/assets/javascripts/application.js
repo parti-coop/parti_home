@@ -8,6 +8,7 @@
 //= require kakao
 //= require jquery.validate
 //= require jquery.validate.messages_ko
+//= require clipboard
 
 Kakao.init('497c9a46f0645fa96fe0d31c607ba74a');
 
@@ -80,6 +81,17 @@ $(function() {
       }
     };
     $form.validate(options);
+  });
+
+  //clipboard
+  $('.js-clipboard').each(function() {
+    var clipboard = new Clipboard(this);
+
+    var self = this;
+    clipboard.on('success', function(e) {
+      e.clearSelection();
+      alert('주소가 복사되었습니다');
+    });
   });
 })
 

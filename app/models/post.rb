@@ -238,6 +238,18 @@ class Post < ApplicationRecord
     }
   ]
 
+  SOLUTIONS_OPTIONS_WITH_ETC = Post::SOLUTIONS.map do |solution|
+    {
+      title: solution[:title],
+      slug: solution[:slug]
+    }
+  end + [
+    {
+      title: '기타',
+      slug: 'etc'
+    }
+  ]
+
   SOLUTIONS_MAP = Hash[Post::SOLUTIONS.map { |solution| [ solution[:slug], solution ] }]
 
   scope :recent, -> (limit_count = nil){

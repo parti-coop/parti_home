@@ -49,6 +49,6 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:project_subject, :solution_slug, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email)
+    params.require(:contact).permit(:project_subject, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email, solution_slugs: [])
   end
 end

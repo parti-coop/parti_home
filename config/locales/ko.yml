@@ -41,13 +41,13 @@ ko:
         title: 제목
         body: 내용
         published_at: 발행 일시
-        solution_slug: 솔루션
+        solution_slugs: 솔루션
         source: 소스
         cover: 커버 이미지
         updated_at: 수정일시
       contact:
         project_subject: 프로젝트 이름
-        solution_slug: 솔루션
+        solution_slugs: 솔루션
         project_body: 프로젝트 개요
         project_why: 빠띠와 함께하려는 이유
         attachment: 첨부파일
@@ -57,6 +57,7 @@ ko:
         contact_email: 이메일 주소
         attachment_name: 첨부파일 이름
         attachment_url: 첨부파일 주소
+        created_at: 접수일시
     errors:
       messages:
         record_invalid: "오류가 있습니다: %{errors}"
@@ -65,6 +66,6 @@ ko:
       contact:
         project_subject: 프로젝트 이름 *
         project_body: 프로젝트 개요 *
-        project_why: 빠띠와 함께하려는 이유
+        project_why: 빠띠와 함께하려는 이유 *
         contact_email: 이메일 주소 *
         contact_manager: 담당자 이름/직함 *

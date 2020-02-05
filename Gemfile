@@ -6,7 +6,7 @@ gem 'bundler', '2.0.1'
 #ruby '2.3.1'
 
 gem 'unicorn'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.3'
 gem 'mini_racer'
 gem 'new_google_recaptcha'
