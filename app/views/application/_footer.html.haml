@@ -20,6 +20,25 @@
       .contact-envelope
         = image_tag 'contact-envelope.png'
 
+  %section.notice.d-none.d-sm-block{ style: 'margin-top: 40px' }
+    .container.container-sm
+      .base-section-title
+        공지
+    .container
+      .text-center{ style: 'margin-top: 40px' }
+        %button.subscribe{class: 'btn btn-primary', 'data-toggle': "modal", 'data-target': "#notice-modal", style: 'height: auto'}
+          2020년 제1차 사회적협동조합
+          %br
+          빠띠 정기총회 공고
+    #notice-modal.modal.fade{class: @subscribe, :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-body
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} &#215;
+            %div{ style: 'color: #111' }
+              = image_tag 'notice_20200212.png', style: 'width: 100%'
+
 %footer.app-footer
   .container-fluid
     .logo
