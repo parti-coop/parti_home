@@ -65,16 +65,16 @@
           .form-check
             = f.check_box :confirm_marketing, class: 'form-check-input'
             %label.form-check-label{ for: :confirm_marketing }<>
-              = link_to '마케팅 정보 수신 동의(선택)', marketing_path, target: '_blank', style: 'text-decoration: underline'
-              에 동의합니다.
+              = link_to '마케팅 정보 수신', marketing_path, target: '_blank', style: 'text-decoration: underline'
+              에 동의합니다. (선택)
             .form-text
               빠띠가 진행하는 여러 이벤트의 알림을 받으시고 혜택을 놓치지 마세요.
 
           .form-check
             = f.check_box :confirm_mailing, class: 'form-check-input'
             %label.form-check-label{ for: :confirm_mailing }<>
-              %strong<> 민주주의 리포트(선택)
-              를 구독합니다.
+              %strong<> 민주주의 리포트
+              를 구독합니다. (선택)
             .form-text
               빠띠의 민주주의 리포트를 매월 이메일로 받아보세요.
 
