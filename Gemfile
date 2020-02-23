@@ -53,6 +53,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'file_validators'
+gem 'fog'
 
 # admin
 gem 'devise'

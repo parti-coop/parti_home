@@ -49,15 +49,15 @@ ActiveRecord::Schema.define(version: 2020_01_21_073543) do
     t.string "contact_tel"
     t.string "contact_email", null: false
     t.string "project_why"
+    t.string "solution_slugs", default: "[]"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "solution_slugs", default: "[]"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
-    t.datetime "published_at", null: false
+    t.datetime "published_at"
     t.string "solution_slug"
     t.string "source"
     t.datetime "created_at", null: false

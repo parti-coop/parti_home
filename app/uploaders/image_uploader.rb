@@ -3,7 +3,15 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :file
+  def self.env_storage
+    if Rails.env.production? || ENV["S3_USE"] == 'true'
+      :fog
+    else
+      :file
+    end
+  end
+
+  storage env_storage
 
   def store_dir
     if model
@@ -18,7 +26,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url
+  def default_url(*args)
     ActionController::Base.helpers.asset_path("default-#{model.class.to_s.underscore}-#{mounted_as}.png")
   end
 
@@ -61,6 +69,24 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def extension_white_list
   #   %w(jpg jpeg gif png)
   # end
+
+  def url(version = nil)
+    super_result = super(version)
+
+    if Rails.env.production? || ENV["S3_USE"] == 'true'
+      return super_result
+    elsif self.model&.read_attribute(self.mounted_as&.to_sym).blank?
+      super_result
+    else
+      if super_result.starts_with?('http://', 'https://')
+        super_result
+      elsif self.file.try(:exists?) or ENV["S3_BUCKET"].blank?
+        ActionController::Base.helpers.asset_url(super_result)
+      else
+        return "https://#{ENV["S3_BUCKET"]}.s3.amazonaws.com#{super_result}"
+      end
+    end
+  end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
