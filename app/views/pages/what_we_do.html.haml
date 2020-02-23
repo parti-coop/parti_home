@@ -9,18 +9,21 @@
 
 %a.anchor(id="tiles")
 %section.tiles
-  .container.container-sm.categories-container
+  .container.categories-container
     .categories
-      .category{ class: ('active' if params[:solution_slug].blank?) }
+      .category{ class: ('active' if params[:category_slug].blank?) }
         = link_to what_we_do_path(anchor: :tiles), class: 'category-text' do
           전체
-      - Post::SOLUTIONS.each do |solution|
-        .category{ class: ('active' if solution[:slug].to_s == params[:solution_slug]) }
-          = link_to what_we_do_path(solution_slug: solution[:slug], anchor: :tiles), class: 'category-text' do
-            != solution[:title]
+      - Post::CATEGORIES.each do |category_slug, category_title|
+        .category{ class: ('active' if category_slug.to_s == params[:category_slug]) }
+          = link_to what_we_do_path(category_slug: category_slug, anchor: :tiles), class: 'category-text' do
+            != category_title
   .container
-    .tiles-container.js-post-tiles-container
-      = render 'pages/what_we_do/posts_page', posts: @posts
-    .tile-more.text-center.js-post-tiles-more
-      = render 'pages/what_we_do/more_posts_btn', posts: @posts
-
+    - if @posts.any?
+      .tiles-container.js-post-tiles-container
+        = render 'pages/what_we_do/posts_page', posts: @posts
+      .tile-more.text-center.js-post-tiles-more
+        = render 'pages/what_we_do/more_posts_btn', posts: @posts
+    - else
+      %p.lead.text-center.w-100{ style: 'margin-top: 200px; margin-bottom: 200px;' }
+        글을 준비 중입니다.

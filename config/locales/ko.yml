@@ -41,7 +41,7 @@ ko:
         title: 제목
         body: 내용
         published_at: 발행 일시
-        solution_slugs: 솔루션
+        category_slugs: 카테고리
         source: 소스
         cover: 커버 이미지
         updated_at: 수정일시

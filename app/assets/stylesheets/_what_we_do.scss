@@ -11,12 +11,12 @@ body.body-pages-what_we_do {
         margin-top: 80px;
         display: flex;
         justify-content: space-between;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
         @include media-breakpoint-down(md) {
           flex-wrap: nowrap;
-          overflow-x: auto;
-          overflow-y: hidden;
-          -webkit-overflow-scrolling: touch;
-          -ms-overflow-style: -ms-autohiding-scrollbar;
           margin-right: -15px;
           margin-left: -15px;
           padding-bottom: 6px;
@@ -41,8 +41,8 @@ body.body-pages-what_we_do {
         }
         @include media-breakpoint-down(md) {
           flex: 0 0 auto;
-          padding-left: 32px;
-          padding-right: 32px;
+          padding-left: 15px;
+          padding-right: 15px;
           font-size: 16px;
           line-height: 24px;
           &:first-child {
