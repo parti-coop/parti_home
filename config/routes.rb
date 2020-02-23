@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'home_what_we_do', to: 'pages#home_what_we_do'
   get 'what_we_do', to: 'pages#what_we_do'
   get 'privacy', to: 'pages#privacy'
+  get 'privacy_revisions/v1', to: 'pages#privacy_revisions_v1', as: :privacy_revisions_v1
   get 'solutions/demos', to: 'solutions#demos'
   get 'solutions/org', to: 'solutions#org'
   get 'solutions/campaign', to: 'solutions#campaign'

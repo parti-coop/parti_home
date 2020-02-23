@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
       @contact
     ) || !@contact.save
       errors_to_flash(@contact)
-      render 'new'
+      render 'new' and return
     end
 
     flash[:success] = '협업 요청해 주셔서 감사합니다. 검토 후 빠른 시일 내로 연락드리겠습니다.'

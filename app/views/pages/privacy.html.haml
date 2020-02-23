@@ -1,0 +1,32 @@
+:css
+  .container.container-privacy {
+    max-width: 700px;
+    margin-top: 200px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .container.container-privacy {
+      margin-top: 130px;
+    }
+  }
+
+  .container.container-privacy li > p {
+    margin-bottom: 0;
+  }
+
+  .container.container-privacy h1 {
+    font-size: 28px
+  }
+
+  .container.container-privacy h2 {
+    font-size: 20px;
+    margin-top: 3rem;
+  }
+%section
+  .container.container-privacy
+    = render 'pages/privacy_content'
+
+    .mt-5.mb-5
+      %h2 이전 개인정보 처리방침
+
+      = link_to '버전 1 (2019.10.21)', privacy_revisions_v1_path

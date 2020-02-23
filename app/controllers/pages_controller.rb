@@ -15,6 +15,10 @@ class PagesController < ApplicationController
   def privacy
   end
 
+  def privacy_revisions_v1
+    render 'pages/privacy_revisions/v1'
+  end
+
   def subscribe_reports
     access_token = ENV['STIBEE_KEY']
     response = HTTParty.post("https://api.stibee.com/v1/lists/7834/subscribers", {
