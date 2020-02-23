@@ -10,6 +10,7 @@ gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.3'
 gem 'mini_racer'
 gem 'new_google_recaptcha'
+gem 'active_interaction', '~> 3.7'
 
 # database
 gem 'sqlite3'
