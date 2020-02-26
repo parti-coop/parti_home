@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     meta_description = Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(@post.body).truncate(100)
-    prepare_meta_tags(title: "#{@post.title} - Democracy More, Parti", description: meta_description)
+    prepare_meta_tags(title: "#{@post.title} - 빠띠", description: meta_description, url: post_url(@post), image: @post.cover.url(:md))
   end
 end
 
