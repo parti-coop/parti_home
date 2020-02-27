@@ -93,6 +93,34 @@ $(function() {
       alert('주소가 복사되었습니다');
     });
   });
+
+  // 협업 문의 동의
+  // 참여자 입장 폼
+  (function() {
+    // 참여자 약관 등 동의
+    $('.js-confirm-all').change(function(e) {
+      e.preventDefault();
+      var $elm = $(e.currentTarget);
+      var $form = $elm.closest('form');
+
+      if($elm.is(':checked')) {
+        $form.find('.js-confirm-all-target').prop('checked', true);
+      } else {
+        $form.find('.js-confirm-all-target').prop('checked', false);
+      }
+      // validate(e);
+    });
+
+    $('.js-confirm-all-target').on('change', function(e) {
+      e.preventDefault();
+      // validate(e);
+
+      var $elm = $(e.currentTarget);
+      var $form = $elm.closest('form');
+      var uncheckd_confirm = $form.find('.js-confirm-all-target:not(:checked)').length;
+      $form.find('.js-confirm-all').prop('checked', uncheckd_confirm <= 0);
+    });
+  })();
 })
 
 var parti_partial$ = function($partial, force) {
