@@ -1,0 +1,20 @@
+.container.container-privacy {
+  max-width: 700px;
+  margin-top: 200px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 130px;
+  }
+
+  li > p {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 28px
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 3rem;
+  }
+}
