@@ -53,13 +53,38 @@
         .form-group
           = f.label :contact_email
           = f.email_field :contact_email, class: 'form-control', data: { 'rule-required': true }
+
         .form-group
           .form-check
-            = f.check_box :confirm, class: 'form-check-input', id: 'contact-form-confirm', data: { 'rule-required': true, 'invalid-error': '#js-contact-checkbox-error', msg: '개인정보 수집 및 처리 동의가 필요합니다.' }
-            %label.form-check-label{ for: :confirm }<>
-              = link_to '개인정보 수집 및 처리', privacy_path, target: '_blank', style: 'text-decoration: underline'
-              에 동의합니다.
-          #js-contact-checkbox-error
+            = f.check_box :confirm_all, class: 'form-check-input js-confirm-all', id: 'contact_confirm_all'
+            %label.form-check-label{ for: 'contact_confirm_all' }<>
+              %span.text-nowrap<> 개인정보 수집 및 처리,&nbsp;
+              %span.text-nowrap<> 마케팅 정보 수신(선택),&nbsp;
+              %span.text-nowrap<> 민주주의 리포트 구독(선택)
+              에 모두 동의합니다.
+          .ml-4
+            .form-check
+              = f.check_box :confirm_privacy, class: 'form-check-input js-confirm-all-target', data: { 'rule-required': true, 'invalid-error': '#js-contact-checkbox-error', msg: '개인정보 수집 및 처리 동의가 필요합니다.' }
+              %label.form-check-label{ for: 'contact_confirm_privacy' }<>
+                = link_to '개인정보 수집 및 처리', privacy_path, target: '_blank', style: 'text-decoration: underline'
+                에 동의합니다.
+            #js-contact-checkbox-error
+
+
+            .form-check
+              = f.check_box :confirm_marketing, class: 'form-check-input js-confirm-all-target'
+              %label.form-check-label{ for: 'contact_confirm_marketing' }<>
+                = link_to '마케팅 정보 수신', marketing_path, target: '_blank', style: 'text-decoration: underline'
+                에 동의합니다. (선택)
+              .form-text
+                빠띠가 진행하는 여러 이벤트의 알림을 받으시고 혜택을 놓치지 마세요.
+
+            .form-check
+              = f.check_box :confirm_mailing, class: 'form-check-input js-confirm-all-target'
+              %label.form-check-label{ for: 'contact_confirm_mailing' }<>
+                민주주의 리포트를 구독합니다. (선택)
+              .form-text
+                빠띠의 민주주의 리포트를 매월 이메일로 받아보세요.
 
         = recaptcha_action('checkout')
 
