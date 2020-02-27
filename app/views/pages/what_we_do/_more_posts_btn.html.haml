@@ -1,2 +1,2 @@
 - unless posts.last_page?
-  = link_to '더 보기', what_we_do_path(solution_slug: params[:solution_slug], page: posts.next_page, format: :js), remote: true, class: 'btn btn-outline-primary btn-more'
+  = link_to '더 보기', what_we_do_path(category_slug: params[:category_slug], page: posts.next_page, format: :js), remote: true, class: 'btn btn-outline-primary btn-more'

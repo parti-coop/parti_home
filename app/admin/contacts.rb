@@ -17,7 +17,7 @@ ActiveAdmin.register Contact do
 
   remove_filter :deprecated_solution_slug
 
-  filter :solution_slugs_array_in, { as: :select, collection: Post::SOLUTIONS_OPTIONS_WITH_ETC.map { |solution_option| [solution_option[:title], solution_option[:slug]] } }
+  filter :solution_slugs_array_in, { as: :select, collection: Solution::CONTACT_OPTIONS.map { |solution_option| [solution_option[:title], solution_option[:slug]] } }
   filter :project_subject
   filter :contact_org
   filter :contact_manager
@@ -57,7 +57,7 @@ ActiveAdmin.register Contact do
   end
 
   form do |f|
-    collected_data = Post::SOLUTIONS_OPTIONS_WITH_ETC.map { |solution_option| [solution_option[:title], solution_option[:slug], { checked: f.object.solution_slugs.include?(solution_option[:slug].to_s) }] }
+    collected_data = Solution::CONTACT_OPTIONS.map { |solution_option| [solution_option[:title], solution_option[:slug], { checked: f.object.solution_slugs.include?(solution_option[:slug].to_s) }] }
     f.inputs do
       f.input :project_subject
       f.input :project_body

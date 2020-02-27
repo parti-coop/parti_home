@@ -22,14 +22,14 @@
             = link_to (item[:url].presence || new_contact_path) , target: '_blank' do
               .tile
                 .tile-cover-container
-                  .tile-cover{ style: (item[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{item[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                  .tile-cover{ style: (item[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{item[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
                 .tile-meta
                   .title
                     != item[:title]
                   .body
                     != item[:description]
 
-- if info[:portfolios].any?          
+- if info[:portfolios].any?
   %section.tiles.tiles-portfolio
     .tiles-title-line
       .container
@@ -42,7 +42,7 @@
             = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
               .tile
                 .tile-cover-container
-                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{info[:slug]}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
                 .tile-meta
                   .title
                     != portfolio[:title]
@@ -56,7 +56,7 @@
         이 솔루션으로 하는 일
   .container.container-full
     .tiles-container
-      - Post.published.recent.by_solution_slug(info[:slug]).limit(3).each do |post|
+      - Post.published.recent.by_category_slug(slug).limit(3).each do |post|
         .tile-container<>
           = link_to post_path(id: post.id) do
             .tile
@@ -64,7 +64,7 @@
                 .title!= post.title
                 .created-at= static_day_f post.published_at
       .tile-container<>
-        = link_to what_we_do_path(solution_slug: info[:slug]), class: 'tile tile-more' do
+        = link_to what_we_do_path(category_slug: slug), class: 'tile tile-more' do
           .more-link
             하는 일 더 보기
           .more-icon

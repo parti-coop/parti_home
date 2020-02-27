@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_024029) do
+ActiveRecord::Schema.define(version: 2020_02_23_121557) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "namespace"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_02_23_024029) do
     t.string "title", null: false
     t.text "body", null: false
     t.datetime "published_at", null: false
-    t.string "solution_slug"
+    t.string "category_slug"
     t.string "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

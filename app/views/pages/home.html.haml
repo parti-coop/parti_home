@@ -29,9 +29,9 @@
       %br
       일상과 세상에 민주주의를 확산시킵니다.
 
-  .container.container-sm.categories-container
-    = render 'pages/home/what_we_do/solution_filters', solution_slug: nil
-  = render 'pages/home/what_we_do/posts', posts: @posts, solution_slug: nil
+  .container.categories-container
+    = render 'pages/home/what_we_do/category_filters', category_slug: nil
+  = render 'pages/home/what_we_do/posts', posts: @posts, category_slug: nil
 
 
 %a.anchor(id="solutions")
@@ -43,12 +43,12 @@
       컨설팅, 교육 및 워크숍, 디지털 플랫폼까지 다양한 솔루션이 준비되어 있습니다.
   .container
     .tiles-container
-      - Post::SOLUTIONS.each do |solution|
-        = link_to send(solution[:path_text]) do
+      - Solution::DICTIONARY.each do |_, solution_info|
+        = link_to send(solution_info[:path_text]) do
           .tile-container{ 'data-aos': 'fade-up' }
-            .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url(solution[:image_path])})" }
+            .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url(solution_info[:image_path])})" }
               .tile-meta
                 .subtitle
-                  != solution[:subtitle]
+                  != solution_info[:subtitle]
                 .title
-                  != solution[:title]
+                  != solution_info[:title]

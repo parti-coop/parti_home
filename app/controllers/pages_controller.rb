@@ -37,8 +37,8 @@ class PagesController < ApplicationController
   def fetch_what_we_do
     @posts = Post.published.recent
 
-    solution_slug = params[:solution_slug]
-    @posts = @posts.by_solution_slug(solution_slug) if solution_slug.present?
+    category_slug = params[:category_slug]
+    @posts = @posts.by_category_slug(category_slug) if category_slug.present?
     @posts
   end
 end

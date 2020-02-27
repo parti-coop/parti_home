@@ -1,18 +1,8 @@
 class SolutionsController < ApplicationController
-
-  def demos
-    @info = Post::SOLUTIONS_MAP[:demos]
-  end
-
-  def org
-    @info = Post::SOLUTIONS_MAP[:org]
-  end
-
-  def campaign
-    @info = Post::SOLUTIONS_MAP[:campaign]
-  end
-
-  def soft
-    @info = Post::SOLUTIONS_MAP[:soft]
+  Solution::DICTIONARY.each do |solution_slug, solution_info|
+    define_method(solution_slug) do
+      @slug = solution_slug
+      @info = solution_info
+    end
   end
 end

@@ -1,12 +1,12 @@
 %section.section-post
   .container.container-sm
     .post-meta
-      - if @post.solution_slug.present?
-        - solution = Post::SOLUTIONS_MAP[@post.solution_slug.to_sym]
-        .solution
+      - if @post.category_slug.present?
+        - category_title = Post::CATEGORIES[@post.category_slug.to_sym]
+        .category
           전체
           \&gt;
-          != solution[:title]
+          != category_title
       .title
         != @post.title
       .date
