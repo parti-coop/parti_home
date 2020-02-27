@@ -26,5 +26,18 @@ module CarrierWave::Uploader::Cache
 end
 
 CarrierWave.configure do |config|
-  config.asset_host = ActionController::Base.asset_host
+  if Rails.env.production? || ENV["S3_USE"] == 'true'
+    config.fog_credentials = {
+      provider:              'AWS',
+      aws_access_key_id:     ENV["S3_ACCESS_KEY"],
+      aws_secret_access_key: ENV["S3_SECRET_KEY"],
+      region:                ENV["S3_REGION"],
+      endpoint:              ENV["S3_END_POINT"]
+    }
+    config.fog_directory  = ENV["S3_BUCKET"]
+    config.fog_public     = true
+  else
+    config.asset_host = ActionController::Base.asset_host
+  end
+  config.remove_previously_stored_files_after_update = true
 end

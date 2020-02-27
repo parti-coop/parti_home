@@ -1,7 +1,15 @@
 # encoding: utf-8
 
 class DocumentUploader < CarrierWave::Uploader::Base
-  storage :file
+  def self.env_storage
+    if Rails.env.production? || ENV["S3_USE"] == 'true'
+      :fog
+    else
+      :file
+    end
+  end
+
+  storage env_storage
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
@@ -30,6 +38,24 @@ class DocumentUploader < CarrierWave::Uploader::Base
   def save_original_filename(file)
     if real_original_filename and model.respond_to?(:"#{mounted_as}_name")
       model.send(:"#{mounted_as}_name=", real_original_filename)
+    end
+  end
+
+  def url(version = nil)
+    super_result = super(version)
+
+    if Rails.env.production? || ENV["S3_USE"] == 'true'
+      return super_result
+    elsif self.model&.read_attribute(self.mounted_as&.to_sym).blank?
+      super_result
+    else
+      if super_result.starts_with?('http://', 'https://')
+        super_result
+      elsif self.file.try(:exists?) or ENV["S3_BUCKET"].blank?
+        ActionController::Base.helpers.asset_url(super_result)
+      else
+        return "https://#{ENV["S3_BUCKET"]}.s3.amazonaws.com#{super_result}"
+      end
     end
   end
 

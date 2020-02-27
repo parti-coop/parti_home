@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_02_23_121557) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
-    t.datetime "published_at", null: false
+    t.datetime "published_at"
     t.string "category_slug"
     t.string "source"
     t.datetime "created_at", null: false
