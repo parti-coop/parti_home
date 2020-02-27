@@ -15,11 +15,20 @@ class ContactsController < ApplicationController
       @contact
     ) || !@contact.save
       errors_to_flash(@contact)
-      render 'new'
+      render 'new' and return
     end
 
     flash[:success] = '협업 요청해 주셔서 감사합니다. 검토 후 빠른 시일 내로 연락드리겠습니다.'
     redirect_to root_url
+
+      outcome = MailingSubscribe.run(name: @contact.contact_manager, email: @contact.contact_email)
+      if outcome.valid?
+        flash[:success] = "민주주의 리포트 구독 확인 이메일을 발송했습니다. 보내드린 이메일을 확인하면 구독이 완료됩니다."
+      else
+        messages = outcome.errors.full_messages.join('. ')
+        logger.error messages
+        flash[:error] = "민주주의 리포트 구독 중에 오류가 발생했습니다. #{messages} help@parti.xyz로 구독 신청 메일을 보내 주세요."
+      end
 
     begin
       notifier = Slack::Notifier.new ENV["SLACK_DOCKING"]
@@ -49,6 +58,6 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:project_subject, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email, solution_slugs: [])
+    params.require(:contact).permit(:project_subject, :project_body, :project_why, :attachment, :contact_org, :contact_manager, :contact_tel, :contact_email, :confirm_privacy, :confirm_marketing, :confirm_mailing, solution_slugs: [])
   end
 end

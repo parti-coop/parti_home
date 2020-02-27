@@ -5,6 +5,6 @@
         .tile-cover-container
           .tile-cover{ style: "background-image: url(#{post.cover_url})" }
         .tile-meta
-          .category!= post.solution_text
+          .category!= post.category_title
           .title!= post.title
           .created-at= static_day_f(post.published_at)

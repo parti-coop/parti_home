@@ -4,9 +4,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
 
-    solution_slug = params[:solution_slug]
+    category_slug = params[:category_slug]
     @posts = Post.recent.limit(12)
-    @posts = @posts.by_solution_slug(solution_slug) if solution_slug.present?
+    @posts = @posts.by_category_slug(category_slug) if category_slug.present?
 
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     meta_description = Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(@post.body).truncate(100)

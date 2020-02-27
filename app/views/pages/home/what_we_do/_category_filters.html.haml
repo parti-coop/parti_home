@@ -1,0 +1,8 @@
+.categories.js-post-tiles-filter
+  .category{ class: ('active' if params[:category_slug].blank?) }
+    = link_to home_what_we_do_path(category_slug: nil, format: :js), remote: true, class: 'category-text' do
+      전체
+  - Post::CATEGORIES.each do |category_slug, category_title|
+    .category{ class: ('active' if category_slug.to_s == params[:category_slug]) }
+      = link_to home_what_we_do_path(category_slug: category_slug, format: :js), remote: true, class: 'category-text' do
+        != category_title

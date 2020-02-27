@@ -84,8 +84,8 @@ body.body-pages-home {
         }
         @include media-breakpoint-down(md) {
           flex: 0 0 auto;
-          padding-left: 32px;
-          padding-right: 32px;
+          padding-left: 15px;
+          padding-right: 15px;
           font-size: 16px;
           line-height: 24px;
           &:first-child {

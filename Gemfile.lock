@@ -32,6 +32,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_interaction (3.7.1)
+      activemodel (>= 4, < 7)
     activeadmin (2.6.0)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (~> 3.1)
@@ -549,6 +551,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_interaction (~> 3.7)
   activeadmin (~> 2.6)
   activeadmin_simplemde!
   bcrypt (~> 3.1.7)

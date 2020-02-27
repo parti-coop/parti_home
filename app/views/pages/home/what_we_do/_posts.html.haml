@@ -1,27 +1,31 @@
 .tiles-container.js-post-tiles-container
-  - post = posts.first
-  .tiles-column.js-sticky-sidebar
-    .tile-container.tile-container-lg
-      = link_to post do
-        .tile
-          .tile-meta
-            .category!= post.solution_text
-            .title!= post.title
-            .created-at= static_day_f(post.published_at)
-          .tile-cover-container
-            .tile-cover{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{post.cover_url})" }
-
-  .tiles-column<>
-    - posts[1..-1].each do |post|
-      .tile-container.tile-container-sm<>
+  - if posts.empty?
+    %p.lead.text-center.w-100
+      글을 준비 중입니다.
+  - else
+    - post = posts.first
+    .tiles-column.js-sticky-sidebar
+      .tile-container.tile-container-lg
         = link_to post do
           .tile
-            .tile-cover-container
-              .tile-cover{ style: "background-image: url(#{post.cover_url})" }
             .tile-meta
-              .category!= post.solution_text
+              .category!= post.category_title
               .title!= post.title
               .created-at= static_day_f(post.published_at)
-    .tile-more.text-center
-      = link_to what_we_do_path(solution_slug: solution_slug), class: 'btn btn-outline-primary btn-more' do
-        더 보기
+            .tile-cover-container
+              .tile-cover{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{post.cover_url})" }
+
+    .tiles-column<>
+      - posts[1..-1].each do |post|
+        .tile-container.tile-container-sm<>
+          = link_to post do
+            .tile
+              .tile-cover-container
+                .tile-cover{ style: "background-image: url(#{post.cover_url})" }
+              .tile-meta
+                .category!= post.category_title
+                .title!= post.title
+                .created-at= static_day_f(post.published_at)
+      .tile-more.text-center
+        = link_to what_we_do_path(category_slug: category_slug), class: 'btn btn-outline-primary btn-more' do
+          더 보기

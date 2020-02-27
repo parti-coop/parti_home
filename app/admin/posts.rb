@@ -6,12 +6,12 @@ ActiveAdmin.register Post do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :title, :body, :published_at, :solution_slug, :source
+  # permit_params :title, :body, :published_at, :category_slug, :source
   #
   # or
   #
   # permit_params do
-  #   permitted = [:title, :body, :published_at, :solution_slug, :source]
+  #   permitted = [:title, :body, :published_at, :category_slug, :source]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
@@ -24,7 +24,7 @@ ActiveAdmin.register Post do
     id_column
     column :title
     column :published_at
-    column :solution_slug
+    column :category_slug
     column :source
     column :updated_at
     actions
@@ -39,7 +39,7 @@ ActiveAdmin.register Post do
         raw(%(<div class="admin-post-show-body site-post-body">#{markdown.render(resource.body)}</div>))
       end
       row :published_at
-      row :solution_slug
+      row :category_slug
       row :source
       row :updated_at
       row :cover do
@@ -52,7 +52,7 @@ ActiveAdmin.register Post do
     f.inputs do
       f.input :title
       f.input :body, as: :simplemde_editor, input_html: { 'data-options': { spellChecker: false }.to_json }
-      f.input :solution_slug, as: :select, collection: Post::SOLUTIONS.map { |solution| [ raw(solution[:title]), solution[:slug] ] }
+      f.input :category_slug, as: :select, collection: Post::CATEGORIES.map { |category_slug, category_title| [ raw(category_title), category_slug ] }
       f.input :published_at, as: :datepicker
       f.input :cover, hint: image_tag(f.object.cover.url(:sm))
       f.input :cover_cache, as: :hidden
@@ -60,7 +60,7 @@ ActiveAdmin.register Post do
     f.actions
   end
 
-  permit_params :title, :body, :published_at, :solution_slug, :cover
+  permit_params :title, :body, :published_at, :category_slug, :cover
 
   action_item :publish, only: :show do
     link_to "발행", publish_admin_post_path(post), method: :put unless post.published_at?
