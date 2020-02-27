@@ -17,8 +17,8 @@ class ApplicationController < ActionController::Base
   end
 
   def build_meta_options(options)
-    site_name = "Democracy More, Parti"
-    title = view_context.strip_tags(options[:title]) || "Democracy More, Parti"
+    site_name = "빠띠 - 민주주의 활동가 협동조합"
+    title = view_context.strip_tags(options[:title]) || "빠띠 - 민주주의 활동가 협동조합"
     image = options[:image] || view_context.image_url('parti-ci.png')
     url = options[:url] || root_url
     description = view_context.strip_tags(options[:description]) || "더 민주적인 세상을 만드는 민주주의 활동가들의 협동조합입니다."
