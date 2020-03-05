@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/parti-coop/activeadmin_easymde
-  revision: abe60ac9ecef839a2e02ea75b76dff8e714a6ebd
+  revision: dbff3e5a7238f12a7035bb36dfe2b9cd36bdc0d1
   specs:
     activeadmin_easymde (2.9.0)
       activeadmin (~> 2.0)
