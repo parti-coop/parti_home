@@ -19,6 +19,7 @@
       .tiles-container<>
         - info[:items].each do |item|
           .tile-container<>
+            %a.anchor(id="anchor-item-#{item[:slug]}")
             = link_to (item[:url].presence || new_contact_path) , target: '_blank' do
               .tile
                 .tile-cover-container

@@ -163,7 +163,8 @@ class Solution
       <br><br>
       핵심 기능: 주제/이슈별 채널 관리, 공동문서 작성, 찬반 투표와 설문으로 토론하기, 아카이빙
       ''',
-      url: 'https://parti.xyz'
+      url: 'https://parti.xyz',
+      slug: 'groups'
     },
     {
       image_path: 'soft_solution_2.png',
@@ -173,7 +174,8 @@ class Solution
       <br><br>
       핵심 기능: 상반되는 의견 중 하나를 선택하는 배틀, 최적의 결론을 도출하는 투표, 참가자와 소통하는 제안, 발표를 극적으로 연출하는 응원
       ''',
-      url: 'https://townhall.kr'
+      url: 'https://townhall.kr',
+      slug: 'townhall'
     },
     {
       image_path: 'soft_solution_3.png',
@@ -183,7 +185,8 @@ class Solution
       <br><br>
       핵심 기능: 지지를 얻기 위한 서명/지도/인증샷/목소리 모으기, 변화를 만들기 위한 촉구/아카이브하기
       ''',
-      url: 'https://govcraft.org'
+      url: 'https://campaigns.kr',
+      slug: 'campaigns'
     },
     {
       image_path: 'soft_solution_4.png',
@@ -193,7 +196,8 @@ class Solution
       <br><br>
       핵심 기능: 오픈소스 운영 가이드, 플랫폼 소스
       ''',
-      url: 'http://demosx.org'
+      url: 'http://demosx.org',
+      slug: 'demosx'
     },
   ]
 
@@ -202,7 +206,7 @@ class Solution
   DICTIONARY = {
     demos: {
       path_text: :solutions_demos_path,
-      title: '기관 민주주의 플랫폼',
+      title: '참여 공론장',
       subtitle: '일상 곳곳을 민주적으로',
       image_path: 'solutions/card-demos.png',
       items_name: '툴킷',
@@ -229,7 +233,7 @@ class Solution
     },
     soft: {
       path_text: :solutions_soft_path,
-      title: '민주주의 디지털 기술',
+      title: '플랫폼',
       subtitle: '일상과 세상을 더 민주적으로',
       image_path: 'solutions/card-soft.png',
       items_name: '디지털 플랫폼',
