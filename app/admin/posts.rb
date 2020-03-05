@@ -35,7 +35,7 @@ ActiveAdmin.register Post do
       row :id
       row :title
       row :body do
-        markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
+        markdown = Redcarpet::Markdown.new(::PartiMarkdownRender.new(hard_wrap: true), autolink: true, tables: true)
         raw(%(<div class="admin-post-show-body site-post-body">#{markdown.render(resource.body)}</div>))
       end
       row :published_at
@@ -51,7 +51,7 @@ ActiveAdmin.register Post do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :body, as: :simplemde_editor, input_html: { 'data-options': { spellChecker: false }.to_json }
+      f.input :body, as: :easymde_editor, input_html: { 'data-options': { spellChecker: false, imageCaption: true }.to_json }
       f.input :category_slug, as: :select, collection: Post::CATEGORIES.map { |category_slug, category_title| [ raw(category_title), category_slug ] }
       f.input :published_at, as: :datepicker
       f.input :cover, hint: image_tag(f.object.cover.url(:sm))

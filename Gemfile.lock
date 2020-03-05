@@ -1,8 +1,8 @@
 GIT
-  remote: https://github.com/parti-coop/activeadmin_simplemde.git
-  revision: 0208aa243fd9453cc696b248c19ee9cb8664abdb
+  remote: https://github.com/parti-coop/activeadmin_easymde
+  revision: abe60ac9ecef839a2e02ea75b76dff8e714a6ebd
   specs:
-    activeadmin_simplemde (0.2.0)
+    activeadmin_easymde (2.9.0)
       activeadmin (~> 2.0)
 
 GEM
@@ -553,7 +553,7 @@ PLATFORMS
 DEPENDENCIES
   active_interaction (~> 3.7)
   activeadmin (~> 2.6)
-  activeadmin_simplemde!
+  activeadmin_easymde!
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3, >= 4.3.1)
