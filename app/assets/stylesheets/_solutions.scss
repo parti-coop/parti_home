@@ -122,6 +122,32 @@ body.body-solutions {
         }
       }
     }
+    @include media-breakpoint-up(sm) {
+      .tiles-container.tiles-container-soft {
+        .tile-container {
+          width: 100%;
+          .tile {
+            display: flex;
+            .tile-cover-container {
+              flex: 1;
+            }
+            .tile-meta {
+              flex: 1;
+              padding-left: 1em;
+              margin-top: 0;
+              flex-direction: column;
+              .title {
+                flex: 0;
+              }
+              .body {
+                padding-left: 0;
+                margin-top: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   section.tiles-what-we-do {

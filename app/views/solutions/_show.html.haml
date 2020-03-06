@@ -16,7 +16,7 @@
         .tiles-title
           != info[:items_name]
     .container
-      .tiles-container<>
+      .tiles-container{ class: "tiles-container-#{slug}" }<>
         - info[:items].each do |item|
           .tile-container<>
             %a.anchor(id="anchor-item-#{item[:slug]}")
@@ -27,7 +27,7 @@
                 .tile-meta
                   .title
                     != item[:title]
-                  .body
+                  .body.text-keep-all
                     != item[:description]
 
 - if info[:portfolios].any?
@@ -54,7 +54,7 @@
   .tiles-title-line
     .container
       .tiles-title.text-keep-all
-        이 솔루션으로 하는 일
+        이 #{ slug == :soft ? '플랫폼' : '솔루션' }으로 하는 일
   .container.container-full
     .tiles-container
       - Post.published.recent.by_category_slug(slug).limit(3).each do |post|
