@@ -167,6 +167,17 @@ class Solution
       slug: 'groups'
     },
     {
+      image_path: 'soft_solution_4.png',
+      title: '데모스X',
+      description: '''
+      시민과 기관이 함께 정책을 논의하고 실행하는 시민참여 플랫폼
+      <br><br>
+      핵심 기능: 오픈소스 운영 가이드, 플랫폼 소스
+      ''',
+      url: 'http://demosx.org',
+      slug: 'demosx'
+    },
+    {
       image_path: 'soft_solution_2.png',
       title: '빠띠 타운홀',
       description: '''
@@ -187,17 +198,6 @@ class Solution
       ''',
       url: 'https://campaigns.kr',
       slug: 'campaigns'
-    },
-    {
-      image_path: 'soft_solution_4.png',
-      title: '데모스X',
-      description: '''
-      시민과 기관이 함께 정책을 논의하고 실행하는 시민참여 플랫폼
-      <br><br>
-      핵심 기능: 오픈소스 운영 가이드, 플랫폼 소스
-      ''',
-      url: 'http://demosx.org',
-      slug: 'demosx'
     },
   ]
 
