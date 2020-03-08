@@ -1,12 +1,13 @@
 //= require active_admin/base
-//= require activeadmin/simplemde/simplemde
-//= require activeadmin/simplemde_editor_input
+//= require activeadmin/easymde/marked
+//= require activeadmin/easymde/easymde
+//= require activeadmin/easymde_editor_input
 //= require inline-attachment
 //= require codemirror-4.inline-attachment
 //= require input.inline-attachment
 
 $(function() {
-  $.each($('.simplemde-editor'), function(i, elm) {
+  $.each($('.easymde-editor'), function(i, elm) {
     var editor = $(elm).data('editor')
     if(editor) {
       inlineAttachment.editors.codemirror4.attach(editor.codemirror, {

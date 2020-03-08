@@ -60,7 +60,8 @@ gem 'fog'
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'activeadmin', '~> 2.6'
-gem 'activeadmin_simplemde', github: 'parti-coop/activeadmin_simplemde'
+gem 'activeadmin_easymde', git: 'https://github.com/parti-coop/activeadmin_easymde'
+# gem 'activeadmin_easymde', path: '/Users/dalikim/workspace/activeadmin_easymde'
 
 # deploy
 gem 'travis'

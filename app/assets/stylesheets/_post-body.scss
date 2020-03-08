@@ -1,9 +1,48 @@
+.CodeMirror {
+  font-family: Arial, monospace;
+  font-size: 16px;
+  line-height: 29px;
+  background-color: #3e3939;
+  .CodeMirror-code {
+    color: white;
+  }
+  .CodeMirror-cursor {
+    border-color: white;
+  }
+  .CodeMirror-selectedtext {
+    color: #3e3939;
+  }
+}
+.cm-s-easymde .cm-header-1 {
+  font-size: 180%;
+}
+.cm-s-easymde .cm-string {
+  color: #c4d5f3;
+}
+.cm-s-easymde .cm-link {
+  color: #e6e9ab
+}
+
 .CodeMirror:not(.CodeMirror-fullscreen),
 .editor-toolbar:not(.fullscreen) {
-  width: calc(80% - 22px);
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: 0;
 }
+
+.editor-toolbar,
+.editor-toolbar.fullscreen {
+  background-color: #f4f4f4;
+  button {
+    color: gray;
+    box-shadow: none;
+    &:hover,
+    &:active {
+      color: white;
+    }
+  }
+}
+
+.editor-toolbar.fullscreen
 
 .CodeMirror.CodeMirror-fullscreen {
   padding: 0;
@@ -32,21 +71,25 @@ pre.CodeMirror-line {
     text-decoration: underline;
   }
 
-  em {
+  figure figcaption {
     font-size: 14px;
     line-height: 27px;
     text-align: center;
     display: inline-block;
     width: 100%;
     color: $gray-light;
+    margin-top: 0.5rem;
   }
 
+  figure img,
   img {
     max-width: 100%;
     max-height: 600px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
   }
 
   hr {
@@ -72,11 +115,11 @@ pre.CodeMirror-line {
   }
 
   h1 {
-    font-size: 29px;
+    font-size: 27px;
     line-height: 47px;
     margin-bottom: 19px;
     @media (min-width: 576px) {
-      font-size: 26px;
+      font-size: 24px;
       line-height: 45px;
     }
   }
@@ -137,5 +180,12 @@ pre.CodeMirror-line {
   }
   ul ul, ul ol, ol ul, ol ol, blockquote.right p, blockquote.left p, .alert :last-child, .note :last-child, .box :last-child, .footnotes :last-child {
     margin-bottom: 0;
+  }
+}
+
+.editor-preview-side {
+  figure img,
+  img {
+    max-height: 80px;
   }
 }
