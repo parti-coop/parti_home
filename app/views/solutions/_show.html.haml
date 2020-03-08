@@ -54,7 +54,7 @@
   .tiles-title-line
     .container
       .tiles-title.text-keep-all
-        이 #{ slug == :soft ? '플랫폼' : '솔루션' }으로 하는 일
+        #{ slug == :soft ? '플랫폼 소식' : '이 솔루션 으로 하는 일' }
   .container.container-full
     .tiles-container
       - Post.published.recent.by_category_slug(slug).limit(3).each do |post|
@@ -67,6 +67,6 @@
       .tile-container<>
         = link_to what_we_do_path(category_slug: slug), class: 'tile tile-more' do
           .more-link
-            하는 일 더 보기
+            #{ slug == :soft ? '소식 더 보기' : '하는 일 더 보기' }
           .more-icon
             %i.fas.fa-arrow-right

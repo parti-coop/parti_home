@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   CATEGORIES = (
-    (Solution::DICTIONARY.map { |solution_slug, solution_info| [solution_slug, solution_info[:title]] }) + [ [:data, '공공 데이터·알고리즘'], [:lab, '민주주의 실험'], [:culture, '조직 문화'] ]
+    (Solution::DICTIONARY.map { |solution_slug, solution_info| [solution_slug, solution_info[:title]] }) + [ [:data, '공공·공익 데이터'], [:lab, '민주주의 랩'], [:culture, '조직 문화'] ]
   ).to_h
 
   scope :recent, -> (limit_count = nil){

@@ -206,7 +206,7 @@ class Solution
   DICTIONARY = {
     demos: {
       path_text: :solutions_demos_path,
-      title: '참여 공론장',
+      title: '이해관계자 숙의 공론장',
       subtitle: '일상 곳곳을 민주적으로',
       image_path: 'solutions/card-demos.png',
       items_name: '툴킷',
@@ -215,7 +215,7 @@ class Solution
     },
     org: {
       path_text: :solutions_org_path,
-      title: '이슈 커뮤니티',
+      title: '협력적 커뮤니티',
       subtitle: '함께 일하고 함께 노는',
       image_path: 'solutions/card-org.png',
       items_name: '툴킷',
