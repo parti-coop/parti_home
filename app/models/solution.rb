@@ -90,7 +90,7 @@ class Solution
         시민의 방송은 어떤 이야기를 담아내야 할까?<br><br>
         더 많은 이들의 참여로 시민이 주체가 되는 방송을 만들고자, 시민들에게 방송 기획안을 공모받아 실제 방송으로 만드는 프로젝트
       ''',
-      url: 'https://parti.coop/posts/151'
+      url: 'https://parti.coop/posts/146'
     }
   ]
 
