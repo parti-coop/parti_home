@@ -22,7 +22,7 @@
             = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
               .tile
                 .tile-cover-container
-                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url("#{slug}-key-visual.png")})") }
                 .tile-meta
                   .title
                     != portfolio[:title]

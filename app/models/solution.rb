@@ -2,19 +2,20 @@ class Solution
   # 데모스
   DEMOS_TOOLKITS = [
     {
+      image_path: 'demos_solution_2.jpg',
+      title: '시민참여 공론장',
+      description: '''
+        사회적으로 관심과 논의가 필요한 의제, 지역 또는 공동체의 일상에서 논의가 필요한 사안에 관심있는 시민 누구나 쉽게 토론에 참여할 수 있습니다.
+      ''',
+      url: 'https://toolkit.parti.coop/sphere/debate.html'
+    },
+    {
       image_path: 'demos_solution_1.png',
-      title: '의제기획 및 선정단',
+      title: '의제기획 및 선정',
       description: '''
         시민의 제안이나 기관의 정책 공론화 여부를 검토하고, 숙의를 통해 공적 의제로 만들어냅니다.
       ''',
       url: 'https://toolkit.parti.coop/sphere/agenda.html'
-    },
-    {
-      image_path: 'demos_solution_2.jpg',
-      title: '열린 정책 공론장',
-      description: '''
-        시민제안 내 의제를 바탕으로 공론화 진행, 기관 의제에 대한 시민 의견 수렴 공론장을 기획하고 운영하는 온, 오프라인 공론장을 만듭니다.
-      '''
     },
     {
       image_path: 'demos_solution_3.jpg',
@@ -25,22 +26,32 @@ class Solution
       url: 'https://toolkit.parti.coop/sphere/workshop.html'
     },
     {
-      image_path: 'demos_solution_4.jpg',
-      title: '찾아가는 시민제안',
-      description: '''
-        더 많은 시민들에게 시민참여플랫폼을 직접 경험할 수 있도록 다양한 이벤트를 기획합니다.
-        <br><br>
-        주요 이슈에 대한 현장 시민의견 수렴, 시민참여플랫폼 브랜드  홍보 등을 진행합니다.
-      '''
-    },
-    {
       image_path: 'demos_solution_5.png',
       title: '시민제안 실험장',
       description: '''
         시민의 제안을 바탕으로 가상의 환경을 만들어 직접 실험해보고 그 결과를 바탕으로 공론화 하는 실험장입니다.
         <br><br>
         이를 통해 제안의 실효성과 정책화의 걸림돌, 해결방안을 검증합니다.
-      '''
+      ''',
+      url: 'https://toolkit.parti.coop/sphere/citizenlab.html'
+    },
+    {
+      image_path: 'demos_solution_4.jpg',
+      title: '찾아가는 시민제안',
+      description: '''
+        더 많은 시민들에게 시민참여플랫폼을 직접 경험할 수 있도록 다양한 이벤트를 기획합니다.
+        <br><br>
+        주요 이슈에 대한 현장 시민의견 수렴, 시민참여플랫폼 브랜드  홍보 등을 진행합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/sphere/suggestion.html'
+    },
+    {
+      image_path: 'demos_solution_6.png',
+      title: '시민참여플랫폼 운영가이드 - 데모스X 운영가이드 1.1',
+      description: '''
+        시민제안 내 의제를 바탕으로 공론화 진행, 기관 의제에 대한 시민 의견 수렴 공론장을 기획하고 운영하는 온, 오프라인 공론장을 만듭니다.
+      ''',
+      url: 'https://toolkit.parti.coop/demosx/'
     }
   ]
 
@@ -49,19 +60,37 @@ class Solution
       image_path: 'demos_portfolio_1.png',
       title: '민주주의서울 기획 및 운영',
       description: '''
-        서울시와 함께 공론장 및 O2O 플랫폼 기획 및 운영<br>
+        서울시와 함께 공론장 및 O2O 플랫폼 기획 및 운영<br><br>
         시민과 서울시가 함께 정책을 논의하고 실행하는 시민참여플랫폼
       ''',
-      url: 'https://democracy.seoul.go.kr/'
+      url: ' https://parti.coop/posts/93'
     },
     {
       image_path: 'demos_portfolio_2.png',
       title: '김해문화재단 김해가야G',
       description: '''
-        김해문화재단과 함께 공유공간 커뮤니티 빌딩 사업 기획 및 운영<br>
+        김해문화재단과 함께 공유공간 커뮤니티 빌딩 사업 기획 및 운영<br><br>
         시민이 직접 공유공간 활용 방안을 제안하고 운영해보는 커뮤니티 실험
       ''',
-      url: 'https://ggg.parti.xyz/'
+      url: 'https://parti.coop/posts/5'
+    },
+    {
+      image_path: '',
+      title: '대전NGO지원센터 워크숍',
+      description: '''
+        대전 활동가들과 함께한 일상의 공론장 만들기<br><br>
+        시민 누구나 일상의 공론장을 열 수 있고, 함께 대화하며 나와 다른이의 목소리를 듣고 자신의 이야기를 구체화해가는 전반의 과정을 경험하는 워크숍
+      ''',
+      url: 'https://parti.coop/posts/151'
+    },
+    {
+      image_path: '',
+      title: 'TBS 오픈테이블',
+      description: '''
+        시민의 방송은 어떤 이야기를 담아내야 할까?<br><br>
+        더 많은 이들의 참여로 시민이 주체가 되는 방송을 만들고자, 시민들에게 방송 기획안을 공모받아 실제 방송으로 만드는 프로젝트
+      ''',
+      url: 'https://parti.coop/posts/151'
     }
   ]
 
@@ -211,7 +240,8 @@ class Solution
       image_path: 'solutions/card-demos.png',
       items_name: '툴킷',
       items: Solution::DEMOS_TOOLKITS,
-      portfolios: Solution::DEMOS_PORTFOLIOS
+      portfolios: Solution::DEMOS_PORTFOLIOS,
+      using_platform_slugs: %i(demosx townhall)
     },
     org: {
       path_text: :solutions_org_path,
