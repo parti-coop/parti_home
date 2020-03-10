@@ -2,8 +2,41 @@
   %section.descriptions
     .container
       %p.lead.text-keep-all
-        이슈를 중심으로 다양한 해결책을
+        시민, 조직과 함께
         %br
-        공동 생산하는 열린 커뮤니티를 만듭니다.
+        더 민주적이고 협력적인 커뮤니티를 만듭니다.
+
+  %section.tiles.tiles-with
+    .tiles-title-line
+      .container
+        .tiles-title
+          함께 하는 일
+    .container
+      .tiles-container<>
+        .tile
+          .tile-meta
+            .title
+              협력 프로젝트
+              .text-muted Collaborate
+            .body.text-keep-all
+              참여자 중심의 커뮤니티 프로젝트를 파트너와 함께 만듭니다.
+        .tile
+          .tile-meta
+            .title
+              교육 및 워크숍
+              .text-muted Inspire
+            .body.text-keep-all
+              툴킷과 플랫폼에 기반한 다양한 커뮤니티 워크숍을 진행합니다.
+        .tile
+          .tile-meta
+            .title
+              네트워크
+              .text-muted Connect
+            .body.text-keep-all
+              더 나은 세상을 만드는 다양한 커뮤니티 활동가들을 연결합니다.
+              %br
+              %a(href= "https://democracy-activists.parti.xyz/" class="text-primary")
+                커뮤니티 활동가 네트워크 참여하기
+                %i.fa.fa-arrow-right
 
 = render 'solutions/show', slug: @slug, info: @info, content: content

@@ -68,25 +68,27 @@ class Solution
   ORG_TOOLKITS = [
     {
       image_path: 'org_solution_1.jpg',
-      title: '커뮤니티 툴킷',
+      title: '소셜이슈 커뮤니티 101',
       description: '''
-        누구나 이슈 커뮤니티를 시작할 수 있는 가이드를 오픈소스로 생산합니다.
+        사회 이슈에 대해 다양한 사람이 모여 안전하고 개방적으로 이야기 나누고 할 수 있는 만큼 협력하는 커뮤니티를 만들 때 활용할 수 있는 가이드입니다.
       ''',
       url: 'https://toolkit.parti.coop/community/community101'
     },
     {
       image_path: 'org_solution_2.jpg',
-      title: '이슈 커뮤니티 디자인',
+      title: '항해하는 조직 101',
       description: '''
-        시민 스스로 만들고 협력하는 지속가능한 커뮤니티 모델을 만듭니다.
-      '''
+        일상 중 가장 많은 시간을 보내는 조직 안에서 더 민주적으로 의사소통할 수 있는 방법들을 소개합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/community/org101.html'
     },
     {
       image_path: 'org_solution_3.jpg',
-      title: '커뮤니티 액션 워크숍',
+      title: 'DIY 정당 101',
       description: '''
-        커뮤니티가 이슈와 해결책을 찾고 실행하는 워크숍을 설계하고 운영합니다.
-      '''
+        우리에게 꼭 필요한 문제나 관심사를 다루는 프로젝트 정당을 직접 만듭니다.
+      ''',
+      url: 'https://toolkit.parti.coop/community/diy-party101.html'
     }
   ]
 
@@ -98,6 +100,14 @@ class Solution
         우리의 달라진 삶에 필요한 정책을 제안하고, 우리의 달라진 삶을 반영하는 문화혁신사업을 진행하는 청년정책 커뮤니티
       ''',
       url: 'https://butterknifecrew.kr'
+    },
+    {
+      image_path: 'org_portfolio_5.jpg',
+      title: '커먼즈필드제주',
+      description: '''
+        함께 고민하고 함께 상상하는 소통협력 공간
+      ''',
+      url: 'https://up.parti.xyz'
     },
     {
       image_path: 'org_portfolio_2.jpg',
@@ -115,14 +125,6 @@ class Solution
       ''',
       url: 'https://zero-waste.parti.xyz'
     },
-    {
-      image_path: 'org_portfolio_4.jpg',
-      title: '일인당',
-      description: '''
-        \'1인 가구 공동공간 만든당\'의 줄임말로 관악구에서 1인 가구의 권리와 삶의 질을 위해 활동하는 커뮤니티
-      ''',
-      url: 'https://alone.parti.xyz'
-    }
   ]
 
   CAMPAIGN_TOOLKITS = []
@@ -201,8 +203,6 @@ class Solution
     },
   ]
 
-  SOFT_PORTFOLIOS = []
-
   DICTIONARY = {
     demos: {
       path_text: :solutions_demos_path,
@@ -216,11 +216,12 @@ class Solution
     org: {
       path_text: :solutions_org_path,
       title: '협력적 커뮤니티',
-      subtitle: '함께 일하고 함께 노는',
+      subtitle: '더불어 일하고 더불어 해결하는',
       image_path: 'solutions/card-org.png',
       items_name: '툴킷',
       items: Solution::ORG_TOOLKITS,
-      portfolios: Solution::ORG_PORTFOLIOS
+      portfolios: Solution::ORG_PORTFOLIOS,
+      using_platform_slugs: %i(groups demosx)
     },
     campaign: {
       path_text: :solutions_campaign_path,
@@ -230,27 +231,6 @@ class Solution
       items_name: '툴킷',
       items: Solution::CAMPAIGN_TOOLKITS,
       portfolios: Solution::CAMPAIGN_PORTFOLIOS
-    },
-    soft: {
-      path_text: :solutions_soft_path,
-      title: '플랫폼',
-      subtitle: '일상과 세상을 더 민주적으로',
-      image_path: 'solutions/card-soft.png',
-      items_name: '디지털 플랫폼',
-      items: Solution::SOFT_PLATFORMS,
-      portfolios: Solution::SOFT_PORTFOLIOS
     }
   }
-
-  CONTACT_OPTIONS = Solution::DICTIONARY.map do |solution_slug, solution_info|
-    {
-      title: solution_info[:title],
-      slug: solution_slug
-    }
-  end + [
-    {
-      title: '기타',
-      slug: 'etc'
-    }
-  ]
 end

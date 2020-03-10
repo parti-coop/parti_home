@@ -20,6 +20,19 @@
       .contact-envelope
         = image_tag 'contact-envelope.png'
 
+%section.activists
+  .container.container-sm
+    .base-section-title
+      활동가 커뮤니티 참여하기
+    .base-section-desc.text-keep-all
+      %span.text-nowrap 빠띠 민주주의 활동가들이
+      %br
+      함께 교류하는
+      %span.text-nowrap 커뮤니티입니다.
+    .activists-button-container
+      = link_to "https://democracy-activists.parti.xyz/",  class: 'btn btn-default btn-contact' do
+        참여하기
+
 %footer.app-footer
   .container-fluid
     .logo

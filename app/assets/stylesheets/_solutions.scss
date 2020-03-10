@@ -150,6 +150,32 @@ body.body-solutions {
     }
   }
 
+  section.tiles-with {
+    margin-bottom: 120px;
+    .tile {
+      padding: 24px 0;
+      border-radius: 8px;
+      .tile-meta {
+        display: flex;
+        .title {
+          flex: none;
+          width: 30%;
+          max-width: 300px;
+          min-width: 200px;
+          font-size: 1.2em;
+          border: 1px solid #c2c2c2;
+          padding: 32px 24px;
+          border-radius: 8px;
+          text-align: center;
+          margin-right: 3em;
+          .text-muted {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+
   section.tiles-what-we-do {
     padding-bottom: 170px;
     @include media-breakpoint-down(xs) {

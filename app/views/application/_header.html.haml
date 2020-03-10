@@ -9,11 +9,11 @@
         %a.nav-link.dropdown-toggle{ href: '#', id: 'header-navbar-dropdown', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' }
           민주주의 솔루션
         .dropdown-menu{ 'aria-labelledby': 'header-navbar-dropdown' }
-          - Solution::DICTIONARY.reject{ |key, _| key == :soft }.each do |_, solution_info|
+          - Solution::DICTIONARY.each do |_, solution_info|
             %a.dropdown-item{ href: send(solution_info[:path_text]) }
               != solution_info[:title]
       %li.nav-item
-        %a.nav-link{ href: send(Solution::DICTIONARY[:soft][:path_text]) }
+        %a.nav-link{ href: send(Platform::INFO[:path_text]) }
           민주주의 플랫폼
       %li.nav-item
         %a.nav-link{ href: what_we_do_path } 소식
