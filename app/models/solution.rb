@@ -136,7 +136,7 @@ class Solution
       description: '''
         함께 고민하고 함께 상상하는 소통협력 공간
       ''',
-      url: 'https://up.parti.xyz'
+      url: 'https://cmzfld.net'
     },
     {
       image_path: 'org_portfolio_2.jpg',
