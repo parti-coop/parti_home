@@ -19,6 +19,23 @@ class Contact < ApplicationRecord
 
   before_save :trim_solution_slugs
 
+  SOLUTION_OPTIONS = Solution::DICTIONARY.map do |solution_slug, solution_info|
+    {
+      title: solution_info[:title],
+      slug: solution_slug
+    }
+  end + [
+    {
+      title: Platform::INFO[:title],
+      slug: Platform::INFO[:slug],
+    }
+  ] + [
+    {
+      title: '기타',
+      slug: 'etc'
+    }
+  ]
+
   def self.ransackable_scopes(auth_object = nil)
     %i(solution_slugs_array_in)
   end

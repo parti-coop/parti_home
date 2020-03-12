@@ -5,4 +5,9 @@ class SolutionsController < ApplicationController
       @info = solution_info
     end
   end
+
+  def soft
+    @slug = Platform::INFO[:slug]
+    @info = Platform::INFO
+  end
 end

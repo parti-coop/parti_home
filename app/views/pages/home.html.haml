@@ -52,3 +52,11 @@
                   != solution_info[:subtitle]
                 .title
                   != solution_info[:title]
+      = link_to send(Platform::INFO[:path_text]) do
+        .tile-container{ 'data-aos': 'fade-up' }
+          .tile{ style: "background-image: linear-gradient(to bottom, #11111100, #11111133), url(#{asset_url(Platform::INFO[:image_path])})" }
+            .tile-meta
+              .subtitle
+                != Platform::INFO[:subtitle]
+              .title
+                != Platform::INFO[:title]

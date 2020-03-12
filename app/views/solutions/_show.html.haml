@@ -9,6 +9,28 @@
 
 = content
 
+- if info[:portfolios].any?
+  %section.tiles.tiles-portfolio
+    .tiles-title-line
+      .container
+        .tiles-title
+          포트폴리오
+          - if slug == :org
+            .lead.text-dark 우리는 더 많은 사람들이 관심과 이슈로 만나 협력할 때 더 민주적인 세상이 된다고 믿습니다.
+    .container
+      .tiles-container<>
+        - info[:portfolios].each do |portfolio|
+          .tile-container<>
+            = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
+              .tile
+                .tile-cover-container
+                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url("#{slug}-key-visual.png")})") }
+                .tile-meta
+                  .title
+                    != portfolio[:title]
+                  .body
+                    != portfolio[:description]
+
 - if info[:items].any?
   %section.tiles.tiles-portfolio
     .tiles-title-line
@@ -30,31 +52,31 @@
                   .body.text-keep-all
                     != item[:description]
 
-- if info[:portfolios].any?
+- if info[:using_platform_slugs]&.any?
   %section.tiles.tiles-portfolio
     .tiles-title-line
       .container
         .tiles-title
-          포트폴리오
+          플랫폼
     .container
-      .tiles-container<>
-        - info[:portfolios].each do |portfolio|
+      .tiles-container.tiles-container-soft<>
+        - info[:using_platform_slugs].each do |using_platform_slug|
+          - using_platform = Platform::DICTIONARY[using_platform_slug]
           .tile-container<>
-            = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
+            = link_to (using_platform[:url].presence || new_contact_path) , target: '_blank' do
               .tile
                 .tile-cover-container
-                  .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
+                  .tile-cover{ style: (using_platform[:image_path].present? ? "background-image: url(#{asset_url("solutions/soft/#{using_platform[:image_path]}")})" : "background-image: url(#{asset_url('samples/home/whatwedo/card1.png')})") }
                 .tile-meta
                   .title
-                    != portfolio[:title]
-                  .body
-                    != portfolio[:description]
-
+                    != using_platform[:title]
+                  .body.text-keep-all
+                    != using_platform[:description]
 %section.tiles.tiles-what-we-do
   .tiles-title-line
     .container
       .tiles-title.text-keep-all
-        #{ slug == :soft ? '플랫폼 소식' : '이 솔루션 으로 하는 일' }
+        소식
   .container.container-full
     .tiles-container
       - Post.published.recent.by_category_slug(slug).limit(3).each do |post|
