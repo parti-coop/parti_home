@@ -39,6 +39,20 @@ class Platform
       핵심 기능: 지지를 얻기 위한 서명/지도/인증샷/목소리 모으기, 변화를 만들기 위한 촉구/아카이브하기
       ''',
       url: 'https://campaigns.kr'
+    },
+    datapublic: {
+      image_path: 'soft_solution_5.png',
+      title: '데이터퍼브릭',
+      description: '''
+      사회적으로 이슈가 된 사안들의 원본 데이터들을 출처와 함께 모읍니다.
+      ''',
+      url: 'https://datapublic.kr/data_sets'
+    },
+    archives: {
+      image_path: 'soft_solution_6.png',
+      title: '아카이브 (제작 중)',
+      description: '',
+      url: ''
     }
   }
 
@@ -50,6 +64,5 @@ class Platform
       image_path: 'solutions/card-soft.png',
       items_name: '디지털 플랫폼',
       items: Platform::DICTIONARY.map { |key, item| item.merge(slug: key) },
-      portfolios: []
   }
 end

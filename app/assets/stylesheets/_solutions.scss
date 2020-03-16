@@ -309,3 +309,12 @@ body.body-solutions-soft {
     }
   }
 }
+
+body.body-solutions-data {
+  section.base-key-visual {
+    background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('data-key-visual.png');
+    @include media-breakpoint-down(sm) {
+      background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('data-key-visual-sm.png');
+    }
+  }
+}

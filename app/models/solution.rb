@@ -210,6 +210,31 @@ class Solution
     },
   ]
 
+  DATA_TOOLKITS = []
+
+  DATA_PORTFOLIOS = [
+    {
+      image_path: 'data_portfolio_1.jpg',
+      title: '코로나19 공공데이터 공동대응',
+      description: '코로나19 공공데이터에 관해 누구나 기여할 수 있는 크라우드 소싱 작업',
+      url: 'http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=030&aid=0002871900'
+    },
+    {
+      image_path: 'data_portfolio_2.png',
+      title: '세월호아카이브',
+      description: '세월호 참사의 기록에 시민과 연구자가 자유롭게 접근할 수 있는 세월호 아카이브',
+      url: 'https://sewolarchive.org/'
+    },
+    {
+      image_path: 'cam_portfolio_3.png',
+      title: '당신의 투표를 예측해 드립니다',
+      description: '''
+      전국 유권자 1500명에게 물어, 최적화된 7개 문항만을 뽑아 구성한 예측모델로 응답자의 투표 결과를 예측한 프로젝트
+      ''',
+      url: 'https://toolkit.parti.coop/lab.html#%EB%8B%B9%EC%8B%A0%EC%9D%98-%ED%88%AC%ED%91%9C%EB%A5%BC-%EC%98%88%EC%B8%A1%ED%95%B4-%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4'
+    }
+  ]
+
   DICTIONARY = {
     demos: {
       path_text: :solutions_demos_path,
@@ -240,6 +265,16 @@ class Solution
       items: Solution::CAMPAIGN_TOOLKITS,
       portfolios: Solution::CAMPAIGN_PORTFOLIOS,
       using_platform_slugs: %i(campaigns)
+    },
+    data: {
+      path_text: :solutions_data_path,
+      title: '공익 데이터',
+      subtitle: '투명하고 신뢰하는 사회를 위한',
+      image_path: 'solutions/card-data.png',
+      items_name: '툴킷',
+      items: Solution::DATA_TOOLKITS,
+      portfolios: Solution::DATA_PORTFOLIOS,
+      using_platform_slugs: %i(datapublic archives)
     }
   }
 end
