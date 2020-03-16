@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   get 'marketing', to: 'pages#marketing'
   get 'privacy', to: 'pages#privacy'
   get 'privacy_revisions/v1', to: 'pages#privacy_revisions_v1', as: :privacy_revisions_v1
-  get 'solutions/demos', to: 'solutions#demos'
-  get 'solutions/org', to: 'solutions#org'
-  get 'solutions/campaign', to: 'solutions#campaign'
-  get 'solutions/soft', to: 'solutions#soft'
+  Solution::DICTIONARY.each do |solution_slug,_|
+    get "solutions/#{solution_slug}", to: "solutions##{solution_slug}", as: :"solutions_#{solution_slug}"
+  end
+  get 'solutions/soft', to: 'solutions#soft', as: :solutions_soft
   post 'reports/subscribe', to: 'pages#subscribe_reports', as: :subscribe_reports
 
   resources :contacts
