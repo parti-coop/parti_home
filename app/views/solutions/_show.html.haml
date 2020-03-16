@@ -21,8 +21,8 @@
       .tiles-container<>
         - info[:portfolios].each do |portfolio|
           .tile-container<>
-            = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
-              .tile
+            .tile
+              = link_to (portfolio[:url].presence || new_contact_path) , target: '_blank' do
                 .tile-cover-container
                   .tile-cover{ style: (portfolio[:image_path].present? ? "background-image: url(#{asset_url("solutions/#{slug}/#{portfolio[:image_path]}")})" : "background-image: url(#{asset_url("#{slug}-key-visual.png")})") }
                 .tile-meta
@@ -30,6 +30,16 @@
                     != portfolio[:title]
                   .body
                     != portfolio[:description]
+              - if portfolio[:links]&.any?
+                .tile-links
+                  %div 관련 뉴스&middot;링크
+                  %ul.list-unstyled
+                    - portfolio[:links].each do |link|
+                      %li
+                        %a{ href: link[:url], target: '_blank' }
+                          \-
+                          = link[:title]
+
 
 - if info[:items].any?
   %section.tiles.tiles-portfolio

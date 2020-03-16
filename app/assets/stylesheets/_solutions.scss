@@ -53,6 +53,7 @@ body.body-solutions {
         width: 50%;
         margin-bottom: 120px;
         display: inline-block;
+        vertical-align: top;
         @include media-breakpoint-down(xs) {
           width: 100%;
           margin-bottom: 80px;
@@ -96,12 +97,16 @@ body.body-solutions {
           .title {
             font-size: 24px;
             font-weight: 500;
-            flex: 1;
             padding-right: 12px;
+            flex: none;
+            width: 45%;
+            word-break: keep-all;
             @include media-breakpoint-down(sm) {
               padding-right: 0;
               font-size: 20px;
               line-height: 28px;
+              flex: 1;
+              width: auto;
             }
           }
           .body {
@@ -119,6 +124,13 @@ body.body-solutions {
               color: $brand-violet;
             }
           }
+        }
+      }
+      .tile-links {
+        margin-top: 2em;
+        ul.list-unstyled {
+          border-top: 1px solid $gray-d8;
+          padding-top: 0.6em;
         }
       }
     }
@@ -315,6 +327,15 @@ body.body-solutions-data {
     background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('data-key-visual.png');
     @include media-breakpoint-down(sm) {
       background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('data-key-visual-sm.png');
+    }
+  }
+}
+
+body.body-solutions-lab {
+  section.base-key-visual {
+    background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('lab-key-visual.png');
+    @include media-breakpoint-down(sm) {
+      background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('lab-key-visual-sm.png');
     }
   }
 }
