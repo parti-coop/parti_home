@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'solutions/demos', to: 'solutions#demos'
   get 'solutions/org', to: 'solutions#org'
   get 'solutions/campaign', to: 'solutions#campaign'
+  get 'solutions/data', to: 'solutions#data'
   get 'solutions/soft', to: 'solutions#soft'
   post 'reports/subscribe', to: 'pages#subscribe_reports', as: :subscribe_reports
 

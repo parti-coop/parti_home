@@ -156,7 +156,24 @@ class Solution
     },
   ]
 
-  CAMPAIGN_TOOLKITS = []
+  CAMPAIGN_TOOLKITS = [
+    {
+      image_path: 'cam_solution_1.png',
+      title: '캠페이너 인생게임',
+      description: '''
+        짧은 시간에 캠페인 전 과정을 실행하면서 캠페이너에게 필요한 기술과 태도를 알게 됩니다.
+      ''',
+      url: 'https://toolkit.parti.coop/campaign/campaigner.html'
+    },
+    {
+      image_path: 'cam_solution_2.png',
+      title: '캠페인 101',
+      description: '''
+        다양한 시민의 참여를 모으고, 촉구 대상에게 답변을 요구하는 캠페인을 만드는 방법을 소개합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/campaign/campaign101.html'
+    }
+  ]
 
   CAMPAIGN_PORTFOLIOS = [
     {
@@ -165,7 +182,15 @@ class Solution
       description: '''
       차별금지법제정연대와 차별금지법 제정을 위한 서명을 모으고 차별에 맞서기 위한 경험을 기록
       ''',
-      url: 'https://sooda.govcraft.org'
+      url: 'https://campaigns.kr/campaigns/192'
+    },
+    {
+      image_path: 'cam_portfolio_5.jpg',
+      title: '카페 일회용컵 줄이기',
+      description: '''
+      28개 커피숍과 환경부가 1회용  플라스틱 제품에 대해 대책을 마련하도록 촉구하는 캠페인
+      ''',
+      url: 'https://campaigns.kr/campaigns/79'
     },
     {
       image_path: 'cam_portfolio_2.png',
@@ -176,59 +201,12 @@ class Solution
       url: 'http://votefuture.kr'
     },
     {
-      image_path: 'cam_portfolio_3.png',
-      title: '#우리에겐_페미니스트_선생님이_필요합니다',
+      image_path: 'cam_portfolio_4.png',
+      title: '아청법 개정을 촉구',
       description: '''
-      사이버불링의 대상이 된 페미니스트 선생님에 대한 문제 해결을 위한 캠페인
+      아동청소년 성매수 피해자를 피해자로 인정하기 위한 아청법 개정을 촉구하는 캠페인
       ''',
-      url: 'https://wouldyouparty.govcraft.org/campaigns/54'
-    },
-  ]
-
-  SOFT_PLATFORMS = [
-    {
-      image_path: 'soft_solution_1.png',
-      title: '빠띠 그룹스',
-      description: '''
-      팀과 커뮤니티의 협업을 위한 플랫폼
-      <br><br>
-      핵심 기능: 주제/이슈별 채널 관리, 공동문서 작성, 찬반 투표와 설문으로 토론하기, 아카이빙
-      ''',
-      url: 'https://parti.xyz',
-      slug: 'groups'
-    },
-    {
-      image_path: 'soft_solution_4.png',
-      title: '데모스X',
-      description: '''
-      시민과 기관이 함께 정책을 논의하고 실행하는 시민참여 플랫폼
-      <br><br>
-      핵심 기능: 오픈소스 운영 가이드, 플랫폼 소스
-      ''',
-      url: 'http://demosx.org',
-      slug: 'demosx'
-    },
-    {
-      image_path: 'soft_solution_2.png',
-      title: '빠띠 타운홀',
-      description: '''
-      참가자 중심의 실시간 토론 플랫폼
-      <br><br>
-      핵심 기능: 상반되는 의견 중 하나를 선택하는 배틀, 최적의 결론을 도출하는 투표, 참가자와 소통하는 제안, 발표를 극적으로 연출하는 응원
-      ''',
-      url: 'https://townhall.kr',
-      slug: 'townhall'
-    },
-    {
-      image_path: 'soft_solution_3.png',
-      title: '빠띠 캠페인즈',
-      description: '''
-      세상을 바꾸는 시민, 시민단체, 조직, 정당의 캠페인 플랫폼
-      <br><br>
-      핵심 기능: 지지를 얻기 위한 서명/지도/인증샷/목소리 모으기, 변화를 만들기 위한 촉구/아카이브하기
-      ''',
-      url: 'https://campaigns.kr',
-      slug: 'campaigns'
+      url: 'https://campaigns.kr/campaigns/68'
     },
   ]
 
@@ -256,11 +234,12 @@ class Solution
     campaign: {
       path_text: :solutions_campaign_path,
       title: '시민주도 캠페인',
-      subtitle: '시민 주도로 바꾸는 세상',
+      subtitle: '시민이 바꾸는 세상',
       image_path: 'solutions/card-campaign.png',
       items_name: '툴킷',
       items: Solution::CAMPAIGN_TOOLKITS,
-      portfolios: Solution::CAMPAIGN_PORTFOLIOS
+      portfolios: Solution::CAMPAIGN_PORTFOLIOS,
+      using_platform_slugs: %i(campaigns)
     }
   }
 end
