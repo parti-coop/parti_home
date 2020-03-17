@@ -1,0 +1,33 @@
+- content = capture do
+  %section.descriptions
+    .container
+      %p.lead.text-keep-all
+        데이터로 더 투명하고
+        %br
+        신뢰하는 사회를 만듭니다.
+
+  %section.tiles.tiles-with
+    .tiles-title-line
+      .container
+        .tiles-title
+          함께 하는 일
+    .container
+      .tiles-container<>
+        .tile
+          .tile-meta
+            .title
+              공익데이터 포럼
+            .body.text-keep-all
+              공익데이터 및 공공데이터에 대한 정책 연구와 제안을 합니다.
+        .tile
+          .tile-meta
+            %a.title(href="https://datapublic.kr/" target="_blank")
+              데이터 퍼블릭
+            .body.text-keep-all
+              사회적 이슈의 원본 데이터를 모으고, 이를 활용해 사실 관계를 확인합니다.
+              %br
+              %a(href= "https://datapublic.kr/" target="_blank" class="text-primary")
+                바로가기
+                %i.fa.fa-arrow-right
+
+= render 'solutions/show', slug: @slug, info: @info, content: content

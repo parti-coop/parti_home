@@ -1,0 +1,9 @@
+- content = capture do
+  %section.descriptions
+    .container
+      %p.lead.text-keep-all
+        다양한 실험을 통해
+        %br
+        더 민주적인 세상을 만듭니다.
+
+= render 'solutions/show', slug: @slug, info: @info, content: content
