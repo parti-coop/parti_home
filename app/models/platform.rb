@@ -42,7 +42,7 @@ class Platform
     },
     datapublic: {
       image_path: 'soft_solution_5.png',
-      title: '데이터퍼브릭',
+      title: '데이터퍼블릭',
       description: '''
       사회적으로 이슈가 된 사안들의 원본 데이터들을 출처와 함께 모읍니다.
       ''',
