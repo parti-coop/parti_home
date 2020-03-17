@@ -26,7 +26,6 @@ gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'redcarpet'
 gem 'htmlentities'
 gem 'browser'
-gem 'meta-tags', '~> 2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 # gem 'coffee-rails', '~> 4.2'
@@ -65,6 +64,10 @@ gem 'activeadmin_easymde', git: 'https://github.com/parti-coop/activeadmin_easym
 
 # deploy
 gem 'travis'
+
+# seo
+gem 'meta-tags', '~> 2.1'
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
