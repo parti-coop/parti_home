@@ -304,7 +304,7 @@ class Solution
           title: '혁신가 100명이 정책을 제안하고 대선캠프가 답하다​'
         }
       ],
-      url: 'http://innovators.kr/'
+      url: 'https://democracy-activists.parti.xyz/posts/15089'
     },
     {
       image_path: 'campaign-inno.png',
@@ -326,7 +326,7 @@ class Solution
       description: '''
       보건복지위원회의 법안심사소위원회 위원장인 인재근 의원에게 전달한 17만여명의 GMO완전표시제 서명 캠페인
       ''',
-      url: 'http://nongmo.parti.xyz/'
+      url: 'https://democracy-activists.parti.xyz/posts/15087'
     },
     {
       image_path: 'campaign-iknow.png',
