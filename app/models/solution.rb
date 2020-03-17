@@ -156,7 +156,24 @@ class Solution
     },
   ]
 
-  CAMPAIGN_TOOLKITS = []
+  CAMPAIGN_TOOLKITS = [
+    {
+      image_path: 'cam_solution_1.png',
+      title: '캠페이너 인생게임',
+      description: '''
+        짧은 시간에 캠페인 전 과정을 실행하면서 캠페이너에게 필요한 기술과 태도를 알게 됩니다.
+      ''',
+      url: 'https://toolkit.parti.coop/campaign/campaigner.html'
+    },
+    {
+      image_path: 'cam_solution_2.png',
+      title: '캠페인 101',
+      description: '''
+        다양한 시민의 참여를 모으고, 촉구 대상에게 답변을 요구하는 캠페인을 만드는 방법을 소개합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/campaign/campaign101.html'
+    }
+  ]
 
   CAMPAIGN_PORTFOLIOS = [
     {
@@ -165,7 +182,15 @@ class Solution
       description: '''
       차별금지법제정연대와 차별금지법 제정을 위한 서명을 모으고 차별에 맞서기 위한 경험을 기록
       ''',
-      url: 'https://sooda.govcraft.org'
+      url: 'https://campaigns.kr/campaigns/192'
+    },
+    {
+      image_path: 'cam_portfolio_5.jpg',
+      title: '카페 일회용컵 줄이기',
+      description: '''
+      28개 커피숍과 환경부가 1회용  플라스틱 제품에 대해 대책을 마련하도록 촉구하는 캠페인
+      ''',
+      url: 'https://campaigns.kr/campaigns/79'
     },
     {
       image_path: 'cam_portfolio_2.png',
@@ -176,60 +201,305 @@ class Solution
       url: 'http://votefuture.kr'
     },
     {
-      image_path: 'cam_portfolio_3.png',
-      title: '#우리에겐_페미니스트_선생님이_필요합니다',
+      image_path: 'cam_portfolio_4.png',
+      title: '아청법 개정을 촉구',
       description: '''
-      사이버불링의 대상이 된 페미니스트 선생님에 대한 문제 해결을 위한 캠페인
+      아동청소년 성매수 피해자를 피해자로 인정하기 위한 아청법 개정을 촉구하는 캠페인
       ''',
-      url: 'https://wouldyouparty.govcraft.org/campaigns/54'
+      url: 'https://campaigns.kr/campaigns/68'
     },
   ]
 
-  SOFT_PLATFORMS = [
+  DATA_TOOLKITS = []
+
+  DATA_PORTFOLIOS = [
     {
-      image_path: 'soft_solution_1.png',
-      title: '빠띠 그룹스',
-      description: '''
-      팀과 커뮤니티의 협업을 위한 플랫폼
-      <br><br>
-      핵심 기능: 주제/이슈별 채널 관리, 공동문서 작성, 찬반 투표와 설문으로 토론하기, 아카이빙
-      ''',
-      url: 'https://parti.xyz',
-      slug: 'groups'
+      image_path: 'data_portfolio_1.jpg',
+      title: '코로나19 공공데이터 공동대응',
+      description: '코로나19 공공데이터에 관해 누구나 기여할 수 있는 크라우드 소싱 작업',
+      url: 'http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=001&oid=030&aid=0002871900'
     },
     {
-      image_path: 'soft_solution_4.png',
-      title: '데모스X',
-      description: '''
-      시민과 기관이 함께 정책을 논의하고 실행하는 시민참여 플랫폼
-      <br><br>
-      핵심 기능: 오픈소스 운영 가이드, 플랫폼 소스
-      ''',
-      url: 'http://demosx.org',
-      slug: 'demosx'
+      image_path: 'data_portfolio_2.png',
+      title: '세월호아카이브',
+      description: '세월호 참사의 기록에 시민과 연구자가 자유롭게 접근할 수 있는 세월호 아카이브',
+      url: 'https://sewolarchive.org/'
     },
     {
-      image_path: 'soft_solution_2.png',
-      title: '빠띠 타운홀',
+      image_path: 'cam_portfolio_3.png',
+      title: '당신의 투표를 예측해 드립니다',
       description: '''
-      참가자 중심의 실시간 토론 플랫폼
-      <br><br>
-      핵심 기능: 상반되는 의견 중 하나를 선택하는 배틀, 최적의 결론을 도출하는 투표, 참가자와 소통하는 제안, 발표를 극적으로 연출하는 응원
+      전국 유권자 1500명에게 물어, 최적화된 7개 문항만을 뽑아 구성한 예측모델로 응답자의 투표 결과를 예측한 프로젝트
       ''',
-      url: 'https://townhall.kr',
-      slug: 'townhall'
+      url: 'https://toolkit.parti.coop/lab.html#%EB%8B%B9%EC%8B%A0%EC%9D%98-%ED%88%AC%ED%91%9C%EB%A5%BC-%EC%98%88%EC%B8%A1%ED%95%B4-%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4'
+    }
+  ]
+
+  LAB_TOOLKITS = []
+
+  LAB_PORTFOLIOS = [
+    {
+      image_path: 'campaign-sewol.png',
+      title: '​세월호 아카이브​',
+      description: '''
+      세월호 참사의 기록에 시민과 연구자가 자유롭게 접근하고, 기록과 기억의 공유로 한국 사회의 변화 방향을 제안하는 프로젝트
+      ''',
+      links: [
+        {
+          url: 'http://h21.hani.co.kr/arti/society/society_general/43268.html',
+          title: '닻 올린 ‘sewolarchive.org’'
+        },
+        {
+          url: 'http://hooc.heraldcorp.com/view.php?ud=20170416112427980442',
+          title: '잊지 않을게, 그날의 약속…세월호를 기록하는 사람들'
+        }
+      ],
+      url: 'http://sewolarchive.org/'
     },
     {
-      image_path: 'soft_solution_3.png',
-      title: '빠띠 캠페인즈',
+      image_path: 'campaign-issuebattle.png',
+      title: '​정책배틀',
       description: '''
-      세상을 바꾸는 시민, 시민단체, 조직, 정당의 캠페인 플랫폼
-      <br><br>
-      핵심 기능: 지지를 얻기 위한 서명/지도/인증샷/목소리 모으기, 변화를 만들기 위한 촉구/아카이브하기
+      사회적 의제를 놓고 전문가, 활동가, 정치인, 일반 시민들이 모여서 토론과 투표를 통해 해결책을 마련해 가는 참여형 의사결정 플랫폼 "타운홀"을 활용하여 오프라인에서 전문가가 제안하고 시민이 투표하는 "정책배틀" 캠페인.
       ''',
-      url: 'https://campaigns.kr',
-      slug: 'campaigns'
+      url: 'https://union.parti.xyz/posts/15092'
     },
+    {
+      image_path: 'campaign-votefuture1.png',
+      title: '미래에서 온 투표 <br>대선 공약 발표회',
+      description: '''
+      미래에서 온 투표에 쌓인 의견을 모아 아동이 직접 국회에 가서 그들이 제안하는 대선 공약 발표회
+      ''',
+      url: 'https://www.yna.co.kr/view/AKR20170227130600004'
+    },
+    {
+      image_path: 'campaign-votefuture.png',
+      title: '미래에서 온 투표​',
+      description: '''
+      아동의 제안을 모아 아동정책을 제 19대 대선 후보에게 전달하는 정책 제안 프로젝트.
+      <br><br>
+      아동의 목소리를 직접 듣고, 모인 의견은 ‘아동이 제안하는 아동정책’ 의 이름으로 제 19대 대선 후보자들에게 전달하고, 각 후보자들의 정책•공약에 포함될 수 있도록 지속적으로 촉구
+      ''',
+      links: [
+        {
+          url: 'https://www.youtube.com/watch?v=f79DEGO9F-w',
+          title: '미래에서 온 투표 아동들의 의견 영상'
+        },
+        {
+          url: 'http://news.sbs.co.kr/news/endPage.do?news_id=N1004139221',
+          title: '스브스 뉴스 \'급식으로서 한마디 할게요\''
+        }
+      ],
+      url: 'http://votefuture.kr/'
+    },
+    {
+      image_path: 'campaign-inno.png',
+      title: '​당신은 혁신의 편입니까?',
+      description: '''
+      혁신가들의 제안으로 만드는 혁신정책 프로젝트
+      ''',
+      links: [
+        {
+          link: 'http://fcinst.org/reviews/27',
+          title: '혁신가 100명이 정책을 제안하고 대선캠프가 답하다​'
+        }
+      ],
+      url: 'https://democracy-activists.parti.xyz/posts/15089'
+    },
+    {
+      image_path: 'campaign-inno.png',
+      title: '​우주당: 하야GO​',
+      description: '''
+      직접민주주의 프로젝트 정당 우주당의 첫번째 이번트로, 박근혜 대통령 탄핵 집회 참여 인증사진과 메시지를 공유하여 집회에 같이 참여한 참가자를 찾거나 장소에 구애받지 않고 온라인에서 함께할 수 있는 프로젝트.
+      ''',
+      links: [
+        {
+          link: 'http://www.hankookilbo.com/v/ca1a3bb84d5749f789d20884b01956f3%20http://www.ohmynews.com/NWS_Web/view/at_pg.aspx?CNTN_CD=A0002272275',
+          title: '순실길 밟기·하야GO…뭐라도 하고픈 당신을 위한 5가지 시위법​'
+        }
+      ],
+      url: 'https://wouldyouparty.campaigns.kr/campaigns/136/pickets'
+    },
+    {
+      image_path: 'campaign-nongmo.png',
+      title: '​GMO완전표시제 <br>입법 청원 캠페인​​',
+      description: '''
+      보건복지위원회의 법안심사소위원회 위원장인 인재근 의원에게 전달한 17만여명의 GMO완전표시제 서명 캠페인
+      ''',
+      url: 'https://democracy-activists.parti.xyz/posts/15087'
+    },
+    {
+      image_path: 'campaign-iknow.png',
+      title: '​나는 알아야겠당​',
+      description: '''
+      바글시민와글입법 3차까지의 진행을 이어 법안 심사 통과 압박 액션까지, 총 800여명의 당원이 뭉친 국내 최초의 프로젝트 정당.
+      <br><br>
+      이 실험은 빠띠의 “인터넷이 있는 지금, 새로운 정치 구조를 상상해볼 수 있는 기회가 열렸는데 왜 아직도 실험과 아이디어는 부족한 걸까.” 라는 물음과, 한 가지 법안의 입법 과정을 추적해보려는 한겨레21의 시도가 만나 시작되었다. 입법안부터 시민의 투표로 정했다. 최저임금 1만원법, 전·월세 상한제법, 데이트폭력 처벌 강화법, GMO완전표시제법 중 5470명의 시민이 직접 투표로 정한 입법안‘GMO 완전표시제법’ 국회 통과를 목적으로 한 ‘나는 알아야겠당’을 창당해 800여명의 당원을 모았다.
+      ''',
+      links: [
+        {
+          title: '나는 알아야겠당 창당파티에 초대합니다 ',
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/42272.html'
+        },
+        {
+          title: '한겨레 21 추적기사 바글와글시민입법 시리즈',
+          url: 'http://h21.hani.co.kr/arti/SERIES/236/?cline=1'
+        },
+        {
+          title: '홍성신문 GMO 없는 홍성/ 우리는, 알아야겠당!',
+          url: 'http://www.hsnews.co.kr/news/articleView.html?idxno=77514'
+        },
+        {
+          title: '와글 블로그 삼인사각 시민 입법 프로젝트',
+          url: 'https://brunch.co.kr/@waglog/1'
+        },
+        {
+          title: '한국기자협회 독자들은 뿌린 기사만 읽지 않는다',
+          url: 'http://www.journalist.or.kr/news/article.html?no=39584'
+        }
+      ],
+      url: 'http://up.parti.xyz/'
+    },
+    {
+      image_path: 'campaign-iknow3.png',
+      title: '​바글시민와글입법(3) <br>전문가 쟁점토론, 당원 투표​​​',
+      description: '''
+      프로젝트 정당 \'나는 알아야겠당\'에서 발의할 입법안 ‘GMO 완전표시제’에 대한 전문가 쟁점 토론과 시민 투표를 진행한 프로젝트.
+      <br><br>
+      온라인 투표를 통해 결정된 시민들의 의사를 윤소하 의원실(정의당)에 전달하고 윤소하 의원실은 알아야겠당의 의견을 포함해 다양한 목소리를 담은 GMO 완전표시제법(식품위생법 개정안)을 8월 초 발의했다. 제안한 당원의 의견이 발의안에 얼마나 반영되었는지까지도 기사와 온라인으로 당원이 알 수 있도록 공유했다.
+      ''',
+      links: [
+        {
+          url: 'http://h21.hani.co.kr/arti/society/society_general/42109.html',
+          title: 'GMO 완전표시제법 당신의 전략은?'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/42270.html',
+          title: '김현권 법안이 발의되자 윤소하 의원실은 술렁였다'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/42271.html',
+          title: '시민 의견은 얼마나 법안이 되었나'
+        }
+      ],
+      url: 'http://up.parti.xyz/step3'
+    },
+    {
+      image_path: 'campaign-iknow2.png',
+      title: '​바글시민와글입법(2) <br>정당 이름 투표, 당원 모집​',
+      description: '''
+      바글와글 1차 쟁점법안 투표에서 4개 법안 중 5470개의 표를 받은 GMO 완전표시제 입법을 위한 원이슈 프로젝트 정당 만들기.
+      <br><br>
+      오로지 ‘GMO 완전표시제법’ 국회 통과를 목적으로 한 정당 창당을 알리고, 투표로 이름까지 결정한 ‘나는 알아야겠당’은 온라인 플랫폼을 기반으로 특정 이슈를 해결하겠다는 800여명의 시민들을 모아 국내 최초의 프로젝트 정당이 되었다. 이후 법안 쟁점에 대한 지식을 공유하기 위해 관련 기사와 간단한 퀴즈를 진행하기도 했다.
+      ''',
+      links: [
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41992.html',
+          title: '안전한 밥상의 권리를 찾아서'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41993.html',
+          title: '세상에 없던 정당의 당원이 되세요'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41994.html',
+          title: '식약처는 왜 GMO를 말하지 않았나'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/society/society_general/42108.html',
+          title: '\'알아야겠당\'을 알려야겠다'
+        }
+      ],
+      url: 'http://up.parti.xyz/step2'
+    },
+    {
+      image_path: 'campaign-iknow1.png',
+      title: '​바글시민와글입법(1) <br>입법안 채택​​',
+      description: '''
+      2016년 입법 진행과정을 추적할 쟁점 법안 4가지 중 입법할 안을 시민이 투표하여 결정한 프로젝트.
+      <br><br>
+      최저임금 1만원법, 전·월세 상한제법, 데이트폭력 처벌 강화법, GMO 완전표시제법 4가지 법안의 각 목표 참여자 수를 2016명으로 두고 이를 넘어야 프로젝트 시작하는 것으로 참여를 독려했다. 법안을 간략 소개한 국범근의 동영상이나 한겨레21 기사를 보면서 시민이 어떤 후보 법안을 선택할지 살펴볼 수 있도록 도왔다. 투표 시작 이틀 만인 6월 8일 2016명이 넘는 시민들이 온라인 투표 페이지를 찾아 단번에 목표치를 채워줬고, 6월26일까지 진행된 투표에서 4개 법안 중 GMO 완전표시제법이 총 5470명의 지지를 받아 본 프로젝트의 법안으로 정해졌다.
+      ''',
+      links: [
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41843.html',
+          title: '살아나라 시민정치!'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41844.html',
+          title: '함께 밀어올리자 이 법'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41845.html',
+          title: '시민을 관객으로 두지 말자'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/society/society_general/41891.html',
+          title: '빠흐띠의 ‘바늘꽂기 실험‘은 계속 될까'
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/society/society_general/41892.html',
+          title: '지금처럼만 바글거려주시라 나흘 만에 약 5350명 투표 참여'
+        }
+      ],
+      url: 'http://up.parti.xyz/step1'
+    },
+    {
+      image_path: 'campaign-toktok.png',
+      title: '​국회톡톡​​​',
+      description: '''
+      시민이 직접 입법 제안하고, 천명의 지지를 받으면 입법안을 의원에게 전달하는 시민입법플랫폼.
+      <br><br>
+      국회 톡톡은 시민의 입장에서 법을 만드는 과정을 재설계했다. 입법 과정을 \'시민 제안 및 지지→의원 매칭→입법 활동\'의 3단계로 구분했다. 시민은 국회 톡톡에서 직접 정책제안을 할 수 있다. 이 제안을 지지하는 시민들이 1000명이 넘으면, 국회 톡톡에서 해당 상임위 국회의원들에게 메일을 보내 시민 제안에 대한 응답을 요청한다.
+      <br><br>
+      매칭 기간 2주 동안 국회의원들의 참여/거부/무응답 내역이 국회 톡톡을 통해 실시간으로 공개된다. 매칭된 시민들과 국회의원은 \'입법 드림팀\'이 되어 별도로 마련된 온라인 공간에서 쌍방향 소통하면서 입법의 전 과정을 공유하고 법안을 만들 때 꼭 담아야 할 핵심 내용이 무엇일지에 대해 서로 의견을 나누고 있다.
+      ''',
+      links: [
+        {
+          url: 'http://www.hani.co.kr/arti/politics/polibar/767321.html',
+          title: '‘국회톡톡’으로 닫힌 국회를 똑!똑'
+        },
+        {
+          url: 'http://www.bloter.net/archives/264937',
+          title: '“시민이 직접 입법 참여하자”…와글, ‘국회톡톡’ 오픈'
+        },
+        {
+          url: 'https://brunch.co.kr/@waglog/89',
+          title: '톡톡 두들기면 국회로 갑니다'
+        },
+        {
+          url: 'http://www.pressian.com/news/article.html?no=142915',
+          title: '국회 톡톡, 내 법안을 부탁해​'
+        }
+      ],
+      url: 'http://up.parti.xyz/step1'
+    },
+    {
+      image_path: 'campaign-yourvote.png',
+      title: '당신의 투표를 예측해 드립니다',
+      description: '''
+      사전에 전국 유권자 1500명에게 물어, 최적화된 7개 문항만을 뽑아 구성한 예측모델로 응답자의 투표 결과를 예측한 프로젝트.
+      <br><br>
+      사전에 전국 유권자 1500명에게 물어, 최적화된 7개 문항만을 뽑아 구성한 예측모델로 정치적 이념성향, 선호하는 신문, 북핵문제 해결 방안(인도적 지원 여부), 한국사회 관심 가져야 할 정책분야(고용·외교안보·복지 등), 역대 대통령에 대한 선호도 등에 대해 선택지를 제안했다. 질문에 답한 응답자가 투표할 확률이 높은 정당과 투표할 확률까지 보여줬다.
+      ''',
+      links: [
+        {
+          url: 'http://www.mediaus.co.kr/news/articleView.html?idxno=55257',
+          title: '총선 D-1, “당신의 정당을 찾아드립니다"'
+        }
+      ],
+      url: 'https://union.parti.xyz/posts/15081'
+    },
+    {
+      image_path: 'campaign-letter.png',
+      title: '국회의장에게 보내는 편지',
+      description: '''
+      테러방지법 본회의 의결을 막기 위한 야권의 필리버스터가 일주일 째 이어지던 당시 테러방지법에 대한 시민의 의견을 모은 프로젝트.
+      <br><br>
+      2016년 2월 29일 오전11시 기준으로 첫 문항인 "테러방지법 논의가 총선일정보다 중요하다" 문항은 찬성이 7만9000여명, 반대 1400여명 / "필리버스터가 계속되어야 한다" 문항은 찬성이 6만7000여명, 반대가 500여명 / "테러방지법은 통과되어야 한다"는 찬성이 2200여명, 반대가 6만5000여명이 투표했다.
+      ''',
+      url: 'http://m.asiae.co.kr/view.htm?no=2016022911033900277'
+    }
   ]
 
   DICTIONARY = {
@@ -256,11 +526,31 @@ class Solution
     campaign: {
       path_text: :solutions_campaign_path,
       title: '시민주도 캠페인',
-      subtitle: '시민 주도로 바꾸는 세상',
+      subtitle: '시민이 바꾸는 세상',
       image_path: 'solutions/card-campaign.png',
       items_name: '툴킷',
       items: Solution::CAMPAIGN_TOOLKITS,
-      portfolios: Solution::CAMPAIGN_PORTFOLIOS
+      portfolios: Solution::CAMPAIGN_PORTFOLIOS,
+      using_platform_slugs: %i(campaigns)
+    },
+    data: {
+      path_text: :solutions_data_path,
+      title: '공익 데이터',
+      subtitle: '투명하고 신뢰하는 사회를 위한',
+      image_path: 'solutions/card-data.png',
+      items_name: '툴킷',
+      items: Solution::DATA_TOOLKITS,
+      portfolios: Solution::DATA_PORTFOLIOS,
+      using_platform_slugs: %i(datapublic archives)
+    },
+    lab: {
+      path_text: :solutions_lab_path,
+      title: '민주주의 랩',
+      subtitle: '다양한 실험',
+      image_path: 'solutions/card-lab.png',
+      items_name: '툴킷',
+      items: Solution::LAB_TOOLKITS,
+      portfolios: Solution::LAB_PORTFOLIOS,
     }
   }
 end
