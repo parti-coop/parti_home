@@ -67,8 +67,14 @@
               = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control', data: { 'rule-required': true, 'invalid-error': '#js-report-subscribe-error', msg: '이름과 이메일 주소는 필수 입력 항목입니다.' }
             %button.btn.btn-primary.btn-subscribe{ type: :submit } 구독신청
           #js-report-subscribe-error
-    .license
-      Copyright 2020.
-      %b Parti Co-op.
-      %span.text-nowrap All rights reserved.
+    .license.d-md-flex
+      %a(href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank")
+        = image_tag 'ccby4.png', style: 'height: 2.8em; margin-right: 0.4em;'
+      .flex-fill
+        %b Parti Co-op.
+        에 의해 작성된
+        이 웹사이트는
+        %br
+        %a.text-nowrap.text-underline.hover:text-underline(href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank") 크리에이티브 커먼즈 저작자표시 4.0 국제
+        %span.text-nowrap 라이선스에 따라 이용할 수 있습니다.
 

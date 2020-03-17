@@ -42,6 +42,14 @@ a {
   white-space: nowrap;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
+.hover\:text-underline:hover {
+  text-decoration: underline;
+}
+
 .text-keep-all {
   word-break: keep-all;
   word-wrap: break-word;
