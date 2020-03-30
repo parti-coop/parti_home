@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://parti.coop"
+SitemapGenerator::Sitemap.default_host = "https://parti.coop"
 
 SitemapGenerator::Sitemap.create do
   add what_we_do_path, changefreq: :daily
