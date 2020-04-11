@@ -47,7 +47,7 @@ ko:
         updated_at: 수정일시
       contact:
         project_subject: 프로젝트 이름
-        solution_slugs: 솔루션
+        solution_slugs: 빠띠와 함께하려는 일
         project_body: 프로젝트 개요
         project_why: 빠띠와 함께하려는 이유
         attachment: 첨부파일
