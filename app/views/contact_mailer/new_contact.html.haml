@@ -1,0 +1,12 @@
+%p "#{@contact.contact_org}"에서 도킹 요청을 보내왔습니다!
+
+%p
+  - %i(project_subject project_body project_why attachment_name attachment_url contact_org contact_manager contact_tel contact_email).map do |attr|
+    %p
+      - if @contact.send(attr).present?
+        %strong ##{Contact.human_attribute_name(attr)}
+        %br
+        #{@contact.send(attr)}
+
+%p
+  = link_to '관리도구에서 보기', admin_contact_url(@contact), target: '_blank'

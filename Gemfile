@@ -65,6 +65,12 @@ gem 'activeadmin_easymde', git: 'https://github.com/parti-coop/activeadmin_easym
 # deploy
 gem 'travis'
 
+# job queuebundle install
+gem 'sucker_punch'
+
+# email
+gem 'postmark-rails'
+
 # seo
 gem 'meta-tags', '~> 2.1'
 gem 'sitemap_generator'
@@ -76,9 +82,10 @@ end
 gem 'spring'
 gem 'spring-watcher-listen', '~> 2.0.0'
 
-group :development do
+group :development, :staging do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do

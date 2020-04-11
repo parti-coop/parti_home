@@ -32,10 +32,17 @@ Rails.application.configure do
 
   config.action_controller.asset_host = "https://coop.test"
 
+  config.active_job.queue_adapter = :sucker_punch
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'coop.test' }
+  # config.action_mailer.delivery_method = :postmark
+  # config.action_mailer.postmark_settings = {
+  #   :api_token => ENV['POSTMARKER_API_KEY']
+  # }
+  config.action_mailer.delivery_method = :letter_opener_web
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

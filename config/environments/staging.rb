@@ -35,6 +35,8 @@ Rails.application.configure do
   # config.action_controller.asset_host = 'http://assets.example.com'
   config.action_controller.asset_host = "https://dev.parti.coop"
 
+  config.active_job.queue_adapter = :sucker_punch
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
@@ -65,7 +67,13 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "parti_home_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'parti.coop' }
+  config.action_mailer.default_url_options = { host: 'dev.parti.coop' }
+
+  # config.action_mailer.delivery_method = :postmark
+  # config.action_mailer.postmark_settings = {
+  #   :api_token => ENV['POSTMARKER_API_KEY']
+  # }
+  config.action_mailer.delivery_method = :letter_opener_web
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
