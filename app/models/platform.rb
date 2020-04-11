@@ -64,5 +64,6 @@ class Platform
       image_path: 'solutions/card-soft.png',
       items_name: '디지털 플랫폼',
       items: Platform::DICTIONARY.map { |key, item| item.merge(slug: key) },
+      seo_desc: '플랫폼으로 사람들의 일상과 세상을 더 민주적으로 만듭니다.'
   }
 end

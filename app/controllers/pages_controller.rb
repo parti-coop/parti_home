@@ -10,6 +10,8 @@ class PagesController < ApplicationController
 
   def what_we_do
     @posts = fetch_what_we_do().page(params[:page]).per(3*10)
+
+    prepare_meta_tags(title: '소식', description: '민주주의를 혁신하고 일상과 세상에 민주주의를 확산하기 위해 저희가 하는 일을 블로그로 소개합니다.', url: what_we_do_url)
   end
 
   def marketing
