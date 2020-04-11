@@ -202,12 +202,28 @@ class Solution
     },
     {
       image_path: 'cam_portfolio_4.png',
-      title: '아청법 개정을 촉구',
+      title: '아청법 개정 촉구',
       description: '''
       아동청소년 성매수 피해자를 피해자로 인정하기 위한 아청법 개정을 촉구하는 캠페인
       ''',
       url: 'https://campaigns.kr/campaigns/68'
     },
+    {
+      image_path: 'cam_portfolio_6.png',
+      title: '#우리에겐 페미니스트 선생님이 필요합니다',
+      description: '''
+      성평등 교육 보장을 촉구하고, 개인에게 가해지는 사이버불링을 멈추기 위한 기자회견 연명 캠페인
+      ''',
+      url: 'https://campaigns.kr/campaigns/54'
+    },
+    {
+      image_path: 'cam_portfolio_7.png',
+      title: '아름다운재단 나눔교육 청소년과 함께한 <캠페이너 인생게임> 워크숍',
+      description: '''
+      아름다운재단의 나눔교육 청소년 100명과 함께한 시민주도 캠페인 디자인 워크숍
+      ''',
+      url: 'https://parti.coop/posts/89'
+    }
   ]
 
   DATA_TOOLKITS = []
