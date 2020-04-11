@@ -1,4 +1,4 @@
-%p "#{@contact.contact_org}"에서 도킹 요청을 보내왔습니다!
+%p "#{@contact.contact_org.presence || @contact.contact_manager.presence}"에서 도킹 요청을 보내왔습니다!
 
 %p
   - %i(project_subject project_body project_why attachment_name attachment_url contact_org contact_manager contact_tel contact_email).map do |attr|
