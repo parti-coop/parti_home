@@ -255,58 +255,12 @@ class Solution
 
   LAB_PORTFOLIOS = [
     {
-      image_path: 'campaign-sewol.png',
-      title: '​세월호 아카이브​',
-      description: '''
-      세월호 참사의 기록에 시민과 연구자가 자유롭게 접근하고, 기록과 기억의 공유로 한국 사회의 변화 방향을 제안하는 프로젝트
-      ''',
-      links: [
-        {
-          url: 'http://h21.hani.co.kr/arti/society/society_general/43268.html',
-          title: '닻 올린 ‘sewolarchive.org’'
-        },
-        {
-          url: 'http://hooc.heraldcorp.com/view.php?ud=20170416112427980442',
-          title: '잊지 않을게, 그날의 약속…세월호를 기록하는 사람들'
-        }
-      ],
-      url: 'http://sewolarchive.org/'
-    },
-    {
       image_path: 'campaign-issuebattle.png',
       title: '​정책배틀',
       description: '''
       사회적 의제를 놓고 전문가, 활동가, 정치인, 일반 시민들이 모여서 토론과 투표를 통해 해결책을 마련해 가는 참여형 의사결정 플랫폼 "타운홀"을 활용하여 오프라인에서 전문가가 제안하고 시민이 투표하는 "정책배틀" 캠페인.
       ''',
       url: 'https://union.parti.xyz/posts/15092'
-    },
-    {
-      image_path: 'campaign-votefuture1.png',
-      title: '미래에서 온 투표 <br>대선 공약 발표회',
-      description: '''
-      미래에서 온 투표에 쌓인 의견을 모아 아동이 직접 국회에 가서 그들이 제안하는 대선 공약 발표회
-      ''',
-      url: 'https://www.yna.co.kr/view/AKR20170227130600004'
-    },
-    {
-      image_path: 'campaign-votefuture.png',
-      title: '미래에서 온 투표​',
-      description: '''
-      아동의 제안을 모아 아동정책을 제 19대 대선 후보에게 전달하는 정책 제안 프로젝트.
-      <br><br>
-      아동의 목소리를 직접 듣고, 모인 의견은 ‘아동이 제안하는 아동정책’ 의 이름으로 제 19대 대선 후보자들에게 전달하고, 각 후보자들의 정책•공약에 포함될 수 있도록 지속적으로 촉구
-      ''',
-      links: [
-        {
-          url: 'https://www.youtube.com/watch?v=f79DEGO9F-w',
-          title: '미래에서 온 투표 아동들의 의견 영상'
-        },
-        {
-          url: 'http://news.sbs.co.kr/news/endPage.do?news_id=N1004139221',
-          title: '스브스 뉴스 \'급식으로서 한마디 할게요\''
-        }
-      ],
-      url: 'http://votefuture.kr/'
     },
     {
       image_path: 'campaign-inno.png',
@@ -323,7 +277,7 @@ class Solution
       url: 'https://democracy-activists.parti.xyz/posts/15089'
     },
     {
-      image_path: 'campaign-inno.png',
+      image_path: 'campaign-go.png',
       title: '​우주당: 하야GO​',
       description: '''
       직접민주주의 프로젝트 정당 우주당의 첫번째 이번트로, 박근혜 대통령 탄핵 집회 참여 인증사진과 메시지를 공유하여 집회에 같이 참여한 참가자를 찾거나 장소에 구애받지 않고 온라인에서 함께할 수 있는 프로젝트.
@@ -335,14 +289,6 @@ class Solution
         }
       ],
       url: 'https://wouldyouparty.campaigns.kr/campaigns/136/pickets'
-    },
-    {
-      image_path: 'campaign-nongmo.png',
-      title: '​GMO완전표시제 <br>입법 청원 캠페인​​',
-      description: '''
-      보건복지위원회의 법안심사소위원회 위원장인 인재근 의원에게 전달한 17만여명의 GMO완전표시제 서명 캠페인
-      ''',
-      url: 'https://democracy-activists.parti.xyz/posts/15087'
     },
     {
       image_path: 'campaign-iknow.png',
@@ -377,60 +323,8 @@ class Solution
       url: 'http://up.parti.xyz/'
     },
     {
-      image_path: 'campaign-iknow3.png',
-      title: '​바글시민와글입법(3) <br>전문가 쟁점토론, 당원 투표​​​',
-      description: '''
-      프로젝트 정당 \'나는 알아야겠당\'에서 발의할 입법안 ‘GMO 완전표시제’에 대한 전문가 쟁점 토론과 시민 투표를 진행한 프로젝트.
-      <br><br>
-      온라인 투표를 통해 결정된 시민들의 의사를 윤소하 의원실(정의당)에 전달하고 윤소하 의원실은 알아야겠당의 의견을 포함해 다양한 목소리를 담은 GMO 완전표시제법(식품위생법 개정안)을 8월 초 발의했다. 제안한 당원의 의견이 발의안에 얼마나 반영되었는지까지도 기사와 온라인으로 당원이 알 수 있도록 공유했다.
-      ''',
-      links: [
-        {
-          url: 'http://h21.hani.co.kr/arti/society/society_general/42109.html',
-          title: 'GMO 완전표시제법 당신의 전략은?'
-        },
-        {
-          url: 'http://h21.hani.co.kr/arti/cover/cover_general/42270.html',
-          title: '김현권 법안이 발의되자 윤소하 의원실은 술렁였다'
-        },
-        {
-          url: 'http://h21.hani.co.kr/arti/cover/cover_general/42271.html',
-          title: '시민 의견은 얼마나 법안이 되었나'
-        }
-      ],
-      url: 'http://up.parti.xyz/step3'
-    },
-    {
-      image_path: 'campaign-iknow2.png',
-      title: '​바글시민와글입법(2) <br>정당 이름 투표, 당원 모집​',
-      description: '''
-      바글와글 1차 쟁점법안 투표에서 4개 법안 중 5470개의 표를 받은 GMO 완전표시제 입법을 위한 원이슈 프로젝트 정당 만들기.
-      <br><br>
-      오로지 ‘GMO 완전표시제법’ 국회 통과를 목적으로 한 정당 창당을 알리고, 투표로 이름까지 결정한 ‘나는 알아야겠당’은 온라인 플랫폼을 기반으로 특정 이슈를 해결하겠다는 800여명의 시민들을 모아 국내 최초의 프로젝트 정당이 되었다. 이후 법안 쟁점에 대한 지식을 공유하기 위해 관련 기사와 간단한 퀴즈를 진행하기도 했다.
-      ''',
-      links: [
-        {
-          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41992.html',
-          title: '안전한 밥상의 권리를 찾아서'
-        },
-        {
-          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41993.html',
-          title: '세상에 없던 정당의 당원이 되세요'
-        },
-        {
-          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41994.html',
-          title: '식약처는 왜 GMO를 말하지 않았나'
-        },
-        {
-          url: 'http://h21.hani.co.kr/arti/society/society_general/42108.html',
-          title: '\'알아야겠당\'을 알려야겠다'
-        }
-      ],
-      url: 'http://up.parti.xyz/step2'
-    },
-    {
       image_path: 'campaign-iknow1.png',
-      title: '​바글시민와글입법(1) <br>입법안 채택​​',
+      title: '​바글시민와글입법​​',
       description: '''
       2016년 입법 진행과정을 추적할 쟁점 법안 4가지 중 입법할 안을 시민이 투표하여 결정한 프로젝트.
       <br><br>
@@ -456,7 +350,12 @@ class Solution
         {
           url: 'http://h21.hani.co.kr/arti/society/society_general/41892.html',
           title: '지금처럼만 바글거려주시라 나흘 만에 약 5350명 투표 참여'
-        }
+        },
+        {
+          url: 'http://h21.hani.co.kr/arti/cover/cover_general/41993.html',
+          title: '세상에 없던 정당의 당원이 되세요'
+        },
+
       ],
       url: 'http://up.parti.xyz/step1'
     },
