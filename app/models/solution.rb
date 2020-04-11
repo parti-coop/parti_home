@@ -126,7 +126,7 @@ class Solution
       image_path: 'org_portfolio_1.jpg',
       title: '버터나이프크루',
       description: '''
-        우리의 달라진 삶에 필요한 정책을 제안하고, 우리의 달라진 삶을 반영하는 문화혁신사업을 진행하는 청년정책 커뮤니티
+        성평등 정책을 만드는 청년 커뮤니티
       ''',
       url: 'https://butterknifecrew.kr'
     },
@@ -134,7 +134,7 @@ class Solution
       image_path: 'org_portfolio_5.jpg',
       title: '커먼즈필드제주',
       description: '''
-        함께 고민하고 함께 상상하는 소통협력 공간
+        삶의 전환을 실험하는 시민 커뮤니티
       ''',
       url: 'https://cmzfld.net'
     },
@@ -142,17 +142,17 @@ class Solution
       image_path: 'org_portfolio_2.jpg',
       title: '나는알아야겠당',
       description: '''
-        GMO 완전표시제법 통과를 목표로 총 800여 명의 당원이 뭉친 국내 최초의 프로젝트 정당
+        국내 최초 이슈 프로젝트 정당
       ''',
       url: 'https://up.parti.xyz'
     },
     {
-      image_path: 'org_portfolio_3.jpg',
-      title: '쓰레기덕질',
+      image_path: 'org_portfolio_6.png',
+      title: '일인당',
       description: '''
-        일상의 실천부터 캠페인까지, 제로 웨이스트를 지향하는 사람들의 커뮤니티
+        일인가구 공동공간을 만드는 지역 이슈 커뮤니티
       ''',
-      url: 'https://zero-waste.parti.xyz'
+      url: 'https://alone.parti.xyz/'
     },
   ]
 
