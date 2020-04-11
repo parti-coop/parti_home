@@ -82,9 +82,12 @@ end
 gem 'spring'
 gem 'spring-watcher-listen', '~> 2.0.0'
 
-group :development, :staging do
+group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+end
+
+group :development, :staging do
   gem 'letter_opener_web', '~> 1.0'
 end
 
