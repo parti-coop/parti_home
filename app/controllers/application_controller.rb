@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def build_meta_options(options)
     site_name = "사회적협동조합 빠띠"
-    title = "#{view_context.strip_tags(options[:title])} | 빠띠" || "사회적협동조합 빠띠"
+    title = ( options[:title].present? ? "#{view_context.strip_tags(options[:title])} | 빠띠" : "사회적협동조합 빠띠" )
     image = options[:image] || view_context.image_url('parti-ci.png')
     url = options[:url] || root_url
     description = view_context.strip_tags(options[:description]) || "빠띠는 민주주의를 혁신하고 사회의 여러 영역으로 확산하기 위해 툴킷, 플랫폼, 커뮤니티를 만드는 민주주의 활동가들의 협동조합입니다."
