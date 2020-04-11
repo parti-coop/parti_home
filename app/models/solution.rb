@@ -136,7 +136,7 @@ class Solution
       description: '''
         삶의 전환을 실험하는 시민 커뮤니티
       ''',
-      url: 'https://cmzfld.net'
+      url: 'https://parti.coop/posts/158'
     },
     {
       image_path: 'org_portfolio_2.jpg',
