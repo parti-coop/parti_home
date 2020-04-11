@@ -40,7 +40,7 @@ class ContactsController < ApplicationController
           [
             {
               color: "good",
-              text: "[도킹 요청] #{@contact.solution_slug}",
+              text: "[도킹 요청] #{@contact.solution_slugs.join(', ')}",
               fields:
                 %i(project_subject project_body project_why
                 attachment_name attachment_url
