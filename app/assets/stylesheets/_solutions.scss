@@ -184,6 +184,16 @@ body.body-solutions {
             font-size: 0.8em;
           }
         }
+        @include media-breakpoint-down(xs) {
+          flex-flow: column;
+          .title {
+            width: auto;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+        }
       }
     }
   }
