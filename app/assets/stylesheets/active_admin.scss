@@ -28,4 +28,8 @@ body.edit.admin_posts.active_admin.admin_namespace #title_bar {
   z-index: 0;
 }
 
+form fieldset.inputs {
+  min-width: 0;
+}
+
 @import "post-body";
