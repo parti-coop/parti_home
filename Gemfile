@@ -29,8 +29,8 @@ gem 'browser'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 # gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
-gem 'webpacker', '~> 4.x'
+# gem 'turbolinks', '~> 5'
+# gem 'webpacker', '~> 4.x'
 # gem 'jbuilder', '~> 2.5'
 
 # gem 'redis', '~> 4.0'
