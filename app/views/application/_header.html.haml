@@ -7,7 +7,7 @@
     %ul.navbar-nav.mt-2.ml-lg-auto.d-lg-flex.d-sm-flex
       %li.nav-item.dropdown
         %a.nav-link.dropdown-toggle{ href: '#', id: 'header-navbar-dropdown', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' }
-          민주주의 솔루션
+          우리가 하는 일
         .dropdown-menu{ 'aria-labelledby': 'header-navbar-dropdown' }
           - Solution::DICTIONARY.each do |_, solution_info|
             %a.dropdown-item{ href: send(solution_info[:path_text]) }
