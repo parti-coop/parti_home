@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   end
 
   def subscribe_reports
-    outcome = MailingSubscribe.run(name: params[:name], email: [:email])
+    outcome = MailingSubscribe.run(name: params[:name], email: params[:email])
     if outcome.valid?
       flash[:success] = "구독 확인 이메일을 발송했습니다. 보내드린 이메일을 확인하면 구독이 완료됩니다."
     else
