@@ -511,7 +511,8 @@ class Solution
       items_name: '툴킷',
       items: Solution::DEMOS_TOOLKITS,
       portfolios: Solution::DEMOS_PORTFOLIOS,
-      using_platform_slugs: %i(demosx townhall)
+      using_platform_slugs: %i(demosx townhall),
+      seo_desc: '이해관계자들이 더 많이 소통하고 협력하는 공론장을 만듭니다.'
     },
     org: {
       path_text: :solutions_org_path,
@@ -521,7 +522,8 @@ class Solution
       items_name: '툴킷',
       items: Solution::ORG_TOOLKITS,
       portfolios: Solution::ORG_PORTFOLIOS,
-      using_platform_slugs: %i(groups demosx)
+      using_platform_slugs: %i(groups demosx),
+      seo_desc: '시민, 조직과 함께 더 민주적이고 협력적인 커뮤니티를 만듭니다.'
     },
     campaign: {
       path_text: :solutions_campaign_path,
@@ -531,7 +533,8 @@ class Solution
       items_name: '툴킷',
       items: Solution::CAMPAIGN_TOOLKITS,
       portfolios: Solution::CAMPAIGN_PORTFOLIOS,
-      using_platform_slugs: %i(campaigns)
+      using_platform_slugs: %i(campaigns),
+      seo_desc: '시민 누구나 캠페인을 하는 세상을 만듭니다.'
     },
     data: {
       path_text: :solutions_data_path,
@@ -541,7 +544,8 @@ class Solution
       items_name: '툴킷',
       items: Solution::DATA_TOOLKITS,
       portfolios: Solution::DATA_PORTFOLIOS,
-      using_platform_slugs: %i(datapublic archives)
+      using_platform_slugs: %i(datapublic archives),
+      seo_desc: '데이터로 더 투명하고 신뢰하는 사회를 만듭니다.'
     },
     lab: {
       path_text: :solutions_lab_path,
@@ -551,6 +555,7 @@ class Solution
       items_name: '툴킷',
       items: Solution::LAB_TOOLKITS,
       portfolios: Solution::LAB_PORTFOLIOS,
+      seo_desc: '다양한 실험을 통해 더 민주적인 세상을 만듭니다.'
     }
   }
 end

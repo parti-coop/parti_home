@@ -3,6 +3,8 @@ require 'slack-notifier'
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
+
+    prepare_meta_tags(title: '협업 문의', description: '활동 영역 별 다양한 방식으로 여러분과 협업합니다.', url: new_contact_url)
   end
 
   def create
