@@ -7,6 +7,8 @@ class MailingSubscribe < ActiveInteraction::Base
 
   def execute
     access_token = ENV['STIBEE_KEY']
+    return if access_token.blank?
+
     response = HTTParty.post("https://api.stibee.com/v1/lists/7834/subscribers", {
       headers: {
         "AccessToken" => access_token

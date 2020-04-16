@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :posts, only: :show
 
   post 'attachments', to: 'attachments#create'
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development? || Rails.env.staging?
 end
