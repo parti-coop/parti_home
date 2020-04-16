@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
       else
         messages = outcome.errors.full_messages.join('. ')
         logger.error messages
-        flash[:error] = "민주주의 리포트 구독 중에 오류가 발생했습니다. #{messages} help@parti.xyz로 구독 신청 메일을 보내 주세요."
+        flash[:error] = "민주주의 리포트 구독 중에 오류가 발생했습니다. #{messages} contact@parti.coop으로 구독 신청 메일을 보내 주세요."
       end
 
     begin

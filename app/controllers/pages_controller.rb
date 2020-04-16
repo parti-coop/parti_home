@@ -28,7 +28,7 @@ class PagesController < ApplicationController
       flash[:success] = "구독 확인 이메일을 발송했습니다. 보내드린 이메일을 확인하면 구독이 완료됩니다."
     else
       logger.error outcome.errors.full_messages.join('. ')
-      flash[:error] = "알 수 없는 오류가 발생했습니다. help@parti.xyz로 구독 신청 메일을 보내 주세요."
+      flash[:error] = "알 수 없는 오류가 발생했습니다. contact@parti.coop로 구독 신청 메일을 보내 주세요."
     end
   end
 
