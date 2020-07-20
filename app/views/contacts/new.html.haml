@@ -22,13 +22,13 @@
 
         .form-group
           = f.label :project_subject
-          = f.text_field :project_subject, class: 'form-control', data: { 'rule-required': true }
+          = f.text_field :project_subject, class: 'form-control', data: { 'rule-required': true }, maxlength: 255
         .form-group
           = f.label :project_body
-          = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산', data: { 'rule-required': true }
+          = f.text_area :project_body, class: 'form-control', placeholder: '프로젝트 소개, 기간, 예산', data: { 'rule-required': true }, maxlength: 20000
         .form-group
           = f.label :project_why
-          = f.text_area :project_why, class: 'form-control', placeholder: '빠띠를 어떻게 알게 되셨나요? 왜 빠띠인지 조금만 더 설명해주시면 효과적으로 접수를 진행할 수 있어요.', data: { 'rule-required': true }
+          = f.text_area :project_why, class: 'form-control', placeholder: '빠띠를 어떻게 알게 되셨나요? 왜 빠띠인지 조금만 더 설명해주시면 효과적으로 접수를 진행할 수 있어요.', data: { 'rule-required': true }, maxlength: 20000
         .form-group
           = f.label :solution_slugs
           - Contact::SOLUTION_OPTIONS.each do |solution_option|
@@ -43,16 +43,16 @@
         %legend 연락처
         .form-group
           = f.label :contact_org
-          = f.text_field :contact_org, class: 'form-control'
+          = f.text_field :contact_org, class: 'form-control', maxlength: 255
         .form-group
           = f.label :contact_manager
-          = f.text_field :contact_manager, class: 'form-control', data: { 'rule-required': true }
+          = f.text_field :contact_manager, class: 'form-control', data: { 'rule-required': true }, maxlength: 255
         .form-group
           = f.label :contact_tel
-          = f.text_field :contact_tel, class: 'form-control'
+          = f.text_field :contact_tel, class: 'form-control', maxlength: 255
         .form-group
           = f.label :contact_email
-          = f.email_field :contact_email, class: 'form-control', data: { 'rule-required': true }
+          = f.email_field :contact_email, class: 'form-control', data: { 'rule-required': true }, maxlength: 255
 
         .form-group
           .form-check
