@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_121557) do
+ActiveRecord::Schema.define(version: 2020_07_20_052737) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "namespace"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_02_23_121557) do
     t.string "contact_manager"
     t.string "contact_tel"
     t.string "contact_email", null: false
-    t.string "project_why"
+    t.text "project_why"
     t.string "solution_slugs", default: "[]"
     t.datetime "created_at"
     t.datetime "updated_at"
