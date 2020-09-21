@@ -33,8 +33,8 @@
           = f.label :solution_slugs
           - Contact::SOLUTION_OPTIONS.each do |solution_option|
             .form-check
-              = f.check_box :solution_slugs, { class: 'form-check-input form-control', multiple: true }, solution_option[:slug], nil
-              %label.form-check-label{ for: :solution_slugs }<>
+              = f.check_box :solution_slugs, { class: 'form-check-input -solution form-control', multiple: true }, solution_option[:slug], nil
+              %label.form-check-label{ for: "contact_solution_slugs_#{solution_option[:slug]}" }<>
                 = solution_option[:title]
         .form-group
           = f.label :attachment
