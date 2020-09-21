@@ -128,7 +128,7 @@ class Solution
       description: '''
         성평등 정책을 만드는 청년 커뮤니티
       ''',
-      url: 'https://butterknifecrew.kr'
+      url: 'https://parti.coop/posts/148'
     },
     {
       image_path: 'org_portfolio_5.jpg',
@@ -144,7 +144,7 @@ class Solution
       description: '''
         국내 최초 이슈 프로젝트 정당
       ''',
-      url: 'https://up.parti.xyz'
+      url: 'https://parti.coop/posts/165'
     },
     {
       image_path: 'org_portfolio_6.png',

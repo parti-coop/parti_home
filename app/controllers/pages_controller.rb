@@ -27,10 +27,16 @@ class PagesController < ApplicationController
   def subscribe_reports
     outcome = MailingSubscribe.run(name: params[:name], email: params[:email])
     if outcome.valid?
-      flash[:success] = "구독 확인 이메일을 발송했습니다. 보내드린 이메일을 확인하면 구독이 완료됩니다."
+      flash[:success] = '구독 확인 이메일을 발송했습니다. 보내드린 이메일을 확인하면 구독이 완료됩니다.'
     else
-      logger.error outcome.errors.full_messages.join('. ')
-      flash[:error] = "알 수 없는 오류가 발생했습니다. contact@parti.coop로 구독 신청 메일을 보내 주세요."
+      messages = outcome.errors.full_messages.join('. ')
+      logger.error messages
+
+      if outcome.errors.added?(:base, :server)
+        flash[:error] = messages
+      else
+        flash[:error] = '민주주의 리포트 구독이 실패했습니다. contact@parti.coop로 구독 신청 메일을 보내 주세요.'
+      end
     end
   end
 

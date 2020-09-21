@@ -38,3 +38,5 @@ public/sitemap.xml
 public/sitemap.xml.gz
 
 .powenv
+
+.vscode/
