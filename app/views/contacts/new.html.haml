@@ -5,8 +5,6 @@
         협업 문의
       .page-subtitle.text-keep-all
         활동 영역 별 다양한 방식으로 여러분과 협업합니다.
-  .envelope
-    = image_tag 'contact-envelope.png'
 
 = content_for :recaptcha_js do
   = include_recaptcha_js
@@ -58,9 +56,9 @@
           .form-check
             = f.check_box :confirm_all, class: 'form-check-input js-confirm-all', id: 'contact_confirm_all'
             %label.form-check-label{ for: 'contact_confirm_all' }<>
-              %span.text-nowrap<> 개인정보 수집 및 처리,&nbsp;
-              %span.text-nowrap<> 마케팅 정보 수신(선택),&nbsp;
-              %span.text-nowrap<> 민주주의 리포트 구독(선택)
+              %span<> 개인정보 수집 및 처리,&nbsp;
+              %span<> 마케팅 정보 수신(선택),&nbsp;
+              %span<> 민주주의 리포트 구독(선택)
               에 모두 동의합니다.
           .ml-4
             .form-check
