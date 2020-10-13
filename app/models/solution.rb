@@ -156,6 +156,60 @@ class Solution
     },
   ]
 
+  TOWNHALL_TOOLKITS = [
+    {
+      image_path: 'townhall_toolkit_1.jpg',
+      title: '아이디어 마켓',
+      description: '''
+        수많은 아이디어 중에서 우선순위를 정하는 일에 구성원 모두가 참여하여 결정합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/'
+    },
+    {
+      image_path: 'townhall_toolkit_2.jpg',
+      title: '열린 토론회',
+      description: '''
+        특정이슈와 관련된 서로의 의사를 공유하고 숙의를 거쳐 의미 있는 의사결정을 도출합니다.
+      ''',
+      url: 'https://toolkit.parti.coop/ '
+    }
+  ]
+
+  TOWNHALL_PORTFOLIOS = [
+    {
+      image_path: 'townhall_portfolio_1.png',
+      title: '2021 구로구에 필요한 정책을 논하는 시민 참여단',
+      description: '''
+        구로구청, 구로구민과 함께 2021년도 구로구 지역사회혁신계획 수립을 위한 시민 총회 개최
+      ''',
+      url: 'https://blog.naver.com/digital9ro/222005700481'
+    },
+    {
+      image_path: 'townhall_portfolio_2.jpg',
+      title: '저출산고령화 굿 아이디어 공모전',
+      description: '''
+        제4차 저출산고령사회 기본 계획을 위한 좋은 아이디어 6개 선정
+      ''',
+      url: 'https://parti.coop/posts/182'
+    },
+    {
+      image_path: 'townhall_portfolio_3.jpg',
+      title: '2019 코리아 챌린지',
+      description: '''
+        국민이 주도하는 대한민국 미래 100년을 준비하기 위해 국민참여 아이디어 경진대회 개최
+      ''',
+      url: 'http://www.korea.kr/news/policyNewsView.do?newsId=148862989'
+    },
+    {
+      image_path: 'townhall_portfolio_4.png',
+      title: '2018 실패박람회',
+      description: '''
+        48개의 주요 실패 이슈를 공유하고 토론에서 ‘빠띠 타운홀’을 활용해 토론을 진행
+      ''',
+      url: 'https://democracy-activists.parti.xyz/posts/28650'
+    },
+  ]
+
   CAMPAIGN_TOOLKITS = [
     {
       image_path: 'cam_solution_1.png',
@@ -450,6 +504,17 @@ class Solution
       portfolios: Solution::CAMPAIGN_PORTFOLIOS,
       using_platform_slugs: %i(campaigns),
       seo_desc: '시민 누구나 캠페인을 하는 세상을 만듭니다.'
+    },
+    townhall: {
+      path_text: :solutions_townhall_path,
+      title: '참여적 의사결정',
+      subtitle: '모두가 함께하는',
+      image_path: 'solutions/card-townhall.png',
+      items_name: '툴킷',
+      items: Solution::TOWNHALL_TOOLKITS,
+      portfolios: Solution::TOWNHALL_PORTFOLIOS,
+      using_platform_slugs: %i(townhall),
+      seo_desc: '모두가 쉽게 자신의 의견을 나누고 의사결정할 수 있는 공간을 만듭니다.'
     },
     data: {
       path_text: :solutions_data_path,

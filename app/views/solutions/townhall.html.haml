@@ -1,0 +1,44 @@
+- content = capture do
+  %section.descriptions
+    .container
+      %p.lead.text-keep-all
+        모두가 쉽게 자신의 의견을 나누고
+        %br
+        의사결정할 수 있는 공간을 만듭니다.
+
+  %section.tiles.tiles-with
+    .tiles-title-line
+      .container
+        .tiles-title
+          함께하는 일
+    .container
+      .tiles-container<>
+        .tile
+          .tile-meta
+            .title
+              협력 프로젝트
+              .text-muted Collaborate
+            .body.text-keep-all
+              %p
+                디지털 플랫폼과 빠띠의 노하우가 담긴 툴킷을 기반으로 함께 프로젝트 기획 및 운영을 할 수 있습니다.
+                %br
+                초기 아이디어 단계여도 좋습니다. 마음껏 프로젝트를 제안해주세요.
+        .tile
+          .tile-meta
+            .title
+              컨설팅 및 자문
+              .text-muted Consulting
+            .body.text-keep-all
+              온오프라인 통합, 비대면 모임과 행사를 기획하고 운영하는 기관, 조직을 대상으로 컨설팅 및 자문을 제공합니다.
+        .tile
+          .tile-meta
+            .title
+              교육 및 워크숍
+              .text-muted Inspire
+            .body.text-keep-all
+              %p
+                의사결정 방식을 직접 설계하고 다양한 사례를 빠띠의 워크숍은 이론이나 기술을 배우기보다 스스로 실행하며 배우는 참여형 워크숍입니다.
+                %br
+                규모와 환경에 따라 다 회차 커리큘럼 프로그램도 가능합니다.
+
+= render 'solutions/show', slug: @slug, info: @info, content: content

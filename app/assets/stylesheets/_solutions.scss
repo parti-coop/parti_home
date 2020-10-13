@@ -323,6 +323,15 @@ body.body-solutions-org {
   }
 }
 
+body.body-solutions-townhall {
+  section.base-key-visual {
+    background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('townhall-key-visual.png');
+    @include media-breakpoint-down(sm) {
+      background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('townhall-key-visual-sm.png');
+    }
+  }
+}
+
 body.body-solutions-soft {
   section.base-key-visual {
     background-image: linear-gradient(to right, #36b6a901, #a499c9aa), asset_url('soft-key-visual.png');
