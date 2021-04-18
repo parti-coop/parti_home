@@ -1,0 +1,937 @@
+:scss
+  $parti-violet-0: #7463ad;
+  @media (max-width: 1024px) {
+    html {
+      height: -webkit-fill-available;
+    }
+    body {
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+  }
+  main.base {
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: $parti-violet-0;
+    > .key-visual {
+      padding-top: 82px;
+      padding-bottom: 44px;
+      @media (max-width: 1024px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+      .container-layout {
+        display: flex;
+        width: 100%;
+        > .left {
+          flex: none;
+        }
+        > .right {
+          flex: 1;
+          position: relative;
+        }
+        @media (max-width: 1024px) {
+          > .left {
+            flex: 1;
+            max-width: 100%;
+          }
+          > .right {
+            display: none;
+          }
+        }
+      }
+      .title {
+        margin-bottom: 36px;
+        @media (max-width: 1024px) {
+          margin-bottom: 16px;
+        }
+        > img {
+          width: 304px;
+          margin-right: 24px;
+          vertical-align: text-bottom;
+        }
+        > .text {
+          font-size: 26px;
+          font-weight: 500;
+          color: white;
+          vertical-align: bottom;
+        }
+        @media (max-width: 1024px) {
+          > img {
+            width: 165px;
+            margin-right: 8px;
+          }
+          > .text {
+            font-size: 16px;
+          }
+        }
+      }
+      .lead > img {
+        width: 600px;
+        margin-bottom: 44px;
+        @media (max-width: 1024px) {
+          max-width: 600px;
+          width: 100%;
+          margin-bottom: 42px;
+        }
+      }
+      .info > tbody {
+        > .item {
+          > .header,
+          > .chevron,
+          > .main {
+            vertical-align: top;
+          }
+          > .header {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+          }
+          > .chevron {
+            font-size: 22px;
+            .fa {
+              color: #10ffa0;
+              margin-left: 8px;
+              margin-right: 8px;
+            }
+          }
+          > .main {
+            .content,
+            .help {
+              display: inline;
+            }
+            .content {
+              font-size: 22px;
+              color: white;
+              .help {
+                font-size: 16px;
+                opacity: 0.6;
+              }
+            }
+          }
+          @media (max-width: 1024px) {
+            > .header,
+            > .chevron {
+              font-size: 14px;
+            }
+            > .main {
+              .content {
+                font-size: 14px;
+                .help {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .app {
+        position: absolute;
+        top: 0;
+        right: 0;
+        > img {
+          width: 88px;
+          height: 88px;
+        }
+      }
+      .cta {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        > .btn {
+          padding: 16px 44px;
+          border-radius: 6px;
+          background-color: #10ffa0;
+          font-size: 24px;
+          font-weight: 500;
+          color: $parti-violet-0;
+        }
+      }
+    }
+    > .intro {
+      .container-layout {
+        padding: 64px;
+        background-color: #f1f1f1;
+        @media (max-width: 1024px) {
+          margin-left: -15px;
+          margin-right: -15px;
+          padding: 32px 16px;
+        }
+      }
+      .edge {
+        font-size: 36px;
+        font-weight: bold;
+        color: $parti-violet-0;
+        margin-bottom: 16px;
+      }
+      .text {
+        font-size: 18px;
+        color: $parti-violet-0;
+        > .strong {
+          font-weight: bold;
+        }
+      }
+      .reviews {
+        display: flex;
+        > .review {
+          flex: 1;
+          padding-left: 16px;
+          padding-right: 16px;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:right-child {
+            padding-right: 0;
+          }
+          > .box {
+            padding: 32px;
+            background-color: white;
+            > .icon {
+              font-size: 36px;
+            }
+            > .text,
+            > .byline {
+              font-size: 18px;
+              color: #666666;
+              margin-bottom: 16px;
+            }
+            > .byline {
+              text-align: right;
+            }
+          }
+        }
+      }
+      @media (max-width: 1024px) {
+        .edge {
+          font-size: 20px;
+        }
+        .text {
+          font-size: 14px;
+        }
+        .reviews {
+          display: block;
+          > .review {
+            padding-left: 43px;
+            padding-right: 0;
+            &:nth-child(odd) {
+              padding-left: 0;
+              padding-right: 43px;
+            }
+            > .box {
+              padding: 16px;
+              > .icon {
+                font-size: 28px;
+              }
+              > .text,
+              > .byline {
+                font-size: 14px;
+              }
+            }
+          }
+          > .review + .review {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+    > .details {
+      .container-layout {
+        padding: 64px;
+        background-color: white;
+        @media (max-width: 1024px) {
+          margin-left: -15px;
+          margin-right: -15px;
+          padding: 32px 16px;
+        }
+        > .detail {
+          &:not(:first-child):not(:last-child) {
+            margin-top: 64px;
+            margin-bottom: 64px;
+          }
+          > .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: $parti-violet-0;
+            margin-bottom: 16px;
+            > .small {
+              display: inline;
+              font-size: 18px;
+            }
+          }
+          > .items {
+            padding-left: 16px + 6px;
+            @media (max-width: 1024px) {
+              padding-left: 6px + 3px;
+            }
+            > .item {
+              font-size: 18px;
+              color: #666666;
+              position: relative;
+              > .strong {
+                display: inline-block;
+                font-weight: bold;
+              }
+              > .cta {
+                color: #4bc6af;
+                text-decoration: underline;
+                font-weight: bold;
+              }
+              &:before {
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                background-color: $parti-violet-0;
+                display: inline-block;
+                position: absolute;
+                left: (16px + 3px) * -1;
+                top: 27px * 0.5 - 6px * 0.5;
+                border-radius: 999999px;
+                @media (max-width: 1024px) {
+                  left: (12px * 0.5 + 3px) * -1;
+                  top: 21px * 0.5 - 6px * 0.5;
+                }
+              }
+            }
+          }
+          > .table,
+          > .table td {
+            border: 1px solid $parti-violet-0;
+          }
+          > .table {
+            &.table-lg {
+              display: table;
+            }
+            &.table-sm {
+              display: none;
+            }
+            table-layout: fixed;
+            margin-bottom: 32px;
+            td.toc,
+            td.day {
+              width: 10%;
+            }
+            td.track,
+            td.lecture {
+              width: 30%;
+            }
+            td.toc,
+            td.track {
+              background-color: #f7f7f7;
+            }
+            td.day {
+              padding-top: 32px;
+              font-size: 24px;
+              font-weight: bold;
+              color: $parti-violet-0;
+              > .small {
+                font-size: 18px;
+              }
+            }
+            td.track {
+              font-size: 32px;
+              font-weight: bold;
+              color: $parti-violet-0;
+              text-align: center;
+              > .small {
+                display: inline;
+                font-size: 12px;
+                color: rgba(116, 99, 173, 0.54);
+              }
+            }
+            td.lecture {
+              padding: 32px;
+              > .name {
+                font-size: 24px;
+                color: #666666;
+                margin-bottom: 16px;
+                > .strong {
+                  font-weight: bold;
+                }
+              }
+              > .items {
+                margin-bottom: 8px;
+                padding-left: 14px + 6px;
+                @media (max-width: 1024px) {
+                  padding-left: 6px + 3px;
+                }
+                > .item {
+                  font-size: 14px;
+                  color: #666666;
+                  position: relative;
+                  &:before {
+                    content: ' ';
+                    width: 4px;
+                    height: 4px;
+                    background-color: $parti-violet-0;
+                    display: inline-block;
+                    position: absolute;
+                    left: (14px + 3px) * -1;
+                    top: 21px * 0.5 - 6px * 0.5;
+                    border-radius: 999999px;
+                    @media (max-width: 1024px) {
+                      left: (12px * 0.5 + 3px) * -1;
+                      top: 18px * 0.5 - 6px * 0.5;
+                    }
+                  }
+                }
+              }
+              > .tags {
+                > .tag {
+                  font-size: 14px;
+                  color: $parti-violet-0;
+                  display: inline;
+                  white-space: nowrap;
+                  margin-right: 8px;
+                  &.strong {
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+          > .cta {
+            text-align: center;
+            .btn {
+              padding: 16px 125px 16px;
+              border-radius: 6px;
+              background-color: #10ffa0;
+              font-size: 24px;
+              font-weight: 500;
+              color: $parti-violet-0;
+            }
+          }
+          @media (max-width: 1024px) {
+            > .title {
+              font-size: 20px;
+              > .small {
+                font-size: 16px;
+              }
+            }
+            > .items {
+              > .item {
+                font-size: 14px;
+              }
+            }
+            > .table {
+              &.table-lg {
+                display: none;
+              }
+              &.table-sm {
+                display: table;
+              }
+              td.day {
+                background-color: #f7f7f7;
+                padding: 16px;
+                font-size: 18px;
+                > .small {
+                  font-size: 14px;
+                  display: inline;
+                }
+              }
+              td.day {
+                width: auto;
+              }
+              col.track,
+              td.track {
+                width: 20%;
+                line-height: 1.8rem;
+                vertical-align: middle;
+                font-size: 24px;
+                .small {
+                  font-size: 10px;
+                  display: block;
+                }
+              }
+              col.lecture,
+              td.lecture {
+                width: 80%;
+                padding: 24px 8px;
+                > .name {
+                  font-size: 18px;
+                }
+                > .items {
+                  > .item {
+                    font-size: 12px;
+                  }
+                }
+                > .tags {
+                  .tag {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            > .cta {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    > .contact {
+      .container-layout {
+        padding: 64px;
+        background-color: white;
+        @media (max-width: 1024px) {
+          margin-left: -15px;
+          margin-right: -15px;
+          padding: 32px 16px;
+        }
+        > .edge {
+          font-size: 36px;
+          font-weight: bold;
+          color: $parti-violet-0;
+          margin-bottom: 16px;
+          @media (max-width: 1024px) {
+            font-size: 20px;
+          }
+        }
+        > .items {
+          padding-left: 16px + 6px;
+          @media (max-width: 1024px) {
+            padding-left: 6px + 3px;
+          }
+          > .item {
+            font-size: 18px;
+            @media (max-width: 1024px) {
+              font-size: 14px;
+            }
+            color: #666666;
+            position: relative;
+            > .strong {
+              display: inline-block;
+              font-weight: bold;
+            }
+            > .link {
+              text-decoration: underline;
+              color: $parti-violet-0;
+            }
+            &:before {
+              content: ' ';
+              width: 6px;
+              height: 6px;
+              background-color: $parti-violet-0;
+              display: inline-block;
+              position: absolute;
+              left: (16px + 3px) * -1;
+              top: 27px * 0.5 - 6px * 0.5;
+              border-radius: 999999px;
+              @media (max-width: 1024px) {
+                left: (12px * 0.5 + 3px) * -1;
+                top: 21px * 0.5 - 6px * 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .sponsored-by {
+      .container-layout {
+        padding: 64px;
+        background-color: #f1f1f1;
+        @media (max-width: 1024px) {
+          margin-left: -15px;
+          margin-right: -15px;
+          padding: 32px 16px;
+        }
+        .content {
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #666666;
+          .link > .osf {
+            height: 30px;
+            vertical-align: bottom;
+          }
+          > .br {
+            display: none;
+            @media (max-width: 1024px) {
+              display: block;
+            }
+          }
+          @media (max-width: 425px) {
+            text-align: left;
+          }
+          @media (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    > .fixed-cta {
+      position: fixed;
+      bottom: 0;
+      width: 100vw;
+      display: none;
+      @media (max-width: 1024px) {
+        display: block;
+      }
+      > .cta > .btn {
+        padding: 16px 44px;
+        border-radius: 6px;
+        background-color: #10ffa0;
+        font-size: 24px;
+        font-weight: 500;
+        color: $parti-violet-0;
+      }
+    }
+  }
+
+%main.base
+  %section.key-visual
+    .container
+      .container-layout
+        .left
+          .title
+            =image_tag 'camp/title.svg'
+            %span.text 4월 시즌
+          .lead
+            =image_tag 'camp/lead.png'
+          %table.info
+            %tbody
+              %tr.item
+                %th.header 일시
+                %td.chevron
+                  %i.fa.fa-chevron-right
+                %td.main
+                  .content
+                    %span.text-nowrap 2021. 4. 29. ~ 30.
+                    %span.text-nowrap 19:30 ~ 21:30 (목/금)
+                    %span.text-nowrap
+                      중 선택
+                      .help.text-nowrap 양일 선택 참여 가능
+              %tr.item
+                %th.header 장소
+                %td.chevron
+                  %i.fa.fa-chevron-right
+                %td.main
+                  .content 온라인 강의 ( ZOOM )와 빠띠 커뮤니티
+              %tr.item
+                %th.header 참가비
+                %td.chevron
+                  %i.fa.fa-chevron-right
+                %td.main
+                  .content
+                    무료
+                    .help 오픈기념!
+        .right
+          .app
+            =image_tag 'camp/app.png'
+          .cta
+            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
+              신청하기
+              %i.fa.fa-chevron-right
+
+  %section.intro
+    .container
+      .container-layout
+        .edge
+          코로나19 이후 디지털전환 🤦🏻‍♀️
+          %br
+          어떻게 준비해야할지 막막하신가요?
+        .text
+          .strong ‘더 많은, 더 나은, 일상의 민주주의’를 만드는 빠띠의
+          디지털 플랫폼과 경험, 노하우를 한번에 만날 수 있는 이틀의 캠프에 초대합니다.
+  %section.details
+    .container
+      .container-layout
+        .detail
+          .title
+            💁‍♀️
+            캠프는 어떻게 진행되나요?
+          %ul.items
+            .item
+              일상의 공론장과 실시간 토론, 이슈 커뮤니티와 워킹그룹, 공익데이터와 캠페인까지
+              .strong 총 여섯 주제의 강연
+              %span> 이 준비되어 있습니다.
+            .item
+              나에게 필요한 주제의 강연을 선택하면 사례와 실습, Q&A와 가이드 자료까지
+              .strong 실용적이고 알찬 세션
+              %span> 을 함께 하게 됩니다
+            .item
+              캠프 한번에 최대 두 개!
+              .strong 세 달에 걸쳐서 모두 다 들을 수 있어요.
+              이번 달에 들을 두 개를 골라보세요.
+        .detail
+          .title
+            👀
+            무엇을 들을 수 있나요?
+          .items
+            .item
+              .strong 작지만 의미있는 커뮤니티 만들기
+              \- 온라인 커뮤니티 공간 만들고 가꾸는 법
+            .item
+              .strong 누구나 쉽게 참여하는 일상의 공론장
+              \- 시민주도 디지털 공론장 만들기
+            .item
+              .strong 어떻게 목소리를 모으고 촉구할까?
+              \- 빠띠 캠페인즈의 시민주도 캠페인 기술
+            .item
+              .strong 혼자가 아니라 함께 일하기
+              \- 민주적으로 협력하는 워킹그룹 방법론
+            .item
+              .strong 단순 투표는 그만! 숙의하고 의사결정하기
+              \- 빠띠 타운홀과 실시간 공론장 열기
+            .item
+              .strong 공익데이터를 만들고 활용하는 시민들
+              \- 데이터 액티비즘과 디지털 시민교육
+
+        .detail
+          .title
+            🙋‍♀️
+            누구에게 도움이 되나요?
+          .items
+            .item
+              디지털 기술을 통해 지금 하고 있는 활동을 조금 더 나은 방향으로 변화시키고 싶으신 분!
+            .item
+              디지털 민주주의? 빠띠?에 대해 조금 더 알아보고 싶으신 분!
+            .item
+              빠띠 플랫폼의 사용법이 궁금하신 분!
+        .detail
+          .title
+            🗓
+            캠프 일정 및 참여방법
+          .items
+            .item
+              프로그램은
+              .strong 2021. 4. 29 (목) ~ 4. 30 (금) 19:30 ~ 21:30
+              사이 진행되며, 하루 1개씩 선택 가능합니다.
+            .item
+              .strong ZOOM과 빠띠 커뮤니티를 통한 온라인
+              %span> 으로 진행되고,
+              %span
+              오픈기념!
+              .strong 참가비는 무료
+              %span> 입니다.
+            .item
+              프로그램별
+              .strong 선착순 15명 신청가능!!!
+              지금
+              = link_to '신청하러', 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'cta', target: '_blank'
+              가볼까요?
+        .detail
+          .title
+            🖍
+            상세 프로그램
+            .small
+              ⏰ 19:30 ~ 21:30
+          - lecture1 = capture do
+            .name
+              이슈 커뮤니티 만들기
+              .strong 온라인 커뮤니티 공간 만들고 가꾸는 법
+            .items
+              .item 커뮤니티 101 - 커뮤니티의 기초를 함께 만드는 법
+              .item 커뮤니티를 위한 디지털 플랫폼 활용하기
+              .item 이슈에서 액션으로: 이야기 나누고 정보를 모으고 액션 만들기
+            .tags
+              .tag.strong #이슈커뮤니티
+              .tag #오거나이징
+              .tag #빠띠카누
+          - lecture2 = capture do
+            .name
+              누구나 쉽게 참여하는 일상의 공론장
+              .strong 시민주도 디지털 공론장 만들기
+            .items
+              .item 디지털 시대의 민주주의와 공론장 이해하기
+              .item 다양한 주체들이 공론을 모아가는 시민주도 공론장과 시민협력플랫폼의 가능성 확인하기
+              .item 사례와 체험을 통해 디지털 공론장과 더 가까워지기
+            .tags
+              .tag.strong #일상의공론장
+              .tag #숙의
+              .tag #빠띠믹스
+          - lecture3 = capture do
+            .name
+              혼자가 아니라 함께 일하기
+              .strong 민주적으로 협력하는 워킹그룹 방법론
+            .items
+              .item 빠띠에서 워킹그룹을 조직하고 운영한 경험
+              .item 비대면/비동기로 워킹그룹이 협업하는 법
+              .item 워킹그룹 101 - 디지털 플랫폼 활용 간단 실습
+            .tags
+              .tag.strong #워킹그룹
+              .tag #협업
+              .tag #빠띠카누
+          - lecture4 = capture do
+            .name
+              공익데이터를 만들고 활용하는 디지털 시민들
+              .strong 데이터 액티비즘
+            .items
+              .item 데이터 그 자체로는 의미가 없다
+              .item 공익데이터와 데이터 액티비즘
+              .item 시민주도 데이터액션 워크숍
+            .tags
+              .tag.strong #공익데이터
+              .tag #데이터액티비즘
+              .tag #데이터퍼블릭
+          - lecture5 = capture do
+            .name
+              단순 투표는 그만! 숙의하고 의사결정하기
+              .strong 빠띠 타운홀과 실시간 공론장 열기
+            .items
+              .item 민주적 의사결정의 의미와 방법 알아보기
+              .item 민주적 의사결정의 사례를 공유 및 고민 나누기
+              .item 민주적 의사결정을 위한 방법을 설계하고 실습해보기
+            .tags
+              .tag.strong #실시간공론장
+              .tag #의사결정
+              .tag #빠띠타운홀
+          - lecture6 = capture do
+            .name
+              어떻게 목소리를 모으고 촉구할까?
+              .strong 빠띠 캠페인즈의 시민주도 캠페인 기술
+            .items
+              .item 빠띠 캠페인즈 플랫폼과 디지털 캠페인 사례 이야기
+              .item 빠띠 캠페인즈 온라인 투어 & 티타임
+              .item 빠띠 캠페인즈를 잘 활용하는 꿀팁 공개
+            .tags
+              .tag.strong #디지털캠페인
+              .tag #목소리모으기
+              .tag #빠띠캠페인즈
+          %table.table.table-lg
+            %tbody
+              %tr
+                %td.toc
+                  &nbsp;
+                %td.track
+                  A
+                  .small 선택
+                %td.track
+                  B
+                  .small 선택
+                %td.track
+                  C
+                  .small 선택
+              %tr
+                %td.day
+                  1일차
+                  .small 4. 29. (목)
+                %td.lecture
+                  = lecture1
+                %td.lecture
+                  = lecture2
+                %td.lecture
+                  = lecture3
+              %tr
+                %td.day
+                  2일차
+                  .small 4. 30. (금)
+                %td.lecture
+                  = lecture4
+                %td.lecture
+                  = lecture5
+                %td.lecture
+                  = lecture6
+
+          %table.table.table-sm
+            %colgruop
+              %col.track
+              %col.lecture
+            %tbody
+              %tr
+                %td.day{ colspan: 2 }
+                  1일차
+                  .small 4. 29. (목)
+              %tr
+                %td.track
+                  .small 선택
+                  A
+                %td.lecture
+                  = lecture1
+              %tr
+                %td.track
+                  .small 선택
+                  B
+                %td.lecture
+                  = lecture2
+              %tr
+                %td.track
+                  .small 선택
+                  C
+                %td.lecture
+                  = lecture3
+
+          %table.table.table-sm
+            %colgruop
+              %col.track
+              %col.lecture
+            %tbody
+              %tr
+                %td.day{ colspan: 2 }
+                  2일차
+                  .small 4. 30. (금)
+              %tr
+                %td.track
+                  .small 선택
+                  A
+                %td.lecture
+                  = lecture4
+              %tr
+                %td.track
+                  .small 선택
+                  B
+                %td.lecture
+                  = lecture5
+              %tr
+                %td.track
+                  .small 선택
+                  C
+                %td.lecture
+                  = lecture6
+
+          .cta
+            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
+              신청하기
+              %i.fa.fa-chevron-right
+
+
+  %section.intro
+    .container
+      .container-layout
+        .edge
+          🥰 지난 교육 참가자 후기
+        .reviews
+          .review
+            .box
+              .icon 👨🏻
+              .text
+                이번 워크숍에 참여하면서 빠띠가 회의하고 일하는 방식도 간접적으로 지켜볼 수 있었어요. 역시 민주주의와 숙의, 토론을 위한 플랫폼을 만드는 빠띠는 다르구나! 하는 생각이 들었습니다.
+              .byline
+                이슈 커뮤니티 워크숍 참가자
+          .review
+            .box
+              .icon 🧑🏻
+              .text
+                공익데이터 실험실이라는 이름처럼 굉장히 탐구적인 프로젝트였다고 생각합니다. 어떤 사회문제나 현상에 관심이 있고 이것을 데이터를 통해 알고자 했던 시민으로서, 어떤 과정을 통해 내가 무엇을 기여할 수 있는지 알게 된 시간이었습니다.
+              .byline
+                공익데이터 실험실 참가자
+          .review
+            .box
+              .icon 👩🏻‍🦰
+              .text
+                실제 공론장 행사에 참여한 듯한 생생한 느낌을 주는 구성으로 진행되었습니다. 단체에 돌아가서 공론장을 만들 때 이번 교육에서 들은 걸 써먹을 수 있을 것 같아요. 빠띠 민주주의 캠프와 이후 심화 과정도 꼭 듣고 싶습니다!
+              .byline
+                공론장 워크숍 참가한 시민단체 활동가
+  %section.contact
+    .container
+      .container-layout
+        .edge
+          🤔  궁금한 게 있으세요?
+        .items
+          .item
+            = link_to 'contact@parti.coop', 'mailto:contact@parti.coop', class: 'link'
+            %span> 으로 문의사항을 보내주시면 1일 내로 답변 드립니다.
+  %section.sponsored-by
+    .container
+      .container-layout
+        .content
+          빠띠 민주주의 캠프는
+          %span.text-nowrap
+            = link_to 'https://www.opensocietyfoundations.org/', class: 'link' do
+              = image_tag 'camp/osf.png', class: 'osf'
+            와 함께 합니다.
+  %section.fixed-cta
+    .cta
+      = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn btn-block', target: '_blank' do
+        신청하기
+        %i.fa.fa-chevron-right
