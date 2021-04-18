@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'bundler', '2.0.1'
+gem 'bundler', '2.2.14'
 
 #ruby '2.3.1'
 
