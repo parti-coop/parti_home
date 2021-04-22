@@ -139,6 +139,10 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        text-align: right;
+        > .end {
+          width: 478px;
+        }
         > .btn {
           padding: 16px 44px;
           border-radius: 6px;
@@ -392,6 +396,9 @@
           }
           > .cta {
             text-align: center;
+            > .end {
+              width: 378px;
+            }
             .btn {
               padding: 16px 125px 16px;
               border-radius: 6px;
@@ -617,10 +624,11 @@
                     .help 오픈기념!
         .right
           .app
-            =image_tag 'camp/app.png'
+            = image_tag 'camp/app.png'
           .cta
-            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
-              신청하기
+            = image_tag 'camp/end.png', class: 'end'
+            = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
+              다음 캠프 소식 받기
               %i.fa.fa-chevron-right
 
   %section.intro
@@ -704,12 +712,12 @@
               오픈기념!
               .strong 참가비는 무료
               %span> 입니다.
-            .item
-              프로그램별
-              .strong 선착순 15명 신청가능!!!
-              지금
-              = link_to '신청하러', 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'cta', target: '_blank'
-              가볼까요?
+            -# .item
+            -#   프로그램별
+            -#   .strong 선착순 15명 신청가능!!!
+            -#   지금
+            -#   = link_to '신청하러', 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'cta', target: '_blank'
+            -#   가볼까요?
         .detail
           .title
             🖍
@@ -880,8 +888,10 @@
                   = lecture6
 
           .cta
-            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
-              신청하기
+            = image_tag 'camp/end.png', class: 'end'
+            %br
+            = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
+              다음 캠프 소식 받기
               %i.fa.fa-chevron-right
 
 
@@ -930,8 +940,8 @@
             = link_to 'https://www.opensocietyfoundations.org/', class: 'link' do
               = image_tag 'camp/osf.png', class: 'osf'
             와 함께 합니다.
-  %section.fixed-cta
-    .cta
-      = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn btn-block', target: '_blank' do
-        신청하기
-        %i.fa.fa-chevron-right
+  -# %section.fixed-cta
+  -#   .cta
+  -#     = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn btn-block', target: '_blank' do
+  -#       신청하기
+  -#       %i.fa.fa-chevron-right
