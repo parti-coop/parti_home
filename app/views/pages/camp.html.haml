@@ -32,12 +32,13 @@
           position: relative;
         }
         @media (max-width: 1024px) {
+          flex-direction: column;
           > .left {
             flex: 1;
             max-width: 100%;
           }
           > .right {
-            display: none;
+            //display: none;
           }
         }
       }
@@ -150,6 +151,21 @@
           font-size: 24px;
           font-weight: 500;
           color: $parti-violet-0;
+        }
+      }
+      @media (max-width: 1024px) {
+        .app {
+          display: none;
+        }
+        .cta {
+          margin-top: 20px;
+          position: initial;
+          .end {
+            width: 100%;
+          }
+          > .btn {
+            display: block;
+          }
         }
       }
     }
