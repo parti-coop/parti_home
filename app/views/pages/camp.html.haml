@@ -32,13 +32,12 @@
           position: relative;
         }
         @media (max-width: 1024px) {
-          flex-direction: column;
           > .left {
             flex: 1;
             max-width: 100%;
           }
           > .right {
-            //display: none;
+            display: none;
           }
         }
       }
@@ -140,10 +139,6 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        text-align: right;
-        > .end {
-          width: 478px;
-        }
         > .btn {
           padding: 16px 44px;
           border-radius: 6px;
@@ -151,21 +146,6 @@
           font-size: 24px;
           font-weight: 500;
           color: $parti-violet-0;
-        }
-      }
-      @media (max-width: 1024px) {
-        .app {
-          display: none;
-        }
-        .cta {
-          margin-top: 20px;
-          position: initial;
-          .end {
-            width: 100%;
-          }
-          > .btn {
-            display: block;
-          }
         }
       }
     }
@@ -412,9 +392,6 @@
           }
           > .cta {
             text-align: center;
-            > .end {
-              width: 378px;
-            }
             .btn {
               padding: 16px 125px 16px;
               border-radius: 6px;
@@ -599,6 +576,50 @@
         color: $parti-violet-0;
       }
     }
+    &.-closed {
+      > .key-visual {
+        .container-layout {
+          @media (max-width: 1024px) {
+            flex-direction: column;
+            > .right {
+              display: block;
+            }
+          }
+        }
+        @media (max-width: 1024px) {
+          .app {
+            display: none;
+          }
+          .cta {
+            margin-top: 20px;
+            position: initial;
+            .end {
+              width: 100%;
+            }
+            > .btn {
+              display: block;
+            }
+          }
+        }
+        .cta {
+          text-align: right;
+          > .end {
+            width: 478px;
+          }
+        }
+      }
+    }
+    > .details {
+      .container-layout {
+        > .detail {
+          > .cta {
+            > .end {
+              width: 378px;
+            }
+          }
+        }
+      }
+    }
   }
 
 %main.base
@@ -608,7 +629,7 @@
         .left
           .title
             =image_tag 'camp/title.svg'
-            %span.text 4월 시즌
+            %span.text 5월 시즌
           .lead
             =image_tag 'camp/lead.png'
           %table.info
@@ -619,7 +640,7 @@
                   %i.fa.fa-chevron-right
                 %td.main
                   .content
-                    %span.text-nowrap 2021. 4. 29. ~ 30.
+                    %span.text-nowrap 2021. 5. 26. ~ 27.
                     %span.text-nowrap 19:30 ~ 21:30 (목/금)
                     %span.text-nowrap
                       중 선택
@@ -642,10 +663,12 @@
           .app
             = image_tag 'camp/app.png'
           .cta
-            = image_tag 'camp/end.png', class: 'end'
-            = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
-              다음 캠프 소식 받기
-              %i.fa.fa-chevron-right
+            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
+              신청하기
+            -# = image_tag 'camp/end.png', class: 'end'
+            -# = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
+            -#   다음 캠프 소식 받기
+            -#   %i.fa.fa-chevron-right
 
   %section.intro
     .container
@@ -690,10 +713,10 @@
               \- 시민주도 디지털 공론장 만들기
             .item
               .strong 어떻게 목소리를 모으고 촉구할까?
-              \- 빠띠 캠페인즈의 시민주도 캠페인 기술
+              \- 시민주도 디지털 캠페인의 기술
             .item
               .strong 혼자가 아니라 함께 일하기
-              \- 민주적으로 협력하는 워킹그룹 방법론
+              \- 디지털 협업 워킹그룹 만들기
             .item
               .strong 단순 투표는 그만! 숙의하고 의사결정하기
               \- 빠띠 타운홀과 실시간 공론장 열기
@@ -719,7 +742,7 @@
           .items
             .item
               프로그램은
-              .strong 2021. 4. 29 (목) ~ 4. 30 (금) 19:30 ~ 21:30
+              .strong 2021. 5. 26 (수) ~ 5.27 (목) 19:30 ~ 21:30
               사이 진행되며, 하루 1개씩 선택 가능합니다.
             .item
               .strong ZOOM과 빠띠 커뮤니티를 통한 온라인
@@ -728,12 +751,12 @@
               오픈기념!
               .strong 참가비는 무료
               %span> 입니다.
-            -# .item
-            -#   프로그램별
-            -#   .strong 선착순 15명 신청가능!!!
-            -#   지금
-            -#   = link_to '신청하러', 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'cta', target: '_blank'
-            -#   가볼까요?
+            .item
+              프로그램별
+              .strong 선착순 15명 신청가능!!!
+              지금
+              = link_to '신청하러', 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'cta', target: '_blank'
+              가볼까요?
         .detail
           .title
             🖍
@@ -767,9 +790,9 @@
           - lecture3 = capture do
             .name
               혼자가 아니라 함께 일하기
-              .strong 민주적으로 협력하는 워킹그룹 방법론
+              .strong 디지털 협업 워킹그룹 만들기
             .items
-              .item 빠띠에서 워킹그룹을 조직하고 운영한 경험
+              .item 빠띠의 워킹그룹 프로젝트 사례 이야기
               .item 비대면/비동기로 워킹그룹이 협업하는 법
               .item 워킹그룹 101 - 디지털 플랫폼 활용 간단 실습
             .tags
@@ -803,7 +826,7 @@
           - lecture6 = capture do
             .name
               어떻게 목소리를 모으고 촉구할까?
-              .strong 빠띠 캠페인즈의 시민주도 캠페인 기술
+              .strong 시민주도 디지털 캠페인의 기술
             .items
               .item 빠띠 캠페인즈 플랫폼과 디지털 캠페인 사례 이야기
               .item 빠띠 캠페인즈 온라인 투어 & 티타임
@@ -829,7 +852,7 @@
               %tr
                 %td.day
                   1일차
-                  .small 4. 29. (목)
+                  .small 5. 26. (수)
                 %td.lecture
                   = lecture1
                 %td.lecture
@@ -839,7 +862,7 @@
               %tr
                 %td.day
                   2일차
-                  .small 4. 30. (금)
+                  .small 5. 27. (목)
                 %td.lecture
                   = lecture4
                 %td.lecture
@@ -855,7 +878,7 @@
               %tr
                 %td.day{ colspan: 2 }
                   1일차
-                  .small 4. 29. (목)
+                  .small 5. 26. (수)
               %tr
                 %td.track
                   .small 선택
@@ -883,7 +906,7 @@
               %tr
                 %td.day{ colspan: 2 }
                   2일차
-                  .small 4. 30. (금)
+                  .small 5. 27. (목)
               %tr
                 %td.track
                   .small 선택
@@ -904,11 +927,14 @@
                   = lecture6
 
           .cta
-            = image_tag 'camp/end.png', class: 'end'
-            %br
-            = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
-              다음 캠프 소식 받기
-              %i.fa.fa-chevron-right
+            = link_to 'https://parti276356.typeform.com/to/FbL5Z7T5', class: 'btn', target: '_blank' do
+              신청하기
+
+            -# = image_tag 'camp/end.png', class: 'end'
+            -# %br
+            -# = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn', target: '_blank' do
+            -#   다음 캠프 소식 받기
+            -#   %i.fa.fa-chevron-right
 
 
   %section.intro
@@ -921,23 +947,23 @@
             .box
               .icon 👨🏻
               .text
-                이번 워크숍에 참여하면서 빠띠가 회의하고 일하는 방식도 간접적으로 지켜볼 수 있었어요. 역시 민주주의와 숙의, 토론을 위한 플랫폼을 만드는 빠띠는 다르구나! 하는 생각이 들었습니다.
+                소개해주신 워킹그룹운영 가이드를 따라 촘촘하지만 느슨하게, 하나의 과업을 진행해보면 좋겠다는 다짐을 하게 됩니다. 상황에 따라 확장, 보완하는 요소를 찾고, 나 또는 우리 조직에 맞는 경계를 찾아보고 싶네요. 생각에 그치지 말고 해보자는 다짐!
               .byline
-                이슈 커뮤니티 워크숍 참가자
+                워킹그룹 방법론 교육 참가자
           .review
             .box
               .icon 🧑🏻
               .text
-                공익데이터 실험실이라는 이름처럼 굉장히 탐구적인 프로젝트였다고 생각합니다. 어떤 사회문제나 현상에 관심이 있고 이것을 데이터를 통해 알고자 했던 시민으로서, 어떤 과정을 통해 내가 무엇을 기여할 수 있는지 알게 된 시간이었습니다.
+                다양한 사례를 들어보고 그에 대한 생각을 자유롭게 나눌 수 있어 좋았습니다:) 이 캠프를 시작으로 서로를 위하고 다정한 마음들이 가득한 커뮤니티가 활발히 움직이길 바라요! 그럴 수 있을 거 같아요!
               .byline
-                공익데이터 실험실 참가자
+                이슈 커뮤니티 만들기 교육 참가자
           .review
             .box
               .icon 👩🏻‍
               .text
-                실제 공론장 행사에 참여한 듯한 생생한 느낌을 주는 구성으로 진행되었습니다. 단체에 돌아가서 공론장을 만들 때 이번 교육에서 들은 걸 써먹을 수 있을 것 같아요. 빠띠 민주주의 캠프와 이후 심화 과정도 꼭 듣고 싶습니다!
+                제가 하고 싶은 일에 데이터를 활용할 수 있는 연결점과 통찰을 얻을 수 있어서 좋았어요. 단순한 데이터가 지혜가 되기까지 필요한 ‘맥락’, ‘의미’, ‘통찰’을 말하는 부분이 가장 기억에 남네요 :) 데이터 액티비즘 꼭 참여하고 싶어요!
               .byline
-                공론장 워크숍 참가한 시민단체 활동가
+                데이터 액티비즘 교육 참가자
   %section.contact
     .container
       .container-layout
@@ -956,8 +982,8 @@
             = link_to 'https://www.opensocietyfoundations.org/', class: 'link' do
               = image_tag 'camp/osf.png', class: 'osf'
             와 함께 합니다.
-  -# %section.fixed-cta
-  -#   .cta
-  -#     = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn btn-block', target: '_blank' do
-  -#       신청하기
-  -#       %i.fa.fa-chevron-right
+  %section.fixed-cta
+    .cta
+      = link_to 'https://forms.gle/fY9NTcJhUPHHqrjPA', class: 'btn btn-block', target: '_blank' do
+        신청하기
+        %i.fa.fa-chevron-right
