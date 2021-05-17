@@ -202,6 +202,19 @@
           }
         }
       }
+      .blog {
+        text-align: center;
+        margin-top: 24px;
+        > .blog-btn {
+          > .img {
+            max-width: 560px;
+            width: 100%;
+            &.-xs {
+              display: none;
+            }
+          }
+        }
+      }
       @media (max-width: 1024px) {
         .edge {
           font-size: 20px;
@@ -231,6 +244,16 @@
           }
           > .review + .review {
             margin-top: 16px;
+          }
+        }
+        .blog {
+          > .blog-btn {
+            > .img {
+              display: none;
+            }
+            > .img.-xs {
+              display: inline-block;
+            }
           }
         }
       }
@@ -964,6 +987,11 @@
                 제가 하고 싶은 일에 데이터를 활용할 수 있는 연결점과 통찰을 얻을 수 있어서 좋았어요. 단순한 데이터가 지혜가 되기까지 필요한 ‘맥락’, ‘의미’, ‘통찰’을 말하는 부분이 가장 기억에 남네요 :) 데이터 액티비즘 꼭 참여하고 싶어요!
               .byline
                 데이터 액티비즘 교육 참가자
+
+        .blog
+          = link_to 'https://parti.coop/posts/263', class: 'blog-btn' do
+            = image_tag 'camp/blog_btn.png', class: 'img'
+            = image_tag 'camp/xs_blog_btn.png', class: 'img -xs'
   %section.contact
     .container
       .container-layout
