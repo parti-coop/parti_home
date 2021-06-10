@@ -92,7 +92,12 @@ footer.app-footer {
       margin-left: 12px;
     }
     @include media-breakpoint-down(md) {
-      .util.util-br + .util {
+      .util.util-br.d-lg-none + .util {
+        margin-left: 0;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      .util.util-br.d-sm-none + .util {
         margin-left: 0;
       }
     }
