@@ -6,7 +6,6 @@
   /* review */
   /* artice */
   body {
-    margin: 0;
     padding: 0;
     font-family: "Noto Sans KR";
     color: #34303C;
@@ -14,8 +13,6 @@
     letter-spacing: -0.6px;
     background-color: #f2f3f4;
     word-break: keep-all;
-    background-image: url('#{asset_url('camp_img/camp_bg.png')}');
-    background-size: 100% 100%;
   }
   div {
     margin: 0;
@@ -103,6 +100,8 @@
   }
   .camp_intro {
     height: 926px;
+    background-image: url('#{asset_url('camp_img/camp_bg.png')}');
+    background-size: 100% 100%;
     .camp_container {
       height: 100%;
       position: relative;
@@ -159,12 +158,6 @@
     }
     .intro_info_right {
       float: left;
-      span {
-        vertical-align: top;
-      }
-      strong {
-        vertical-align: top;
-      }
     }
     .time_m_out {
       font-size: 16px;
@@ -245,7 +238,6 @@
     background-color: #fff;
     padding: 12px 0;
     z-index: 1;
-    display: none;
   }
   .camp_m_btn.camp_parti_btn {
     line-height: 84px;
@@ -267,6 +259,7 @@
     line-height: 1.4;
     padding: 64px 0 16px;
     font-weight: 700;
+    color: #170540;
   }
   .camp_content_title {
     font-size: 24px;
@@ -297,16 +290,17 @@
         }
       }
       line-height: 1.8;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
     padding-bottom: 16px;
     border-bottom: 2px solid #170540;
     margin-top: 8px;
     margin-bottom: 60px;
     .program_tag_list {
+      padding-left: 18px;
       li {
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 8px;
       }
     }
   }
@@ -409,6 +403,9 @@
     letter-spacing: -0.4px;
   }
   .camp_article {
+    .camp_content_head {
+      color: inherit;
+    }
     .article_line_clamp {
       line-height: 1.8;
       display: -webkit-box;
@@ -442,7 +439,7 @@
     }
   }
   .camp_footer {
-    padding: 48px 0 80px;
+    padding: 48px 0;
     text-align: center;
   }
   .camp_footer_img {
@@ -533,11 +530,6 @@
       padding: 80px 0 48px;
       margin-top: -80px;
     }
-    main.base.camp_open {
-      .camp_footer {
-        padding-bottom: 140px;
-      }
-    }
   }
   @media screen and (max-width: 940px) {
     .camp_intro_title {
@@ -568,6 +560,7 @@
       padding-bottom: 48px;
     }
     .camp_intro {
+      background-image: url('#{asset_url('camp_img/camp_bg_m.png')}');
       .camp_container {
         padding-top: 40px;
         &:before {
@@ -690,7 +683,7 @@
       }
     }
     .camp_footer {
-      padding: 24px 0 40px;
+      padding: 32px 0;
     }
     .camp_m_btn.camp_parti_btn {
       font-size: 18px;
@@ -753,11 +746,6 @@
       font-size: 14px;
       width: 100%;
     }
-    main.base.camp_open {
-      .camp_footer {
-        padding-bottom: 100px;
-      }
-    }
   }
   @media screen and (max-width: 440px) {
     .camp_intro {
@@ -809,7 +797,7 @@
         %img.camp_parti_btn_closed{alt: "어이쿠 벌써 마감..다음캠프때 가장 먼저 알려드릴게요", src: asset_url("camp_img/camp_parti_btn_closed.png")}/
     / camp_container
   / camp_intro
-  .camp_floating_btn.camp_closed_hidden
+  .camp_floating_btn.camp_closed_hidden.camp_m_btn
     .camp_container
       %button.camp_parti_btn.camp_m_btn{onclick: "location.href='https://docs.google.com/forms/d/e/1FAIpQLScdBqgY2Vk0Vt2md8lNR9dDYLJidzxPG4Xy4yANkyRrNeB_-A/viewform'"}
         %span 신청하기
@@ -830,9 +818,9 @@
       %ul.content_txt_list
         %li 일상의 공론장과 실시간 토론, 이슈 커뮤니티와 디지털 협업, 공익데이터와 캠페인, 지역공동체 거버넌스와 공론장의 사례 등 총 일곱 주제의 강연이 준비되어 있습니다.
         %li
-          나에게 필요한 주제의 강연을 선택하면 사례와 실습, Q&amp;A와 가이드 자료까지
-          = succeed "\uC744" do
-            %strong 실용적이고 알차면서도 직접 실습할 수 있는 시간
+          나에게 필요한 주제의 강연을 선택하면 사례와 실습, Q&amp;A와 가이드 자료까지&nbsp;
+          %strong> 실용적이고 알차면서도 직접 실습할 수 있는 시간
+          을 빠띠와 함께 하게 됩니다
         %li 캠프는 세달에 걸쳐 오후와 저녁시간대로 나뉘어 진행됩니다. 이번 달(9월)에 들을 두 강의를 골라보세요.
       %p.camp_content_title
         %span.content_title_emoji> 👀
@@ -875,9 +863,9 @@
         %li 9월 캠프는 29일(수)에만 진행되며, 하루 2개의 강의를 선택하실 수 있습니다.
         %li
           %strong> ZOOM과 빠띠 커뮤니티를 통한 온라인으로 진행
-          되고,
-          = succeed "\uC785\uB2C8\uB2E4." do
-            %strong 참가비는 무료
+          되고,&nbsp;
+          %strong> 참가비는 무료
+          입니다.
         %li
           프로그램별
           %strong 선착순 20명 신청가능!!
@@ -1060,7 +1048,7 @@
         %img.camp_article_img_m{alt: "사실 온라인 활동이 아직 좀 어렵다! OX로 답해요", src: asset_url("camp_img/camp_article_2_m.png")}/
         .camp_article_txt
           %p.article_title 빠띠 민주주의캠프 시즌1을 마무리하며
-          %p.article_line_clamp 지난 4월 29일, 빠띠 민주주의 캠프(이하 캠프)가 문을 열었다. 코로나19 이후, 많은 단체와 조직들의 디지털 전환이 불가피해지면서, 빠띠의 디지털전환에 대한 경험을 공유하면 좋겠다는 생각으로 캠프를 진행했다. 3개월의 기간 동안 무려 239명이 캠프에 참여했다. 성황리에 마친 캠프를 뒤로하고, 다음 캠프를 준비하던 중, '신청해주신 분들은 어떤 생각과 고민을 가지고 오셨을까?'하는 생각이 들었다. 참여자들의 이야기를 들어보고자 …
+          %p.article_line_clamp 성황리에 마친 캠프를 뒤로하고, 다음 캠프를 준비하던 중, '신청해주신 분들은 어떤 생각과 고민을 가지고 오셨빠띠의 디지털전환에 대한 경험을 공유하면 좋겠다는 생각으로 진행된 캠프에는 무려 239명이나 참여했다. 성황리에 마친 캠프를 뒤로하고, 다음 캠프를 준비하던 중, '신청해주신 분들은 어떤 생각과 고민을 가지고 오셨을까?'하는 생각이 들었다. 참여자들의 이야기를 들어보고자 캠프에 적극적으로 참여해주신 몇 분께 인터뷰를…
           %a.camp_link_topaz{href: "http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002769163"} 더보기
     / camp_article camp_container
     .camp_contact.camp_container
