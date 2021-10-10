@@ -26,19 +26,38 @@
       공지
   .container
     .text-center{ style: 'margin-top: 40px' }
-      %button.subscribe{class: 'btn btn-primary', 'data-toggle': "modal", 'data-target': "#notice-modal", style: 'height: auto'}
-        2021년 사회적협동조합
-        %br
-        빠띠 정기총회 공고
+      %button.subscribe{class: 'btn btn-primary', 'data-toggle': "modal", 'data-target': "#notice-modal", style: 'height: auto; font-size: 20px;'}
+        사회적협동조합 빠띠 공익법인 지정
   #notice-modal.modal.fade{class: @subscribe, :role => "dialog", :tabindex => "-1"}
     .modal-dialog.modal-lg{:role => "document"}
       .modal-content
-        .modal-body
+        .modal-body{ style: "padding: 2rem"}
           %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
             %span{"aria-hidden" => "true"} &#215;
-          %div{ style: 'color: #111' }
-            = image_tag 'notice_20210322.png', style: 'width: 100%'
-
+          %div{ style: 'color: #111; font-size: 14px; letter-spacing: 0' }
+            %p.text-center{ style: 'font-size: 24px; font-weight: bold; margin-top: 24px;'} 사회적협동조합 빠띠 공익법인 지정
+            %br
+            %p 사회적협동조합 빠띠가 2021.06.30 기획재정부 장관이 지정하는 공익법인 기부금 대상단체가 되었습니다. 사회적협동조합 빠띠를 후원하시면 연말 소득공제 혜택을 받을 수 있습니다.
+            %br
+            %ul{style:"line-height:1.8;"}
+              %li
+                %span{style:"display: inline-block"} 공익법인으로 인정되는 기간 :&nbsp;
+                %span{style:"display: inline-block;"}
+                  %strong 2021.1.1 ∼ 2023.12.31
+                  (3년간)
+              %li
+                후원계좌 :&nbsp;
+                %strong{style:"display: inline-block;"}  국민은행 030301-04-186573
+            %br
+            %p.text-center
+              %button{style: "font-size: 18px; padding: 0 16px; line-height: 40px; border-radius: 40px;",  onclick: "location.href='https://docs.google.com/forms/d/e/1FAIpQLSfIuzcwJJfgbgTkCFOQ6iICFDK17YktaPESbXpCq_1NMAY9QQ/viewform'"}
+                후원하기
+            %br
+            %p
+              ※ 기획재정부
+              %a{style: 'text-decoration: underline; color: blue;', href: "https://www.moef.go.kr/lw/denm/detailTbDenmView.do?menuNo=7030000&searchNttId1=MOSF_000000000055602&searchBbsId1=MOSFBBS_000000000120"}
+                2021년 2/4분기 공익법인 지정·변경에 관한 고시
+              공고 참고 
 
 %section.activists
   .container.container-sm
