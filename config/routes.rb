@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'pages#home'
+  get 'parti2022', to: 'pages#parti2022'
   get 'home_what_we_do', to: 'pages#home_what_we_do'
   get 'what_we_do', to: 'pages#what_we_do'
   get 'marketing', to: 'pages#marketing'
