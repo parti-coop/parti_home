@@ -3,6 +3,9 @@ class PagesController < ApplicationController
     @posts = fetch_what_we_do().limit(1 + 2 * 4)
   end
 
+  def parti2022
+  end
+
   def home_what_we_do
     @posts = fetch_what_we_do().limit(1 + 2 * 4)
     render 'pages/home/what_we_do'

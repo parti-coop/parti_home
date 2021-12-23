@@ -61,13 +61,13 @@ section.activists {
 }
 
 footer.app-footer {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   .logo {
     font-size: 26px;
   }
   .utils {
-    margin-top: 56px;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     @include media-breakpoint-down(lg) {
