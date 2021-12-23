@@ -650,6 +650,14 @@ body.body-pages-home {
     }
   }
 .section3 {
+    .message {
+      color: #797B7E;
+      font-weight: bold;
+      font-family: "Noto Sans KR";
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: center;
+    }
     .townhall_link {
       color: #fff;
       width: 100%;
@@ -711,6 +719,9 @@ body.body-pages-home {
     
     @media (min-width: 768px){
       padding: 60px 0;
+      .message {
+        font-size: 16px;
+      }
       .townhall_link {
         font-size: 40px;
         margin-top: 100px;
@@ -1233,7 +1244,7 @@ body.body-pages-home {
       }
     }
   } 
-  @media (min-width: 768px)and (max-width: 991.98px) {
+  @media (min-width: 768px) and (max-width: 991.98px) {
     position: relative;
     top: 4px;
   }
