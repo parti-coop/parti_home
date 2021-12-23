@@ -74,7 +74,7 @@
                     = image_tag "parti2022_youtube.png", height: "64"
                     빠띠 유튜브 채널
                 .live.pc
-                    %p 1.20 ~ 1.21
+                    %p 1/20, 1/21
                     %p Parti 2022가 라이브 중계됩니다
         .live.mobile
             .content
@@ -337,7 +337,7 @@
                             .subject 
                                 %p 네트워킹 : 카누 커뮤니티 데이!
                                 %p 2022년, 어떤 이슈로 커뮤니티 해볼까?
-                            .small-text 오프라인 진행
+                            .small-text 오프라인 진행 : 서울하우징랩 (영등포구)
                     .foldable
                         .padding
                             .desc
@@ -459,7 +459,8 @@
         .background
         .video_wrap
             .video
-                %iframe{src:"https://drive.google.com/file/d/1zMall__xwCVdl5T46ILkWMktIvPRA4nu/preview", allow:"autoplay"}
+                .video_inner
+                    %iframe{src:"https://www.youtube.com/embed/8l5fqjv4s3A", title:"YouTube video player", frameborder:"0", allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen:"true"}
     %section.section5
         .content
             .title
@@ -532,7 +533,10 @@
             .title 협업 문의
             .paragraph
                 %p 빠띠는 공론장, 캠페인, 커뮤니티, 숙의와 의사결정 등 다양한 영역에서 디지털 민주주의를 혁신하고 있습니다.
-                %p 활동하시는 지역이나 분야에서 디지털 민주주의를 빠띠와 함께 만들고 싶으신가요? contact@parti.coop 으로 연락주세요.
+                %div
+                    활동하시는 지역이나 분야에서 디지털 민주주의를 빠띠와 함께 만들고 싶으신가요?
+                    = link_to "contact@parti.coop", "mailto:contact@parti.coop", class: "mail_link"
+                    으로 연락주세요.
     %section.section7
         .content.flex-768
             .title 후원 안내
@@ -540,7 +544,7 @@
                 %p Parti 2022는 민주주의 활동가들의 자발적인 기여로 더 나은 민주주의 생태계를 만들어가고자 하는 첫 걸음입니다.
                 %p 더 나은 생태계를 위한 발걸음에 동참해주세요.
                 %br
-                %p 1만원 이상 후원해주신 분들께는 빠띠 굿즈를 배송해드릴 예정입니다. 빠띠는 지정기부금 단체로 지정되어 소득공제 혜택이 가능합니다.
+                %p 1만원 이상 후원해주신 분들께는 빠띠 굿즈를 배송해드릴 예정입니다. 빠띠는 지정기부금 단체로 지정되어 소득공제를 받을 수 있습니다.
 
                 = link_to "후원하기", "https://forms.gle/bTVprytmoq1p6EbFA", class: "donation_link", target: "_blank"
             

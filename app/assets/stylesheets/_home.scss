@@ -967,6 +967,14 @@ body.body-pages-home {
       width: 100%;
       padding-bottom: 56.25%;
       position: relative;
+      overflow: hidden;
+    }
+    .video_inner {
+      position: absolute;
+      left: -2px;
+      right: -3px;
+      top: 0;
+      bottom: 0;
       iframe {
         width: 100%;
         height: 100%;
@@ -980,7 +988,6 @@ body.body-pages-home {
     }
   }
   .section5 {
-    margin-top: -1px;
     color: #fff;
     background-color: #6F4BF9;
     .title {
@@ -1162,7 +1169,11 @@ body.body-pages-home {
     background-color: #222;
     color: #fff;
     .paragraph {
-      opacity: 0.85;
+      color: rgba(255,255,255,0.85);
+    }
+    .mail_link {
+      text-decoration: underline;
+      color: rgba(255,255,255,0.85);
     }
   }
   .section7 {
