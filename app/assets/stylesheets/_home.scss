@@ -806,10 +806,7 @@ body.body-pages-home {
     .session {
       cursor: pointer;
       position: relative;
-      .small-text {
-        font-weight: bold;
-        opacity: 0.5 
-      }
+
       &:before {
         content: '더보기';
         display: block;
@@ -861,8 +858,20 @@ body.body-pages-home {
       line-height: 1.44;
     }
     .session .small-text {
+      color: #777;
       margin-top: 6px;
       font-weight: bold;
+      a {
+        border-bottom: 1px solid #999;
+        color: #777;
+        &:after {
+          content: '〉';
+          display: inline-block;
+          margin-left: 4px;
+          font-size: 12px;
+          letter-spacing: -6.2px;
+        }
+      }
     }
     .time {
       font-size: 20px;
