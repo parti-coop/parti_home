@@ -1,23 +1,18 @@
-.auto-image-modal {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.notice-image-modal {
   box-shadow: 0px 12px 64px 0px #23252C29;
   border-radius: 12px;
   overflow: hidden;
   width: 90%;
   max-width: 570px;
-  display: none;
-  z-index: 1040;
   background-color: #fff;
   border: 1px solid #E9EBF0;
   
+  .modal-content {
+    border: none;
+  }
+  
   img {
     max-width: 100%;
-  }
-  &.open {
-    display: block;
   }
   .close-btn-wrap {
     width: 74%;

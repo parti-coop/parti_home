@@ -72,14 +72,3 @@
                 != Platform::INFO[:subtitle]
               .title
                 != Platform::INFO[:title]
-
-.auto-image-modal.open
-  = link_to "https://zep.us/play/87e3Oy" do
-    = image_tag "parti-notice.png"
-  .close-btn-wrap
-    .close-btn{ onclick: "autoModalClose()" } 닫기
-
-:javascript
-  function autoModalClose() {
-    document.getElementsByClassName('auto-image-modal')[0].classList.remove('open');   
-  }
