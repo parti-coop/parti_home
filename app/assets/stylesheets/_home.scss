@@ -1,3 +1,37 @@
+.notice-image-modal {
+  box-shadow: 0px 12px 64px 0px #23252C29;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 570px;
+  background-color: #fff;
+  border: 1px solid #E9EBF0;
+  
+  .modal-content {
+    border: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  .close-btn-wrap {
+    width: 74%;
+    margin: 0 auto;
+    text-align: right;
+    padding-bottom: 6%;
+  }
+  .close-btn {
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    color: #797B89;
+    font-size: 18px;
+    &:hover {
+      color: #41424A;
+    }
+  }
+}
 body.body-pages-home {
   section.key-visual {
     height: 800px;
