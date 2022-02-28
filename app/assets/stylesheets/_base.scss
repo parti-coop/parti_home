@@ -1,6 +1,6 @@
 body {
 	-webkit-text-size-adjust: none;
-	font-family: 'Noto Sans KR','Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
+	font-family: 'Roboto', 'Noto Sans KR','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림', sans-serif;
   margin-top: $header-height;
   @include media-breakpoint-down(md) {
     margin-top: $header-height-sm;
