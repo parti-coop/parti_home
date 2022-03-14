@@ -499,9 +499,6 @@ body.body-pages-home {
           }
         }
       }
-      .inline-block {
-        margin-right: 4px;
-      }
       @media (min-width: 768px){
         font-size: 32px;
         margin: 80px 0 0;
@@ -509,147 +506,6 @@ body.body-pages-home {
         .date {
           font-size: 36px;
         }
-      }
-    }
-    .title {
-      font-size: 21px;
-      font-weight: normal;
-      line-height: 1.2;
-      padding: 12px 0 0 28px;
-      position: relative;
-      margin: 44px 0 20px;
-
-      &:before {
-        content: '';
-        width: 52px;
-        height: 52px;
-        border-radius: 86px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #4CCDC1;
-        display: block;
-      }
-      &.right {
-        &:before {
-          background-color: #6F4BF9;
-          opacity: 0.8;
-        }
-      }
-      p {
-        position: relative;
-        z-index: 1;
-      }
-      @media (min-width: 768px){
-        padding: 20px 0 0 56px;
-        font-size: 24px;
-        &:before {
-          width: 72px;
-          height: 72px;
-        }  
-      }
-      @media (min-width: 1024px){
-        margin: 120px 0 32px;
-        &.left {
-          margin-top: 140px;
-        }
-      }
-    }
-    .paragraph {
-      font-weight: 500;
-      padding-left: 28px;
-      line-height: 1.5;
-      box-sizing: content-box;
-      width: 88%;
-
-      @media (min-width: 440px){
-        width: 80%;
-      }
-      @media (min-width: 768px){
-        padding-left: 58px;
-      }
-      @media (min-width: 1024px){
-        width: 356px;
-      }
-      @media (min-width: 1280px){
-        width: 462px;
-      }
-      &.right {
-        @media (min-width: 1280px){
-          width: auto;
-        }
-      }
-    }
-  }
-  .section2 {
-    display: none;
-    background-color: #6F4BF9;
-    color: #fff;
-    text-align: center;
-    .flex {
-      padding: 18px 0;
-    }
-    .channel {
-      flex-grow: 1;
-      font-size: 22px;
-      color: #fff;
-      img {
-        max-height: 48px;
-        margin-right: 12px;
-        vertical-align: -16px;
-      }
-    }
-    .channel:after {
-      content: '';
-      display: inline-block;
-      width: 15px;
-      height: 20px;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      background-position: left center;
-      vertical-align: -2px;
-      background-image: asset_url("parti2022_youtube-arrow.png");
-      margin-left: 8px;
-    }
-    .red {
-      color: #FB4D42;
-    }
-    .live.mobile {
-      background-color: black;
-      color: #fff;
-      padding: 18px 0;
-      font-size: 20px;
-    }
-    .mobile .red {
-      margin-left: 18px;
-    }
-    @media (min-width: 768px){
-      .channel {
-        font-size: 28px;
-      }
-      .channel img {
-        margin-right: 16px;
-        vertical-align: -20px;
-        max-height: none;
-      }
-      .live.mobile,
-      .live {
-        font-size: 26px;
-      }
-      .live.mobile {
-        padding: 32px 0;
-      }
-    }
-    @media (min-width: 1024px){
-
-      .flex {
-        padding: 32px 0;
-      }
-      .channel {
-        text-align: left;
-      }
-      .live {
-        text-align: right;
       }
     }
   }
@@ -982,54 +838,7 @@ body.body-pages-home {
       }
     }     
   }
-  // .section4 {
-   
-    // position: relative;
-    // overflow: hidden;
-    // .container {
-    //   overflow: hidden;
-    //   padding: 0;
-    // }
-    // .background {
-    //   position: absolute;
-    //   left: -8px;
-    //   top: -8px;
-    //   bottom: -8px;
-    //   right: -8px;
-    //   background-image: asset_url('parti2022_movie.png');
-    //   background-position: center center;
-    //   background-size: cover;
-    //   filter: blur(8px);
-    //   -webkit-filter: blur(8px);
-    // }
-    // .video_wrap {
-    //   max-width: 1280px;
-    //   margin: 0 auto;
-    // }
-    // .video {
-    //   width: 100%;
-    //   padding-bottom: 56.25%;
-    //   position: relative;
-    //   overflow: hidden;
-    // }
-    // .video_inner {
-    //   position: absolute;
-    //   left: -2px;
-    //   right: -3px;
-    //   top: 0;
-    //   bottom: 0;
-    //   iframe {
-    //     width: 100%;
-    //     height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     left: -1px;
-    //     right: -1px;
-    //     bottom: 0;
-    //     border: 0 none;
-    //   }
-    // }
-  // }
+
   .section5 {
     color: #fff;
     background-color: #6F4BF9;
@@ -1272,32 +1081,10 @@ body.body-pages-home {
 }
 .parti2022-banner {
   border: 6px solid black;
+  padding: 20px 10px;
   img {
     margin: 0 auto;
     max-width: 100%;
     display: block;
-  }
-  .pc {
-    display: none;
-    @media (min-width: 768px){
-      display: block;
-    }
-  }
-  .mobile {
-    @media (min-width: 768px){
-      display: none !important;
-    }
-    img {
-      padding: 4% 0 5%;
-    }
-    @media (min-width: 460px){
-      img {
-        max-width: 80%;
-      }
-    }
-  } 
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    position: relative;
-    top: 4px;
   }
 }
