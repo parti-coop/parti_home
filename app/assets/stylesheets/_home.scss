@@ -506,242 +506,68 @@ body.body-pages-home {
   .block {
     display: block;
   }
+  .flex-1024 {
+    @media (min-width: 1024px){
+      display: flex;
+    }
+  }
   @media (min-width: 1024px){
     .half {
       width: 50%;
     }
   }
   .section1 {
-    .flex {
-      flex-direction: column;
-      @media (min-width: 1024px){
-        justify-content: space-between;
-        flex-direction: row;
-      }
+    .pc img {
+      margin-left: -56px;
     }
     .info {
       font-size: 22px;
       line-height: 2;
+      text-align: right;
       .date {
         font-size: 24px;
+        display: block;
       }
       .youtube {
+        display: inline-block;
         font-size: 14px;
-        padding: 7px 11px 5px;
         border-radius: 50px;
         color: #fff;
         background-color: #FB4D42;
-        display: inline-block;
         line-height: normal;
         vertical-align: 3px;
-      }
-      .inline-block {
-        margin-right: 4px;
+        margin-left: 16px;
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 15px;
+          height: 20px;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          background-position: left center;
+          vertical-align: -2px;
+          background-image: asset_url("parti2022_youtube-arrow.png");
+          margin-left: 8px;
+        }
+        @media (min-width: 768px){
+          font-size: 28px;
+          padding: 8px 18px 6px;
+          &:after {          
+            height: 24px;
+          }
+        }
       }
       @media (min-width: 768px){
         font-size: 32px;
-        margin-top: 26px;
+        margin: 80px 0 0;
+
         .date {
           font-size: 36px;
         }
-        .youtube {
-          font-size: 19px;
-          vertical-align: 5px;
-        }
-      }
-    }
-    .title {
-      font-size: 21px;
-      font-weight: normal;
-      line-height: 1.2;
-      padding: 12px 0 0 28px;
-      position: relative;
-      margin: 44px 0 20px;
-
-      &:before {
-        content: '';
-        width: 52px;
-        height: 52px;
-        border-radius: 86px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #4CCDC1;
-        display: block;
-      }
-      &.right {
-        &:before {
-          background-color: #6F4BF9;
-          opacity: 0.8;
-        }
-      }
-      p {
-        position: relative;
-        z-index: 1;
-      }
-      @media (min-width: 768px){
-        padding: 20px 0 0 56px;
-        font-size: 24px;
-        &:before {
-          width: 72px;
-          height: 72px;
-        }  
-      }
-      @media (min-width: 1024px){
-        margin: 120px 0 32px;
-        &.left {
-          margin-top: 140px;
-        }
-      }
-    }
-    .paragraph {
-      font-weight: 500;
-      padding-left: 28px;
-      line-height: 1.5;
-      box-sizing: content-box;
-      width: 88%;
-
-      @media (min-width: 440px){
-        width: 80%;
-      }
-      @media (min-width: 768px){
-        padding-left: 58px;
-      }
-      @media (min-width: 1024px){
-        width: 356px;
-      }
-      @media (min-width: 1280px){
-        width: 462px;
-      }
-      &.right {
-        @media (min-width: 1280px){
-          width: auto;
-        }
-      }
-    }
-    .community {
-      margin-bottom: 50px;
-      align-items: start;
-
-      .flex {
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding-left: 28px;
-        column-gap: 24px;
-
-        img {
-          max-height: 42px;
-        }        
-      }
-
-      @media (min-width: 768px){
-        margin-bottom: 100px;
-
-        .flex {
-          justify-content: space-between;
-          margin-right: 60px;
-          img {
-            max-height: none;
-          }
-        }
-      }
-      @media (min-width: 1024px){
-        .flex{
-          padding-left: 56px;
-          margin-right: 160px;          
-        }
-        .title {
-          margin: 0 0 24px;
-
-          &:before {
-            opacity: 0.8;
-            background-color: #6F4BF9;
-          }
-        }
-      }
-      @media (min-width: 1280px){
-        .flex {
-          margin-right: 140px;
-        }
-      }
-    }
-
-  }
-  .section2 {
-    background-color: #6F4BF9;
-    color: #fff;
-    text-align: center;
-    .flex {
-      padding: 18px 0;
-    }
-    .channel {
-      flex-grow: 1;
-      font-size: 22px;
-      color: #fff;
-      img {
-        max-height: 48px;
-        margin-right: 12px;
-        vertical-align: -16px;
-      }
-    }
-    .channel:after {
-      content: '';
-      display: inline-block;
-      width: 15px;
-      height: 20px;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      background-position: left center;
-      vertical-align: -2px;
-      background-image: asset_url("parti2022_youtube-arrow.png");
-      margin-left: 8px;
-    }
-    .red {
-      color: #FB4D42;
-    }
-    .live.mobile {
-      background-color: black;
-      color: #fff;
-      padding: 18px 0;
-      font-size: 20px;
-    }
-    .mobile .red {
-      margin-left: 18px;
-    }
-    @media (min-width: 768px){
-      .channel {
-        font-size: 28px;
-      }
-      .channel img {
-        margin-right: 16px;
-        vertical-align: -20px;
-        max-height: none;
-      }
-      .live.mobile,
-      .live {
-        font-size: 26px;
-      }
-      .channel:after {
-        height: 24px;
-      }
-      .live.mobile {
-        padding: 32px 0;
-      }
-    }
-    @media (min-width: 1024px){
-
-      .flex {
-        padding: 32px 0;
-      }
-      .channel {
-        text-align: left;
-      }
-      .live {
-        text-align: right;
       }
     }
   }
-.section3 {
+  .section3 {
     .message {
       color: #797B7E;
       font-weight: bold;
@@ -776,41 +602,44 @@ body.body-pages-home {
         border: 4px solid black;
       }
     }
-    padding: 0 0 50px;
     .content {
       position: relative;
       margin-top: 60px;
+      border-top: 4px solid #000;
     }
     .date {
-      color: #6F4BF9;
       font-size: 20px;
+      position: absolute;
+      top: -22px;
+      right: 0;
+      background-color: #fff;
+    }
+    .people {
+      font-size: 20px;
+      padding: 16px 0 24px
     }
     .title {
       font-size: 32px;
       margin: 32px 0 20px;
       line-height: 1.2;
-      .small-text {
-        font-size: 28px;
-      }
+      // .small-text {
+      //   font-size: 28px;
+      // }
     }
     .intro {
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
-    img {
-      position: absolute;
-      right: 0;
-      top: 0;
+    .date_img {
       max-height: 80px;
+      margin: 30px 0 0;
     }
     @media (min-width: 460px){
       .inline-block-460 {
         display: inline-block;
       }
     }
-    
     @media (min-width: 768px){
-      padding: 60px 0;
       .message {
         font-size: 16px;
       }
@@ -821,24 +650,32 @@ body.body-pages-home {
           font-size: 44px;
         }
       }
+      .content {
+        border-top: 6px solid #000;
+        margin-top: 120px;
+      }
       .date {
         font-size: 32px;
+        top: -36px;        
+      }
+      .people {
+        font-size: 32px;
+        padding: 20px 0 40px;
       }
       .title {
         font-size: 48px;
         margin: 0 0 40px;
-        .small-text {
-          font-size: 42px;
-        }
+        // .small-text {
+        //   font-size: 42px;
+        // }
       }
       .intro {
-        margin-top: 40px;
         font-size: 16px;
-        width: 540px;
+        // width: 540px;
         max-width: 100%;
       }
-      img {
-        top: 20px;
+      .date_img {
+        margin: 48px 0 40px;
         max-height: 120px;
       }
       .flex-768 {
@@ -846,18 +683,15 @@ body.body-pages-home {
       }
     }
     @media (min-width: 1024px){
-      img {
-        top: 64px;
-        max-height: none;
-      }
-      .second {
-        padding-left: 50%;
-        img {
-          left: 0;
-        }
+      .intro {
+        padding-right: 80px;
       }
       .text-left-1024 {
         text-align: left;
+      }
+      .left {
+        width: 56%;
+        flex-shrink: 0;
       }
     }
     .time-table-date {
@@ -870,14 +704,16 @@ body.body-pages-home {
     .time-table {
       font-size: 13px;
       padding-bottom: 32px;
-      border-bottom: 2px solid #222;
       font-weight: 900;
+      padding-top: 40px;
     }
     .table-row {
       position: relative;
       border-top: 2px solid #222;
       &:first-child {
-        border-top: 4px solid #222;
+        @media (min-width: 1024px){
+          border-top: none;
+        }
       }
       margin-top: 20px;
       padding-top: 12px;
@@ -910,7 +746,7 @@ body.body-pages-home {
         background-repeat: no-repeat;
         background-size: auto 10px;
         background-position: center top;
-        font-size: 11px;
+        font-size: 12px;
       }
     }
     .show .session {
@@ -928,7 +764,7 @@ body.body-pages-home {
         background-repeat: no-repeat;
         background-size: auto 12px;
         background-position: center top;
-        font-size: 11px;
+        font-size: 12px;
       }
     }
     .foldable {
@@ -976,13 +812,8 @@ body.body-pages-home {
     .desc {
       margin-bottom: 20px;
     }
-    .mobile {
-      .foldable {
-        padding-left: 0;
-      }
-      .subject {
-        width: calc(100% - 48px);
-      }
+    .subject {
+      width: calc(100% - 48px);
     }
     @media (min-width: 768px){
       .time-table-date {
@@ -991,6 +822,7 @@ body.body-pages-home {
       }
       .time-table {
         font-size: 14px;
+        padding-top: 64px;
       }
       .table-row {
         margin-top: 32px;
@@ -1002,7 +834,7 @@ body.body-pages-home {
       .session {
         &:before,
         &:after {
-          font-size: 13px;
+          font-size: 12px;
           background-size: auto 12;
           padding-top: 16px;
         }
@@ -1014,9 +846,7 @@ body.body-pages-home {
         flex-shrink: 0;
         width: 180px;
       }
-      .foldable {
-        padding-left: 180px;
-      }
+
       .padding {
         margin-top: 20px;
         padding: 32px;
@@ -1032,62 +862,41 @@ body.body-pages-home {
       .time {
         width: 190px;
       }
-      .padding {
-        padding-left: 190px;
-        padding-right: 0;
+      .time-table {
+        padding-top: 20px;
       }
       .foldable {
         padding-left: 0;
       }
     }
-  }
-  .section4 {
-    position: relative;
-    overflow: hidden;
-    .container {
-      overflow: hidden;
-      padding: 0;
-    }
-    .background {
-      position: absolute;
-      left: -8px;
-      top: -8px;
-      bottom: -8px;
-      right: -8px;
-      background-image: asset_url('parti2022_movie.png');
-      background-position: center center;
-      background-size: cover;
-      filter: blur(8px);
-      -webkit-filter: blur(8px);
-    }
-    .video_wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .video {
-      width: 100%;
-      padding-bottom: 56.25%;
-      position: relative;
-      overflow: hidden;
-    }
-    .video_inner {
-      position: absolute;
-      left: -2px;
-      right: -3px;
-      top: 0;
-      bottom: 0;
-      iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: -1px;
-        right: -1px;
-        bottom: 0;
-        border: 0 none;
+    .community {
+      margin: 0 0 56px;
+      align-items: start;
+
+      .flex {
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 36px;
+
+        img {
+          max-height: 42px;
+        }        
       }
-    }
+
+      @media (min-width: 768px){
+        margin: 0 0 100px;
+
+        .flex {
+          justify-content: space-between;
+          column-gap: 62px;
+          img {
+            max-height: none;
+          }
+        }
+      }
+    }     
   }
+
   .section5 {
     color: #fff;
     background-color: #6F4BF9;
@@ -1113,12 +922,6 @@ body.body-pages-home {
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
-    }
-    .flex-1024 {
-      @media (min-width: 1024px){
-        display: flex;
-        align-items: center;
-      }
     }
     .half-1024 {
       width: 100%;
@@ -1336,32 +1139,10 @@ body.body-pages-home {
 }
 .parti2022-banner {
   border: 6px solid black;
+  padding: 20px 10px;
   img {
     margin: 0 auto;
     max-width: 100%;
     display: block;
-  }
-  .pc {
-    display: none;
-    @media (min-width: 768px){
-      display: block;
-    }
-  }
-  .mobile {
-    @media (min-width: 768px){
-      display: none !important;
-    }
-    img {
-      padding: 4% 0 5%;
-    }
-    @media (min-width: 460px){
-      img {
-        max-width: 80%;
-      }
-    }
-  } 
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    position: relative;
-    top: 4px;
   }
 }

@@ -1,34 +1,24 @@
-= link_to parti2022_path do
-  %section.parti2022-banner
-    .pc
-      .container
-        = image_tag "parti2022_key-visual.png", width: "1120"
-        = image_tag "parti2022_banner-bottom.png", width: "1120"
-    .mobile
-      .container= image_tag "parti2022_key-visual-m.png", width: "640"
-
-  
--# %section.key-visual
--#   .key-visual-line
--#     .container
--#       .mission-text-container
--#         .mission-text
--#           더 민주적인 세상을 만드는
--#   .key-visual-line
--#     .container
--#       .mission-text-container
--#         .mission-text
--#           민주주의 활동가들의
--#   .key-visual-line
--#     .container
--#       .mission-text-container
--#         .mission-text
--#           협동조합입니다.
--#   .key-visual-line
--#     .container
--#       .mission-text-container
--#         .mission-text.mission-text-serif
--#           Democracy More
+%section.key-visual
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          더 민주적인 세상을 만드는
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          민주주의 활동가들의
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text
+          협동조합입니다.
+  .key-visual-line
+    .container
+      .mission-text-container
+        .mission-text.mission-text-serif
+          Democracy More
 
 %section.what-we-do
   .container.container-sm
@@ -72,3 +62,7 @@
                 != Platform::INFO[:subtitle]
               .title
                 != Platform::INFO[:title]
+
+= link_to parti2022_path do
+  %section.parti2022-banner
+    = image_tag "parti2022_mini.png", width: "640"
