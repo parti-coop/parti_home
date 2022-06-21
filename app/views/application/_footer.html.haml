@@ -138,6 +138,26 @@
               = f.email_field :email, placeholder: '이메일 주소', id: 'site-subscribe-report-input-email', class: 'form-control', data: { 'rule-required': true, 'invalid-error': '#js-report-subscribe-error', msg: '이름과 이메일 주소는 필수 입력 항목입니다.' }
             %button.btn.btn-primary.btn-subscribe{ type: :submit } 구독신청
           #js-report-subscribe-error
+    .utils
+      %span
+        %span.text-nowrap 사회적협동조합 빠띠
+        %span.d-none.d-sm-inline= "|"
+        %br.d-block.d-sm-none
+        %span.text-nowrap 이사장: 권오현
+        %span.d-none.d-sm-inline= "|"
+        %br.d-block.d-sm-none
+        %span.text-nowrap 등록번호: 278-82-00201
+        %span.d-none.d-lg-inline= "|"
+        %br.d-block.d-lg-none
+        %span.text-nowrap 서울시 서대문구 수색로 43
+        %br.d-block.d-sm-none
+        %span.text-nowrap 사회적경제마을자치센터 2층
+        %span.d-none.d-sm-inline= "|"
+        %br.d-block.d-sm-none
+        %span.text-nowrap
+          Email:
+          %span
+          %a{href: "mailto:member@parti.coop"}> member@parti.coop
     .license.d-md-flex
       %a(href="https://creativecommons.org/licenses/by/4.0/deed.ko" target="_blank")
         = image_tag 'ccby4.png', style: 'height: 2.8em; margin-right: 0.4em;'

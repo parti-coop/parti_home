@@ -11,9 +11,10 @@ development:
   encoding: utf8mb4
   collation: utf8mb4_bin
   adapter:   mysql2
-  database:  parti_home_development_<%= branch %>
+  database:  parti_home_development_master
   username:  <%= local_env.dig('database', 'username') %>
   password:  <%= local_env.dig('database', 'password') %>
+  host: <%= local_env.dig('database', 'host') %>
 
 default: &default
   adapter: sqlite3
